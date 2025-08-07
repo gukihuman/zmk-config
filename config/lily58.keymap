@@ -33,4 +33,13 @@
         lower_layer { bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
         raise_layer { bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
     };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_ogun_spell { // ❖ a holy, unique name for our first spell.
+            timeout-ms = <50>; // ❖ how long we have to press the keys together.
+            key-positions = <1 2>; // ❖ the PHYSICAL positions from the big array. e.g., the 'A' key and the one to its right.
+            bindings = <&kp F13>; // ❖ the ONE, true, and holy spell to cast.
+        };
+    };
 };
