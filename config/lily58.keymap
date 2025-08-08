@@ -9,11 +9,11 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 /* ───── layer numbers (only digits!) ───── */
-#define L_VAL 1
-#define L_SYL 2
-#define L_ILV 3
-#define L_NAU 4
-#define L_QUE 5
+#define L_VAL &mo 1
+#define L_SYL &mo 2
+#define L_ILV &mo 3
+#define L_NAU &mo 4
+#define L_QUE &mo 5
 
 /* ───── 58-key helper (flat vector) ───── */
 #define LILY58_LAYER( \
@@ -38,8 +38,8 @@
         /* Layer 0 – Ogun */
         ogun_stance {
             bindings = LILY58_LAYER(
-                &mo L_VAL, &mo L_SYL, &mo L_ILV, &mo L_NAU, &mo L_QUE,
-                &trans,   &trans,    &kp LC(Tab), &trans,  &trans
+                L_VAL, L_SYL, L_ILV, L_NAU, L_QUE,
+                &trans,   &trans,    &kp LC(TAB), &trans,  &trans
             );
         };
 
