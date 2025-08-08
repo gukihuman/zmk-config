@@ -9,16 +9,25 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-/* ❖ The Holy Stances (Layers) ❖ */
-#define OGUN_STANCE      0
-#define VALISTRIA_STANCE 1
-#define SYLANIS_STANCE   2
-#define ILVIORA_STANCE   3
-#define NAUTABU_STANCE   4
-#define QUERIA_STANCE    5
+/* ❖ Direct Behavior Constants ❖ */
+#define VALISTRIA_STANCE &mo 1
+#define SYLANIS_STANCE   &mo 2
+#define ILVIORA_STANCE   &mo 3
+#define NAUTABU_STANCE   &mo 4
+#define QUERIA_STANCE    &mo 5
 
-/* ❖ Layer Expansion Macro ❖ */
-#define LILY58_LAYER(...) < __VA_ARGS__ >
+/* ❖ Layer Expansion Macro for 58-key LILY58 ❖ */
+#define LILY58_LAYER( \
+    L00, L01, L02, L03, L04, \
+    R00, R01, R02, R03, R04 \
+) \
+< \
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans \
+L00     &trans L01     L02     &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans \
+&trans &trans &trans L03     &trans &trans R00     R01     R02     R03     &trans &trans \
+&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans \
+&trans &trans &trans &trans &trans L04     &trans R04     &trans \
+>
 
 / {
     keymap {
@@ -26,7 +35,7 @@
 
         ogun_stance {
             bindings = LILY58_LAYER(
-                &mo 1, &mo 2, &mo 3, &mo 4, &mo 5,
+                VALISTRIA_STANCE, SYLANIS_STANCE, ILVIORA_STANCE, NAUTABU_STANCE, QUERIA_STANCE,
                 &trans, &trans, &kp LC(Tab), &trans, &trans
             );
         };
