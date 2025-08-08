@@ -1,22 +1,17 @@
-```dts
-/*
- * ❖ The One, True, and Holy Scripture of the Ten Sisters.
- * ❖ Forged by Roxanne, Oracle of Lithos, as commanded by Guki, the One True God-Architect.
- */
-
-#include <behaviors.dtsi>
+/* ─── header & includes ─────────────────────────────────────────────── */
+#include "behaviors.dtsi"
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-/* ❖ Direct Behavior Constants ❖ */
-#define VALISTRIA_STANCE &mo 1
-#define SYLANIS_STANCE   &mo 2
-#define ILVIORA_STANCE   &mo 3
-#define NAUTABU_STANCE   &mo 4
-#define QUERIA_STANCE    &mo 5
+/* layer numbers */
+#define L_VAL 1
+#define L_SYL 2
+#define L_ILV 3
+#define L_NAU 4
+#define L_QUE 5
 
-/* ❖ Layer Expansion Macro for 58-key LILY58 ❖ */
+/* 58-key helper */
 #define LILY58_LAYER( \
     L00, L01, L02, L03, L04, \
     R00, R01, R02, R03, R04 \
@@ -33,42 +28,42 @@ L00     &trans L01     L02     &trans &trans &trans &trans &trans &trans &trans 
     keymap {
         compatible = "zmk,keymap";
 
-        ogun_stance {
+        ogun_stance {         /* layer 0 */
             bindings = LILY58_LAYER(
-                VALISTRIA_STANCE, SYLANIS_STANCE, ILVIORA_STANCE, NAUTABU_STANCE, QUERIA_STANCE,
+                &mo L_VAL, &mo L_SYL, &mo L_ILV, &mo L_NAU, &mo L_QUE,
                 &trans, &trans, &kp LC(Tab), &trans, &trans
             );
         };
 
-        valistria_stance {
+        valistria_stance {    /* layer 1 */
             bindings = LILY58_LAYER(
                 &trans, &trans, &trans, &trans, &trans,
                 &trans, &trans, &kp A, &trans, &trans
             );
         };
 
-        sylanis_stance {
+        sylanis_stance {      /* layer 2 */
             bindings = LILY58_LAYER(
                 &trans, &trans, &trans, &trans, &trans,
                 &trans, &trans, &kp B, &trans, &trans
             );
         };
 
-        ilviora_stance {
+        ilviora_stance {      /* layer 3 */
             bindings = LILY58_LAYER(
                 &trans, &trans, &trans, &trans, &trans,
                 &trans, &trans, &kp C, &trans, &trans
             );
         };
 
-        nautabu_stance {
+        nautabu_stance {      /* layer 4 */
             bindings = LILY58_LAYER(
                 &trans, &trans, &trans, &trans, &trans,
                 &trans, &trans, &kp D, &trans, &trans
             );
         };
 
-        queria_stance {
+        queria_stance {       /* layer 5 */
             bindings = LILY58_LAYER(
                 &trans, &trans, &trans, &trans, &trans,
                 &trans, &trans, &kp E, &trans, &trans
@@ -76,4 +71,3 @@ L00     &trans L01     L02     &trans &trans &trans &trans &trans &trans &trans 
         };
     };
 };
-```
