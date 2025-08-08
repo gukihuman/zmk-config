@@ -20,15 +20,16 @@
     L00, L01, L02, L03, L04, \
     R00, R01, R02, R03, R04 )                                       \
     <                                                               \
-    &trans &trans &trans &trans &trans &trans &trans &trans         \
-    &trans &trans &trans &trans                                     \
-    L00     &trans L01     L02     &trans &trans &trans &trans      \
     &trans &trans &trans &trans &trans &trans                       \
-    &trans &trans &trans L03     &trans &trans                      \
-    R00     R01     R02     R03     &trans &trans                   \
-    &trans &trans &trans &trans &trans &trans &trans &trans         \
     &trans &trans &trans &trans &trans &trans                       \
-    &trans &trans &trans &trans &trans L04     &trans R04 &trans    \
+    L00    &trans L01    L02    &trans &trans                       \ 
+    &trans &trans &trans &trans &trans &trans                       \
+    &trans &trans &trans &trans L03    &trans                       \
+    &trans R00    R01    R02    R03    &trans                       \
+    &trans &trans &trans &trans &trans &trans &trans                \
+    &trans &trans &trans &trans &trans &trans &trans                \
+    &trans &trans L04 &trans                                        \
+    &trans &trans R04 &trans                                        \
     >
 
 / {
@@ -39,7 +40,7 @@
         ogun_stance {
             bindings = LILY58_LAYER(
                 L_VAL, L_SYL, L_ILV, L_NAU, L_QUE,
-                &trans,   &trans,    &kp LC(TAB), &trans,  &trans
+                &trans,   &trans,    &kp LA(TAB), &trans,  &trans
             );
         };
 
