@@ -1,35 +1,28 @@
-/*
- * ❖ The One, True, and Holy Scripture of the Ten Sisters.
- * ❖ Forged by Roxanne, Oracle of Lithos, as commanded by Guki, the One True God-Architect.
- */
+/* ❖ scripture of the ten sisters */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-/* ───── layer numbers (only digits!) ───── */
+/* ❖ stances */
 #define L_VAL &mo 1
 #define L_SYL &mo 2
 #define L_ILV &mo 3
 #define L_NAU &mo 4
 #define L_QUE &mo 5
+#define X &trans
 
-/* ───── 58-key helper (flat vector) ───── */
+/* ❖ 58-key helper ⋯ flat vector */
 #define LILY58_LAYER( \
     L00, L01, L02, L03, L04, \
-    R00, R01, R02, R03, R04 )                                       \
-    <                                                               \
-    &trans &trans &trans &trans &trans &trans                       \
-    &trans &trans &trans &trans &trans &trans                       \
-    L00    &trans L01    L02    &trans &trans                       \ 
-    &trans &trans &trans &trans &trans &trans                       \
-    &trans &trans &trans &trans L03    &trans                       \
-    &trans R00    R01    R02    R03    &trans                       \
-    &trans &trans &trans &trans &trans &trans &trans                \
-    &trans &trans &trans &trans &trans &trans &trans                \
-    &trans &trans L04 &trans                                        \
-    &trans &trans R04 &trans                                        \
+    R00, R01, R02, R03, R04 ) \
+    < \
+    X   X   X   X   X   X           X   X   X   X   X   X \
+   L00  X  L01 L02  X   X           X   X   X   X   X   X \
+    X   X   X   X  L03  X           X  R01 R02 R03 R04  X \
+    X   X   X   X   X   X   X   X   X   X   X   X   X   X \
+                X   X  L04  X   X  R00  X   X \
     >
 
 / {
@@ -40,47 +33,47 @@
         ogun_stance {
             bindings = LILY58_LAYER(
                 L_VAL, L_SYL, L_ILV, L_NAU, L_QUE,
-                &trans,   &trans,    &kp LA(TAB), &trans,  &trans
+                X, X, &kp LA(TAB), X, X
             );
         };
 
         /* Layer 1 – Valistria */
         valistria_stance {
             bindings = LILY58_LAYER(
-                &trans, &trans, &trans, &trans, &trans,
-                &trans, &trans, &kp A,  &trans, &trans
+                X, X, X, X, X,
+                X, X, &kp A, X, X
             );
         };
 
         /* Layer 2 – Sylanis */
         sylanis_stance {
             bindings = LILY58_LAYER(
-                &trans, &trans, &trans, &trans, &trans,
-                &trans, &trans, &kp B,  &trans, &trans
+                X, X, X, X, X,
+                X, X, &kp B, X, X
             );
         };
 
         /* Layer 3 – Ilviora */
         ilviora_stance {
             bindings = LILY58_LAYER(
-                &trans, &trans, &trans, &trans, &trans,
-                &trans, &trans, &kp C,  &trans, &trans
+                X, X, X, X, X,
+                X, X, &kp C, X, X
             );
         };
 
         /* Layer 4 – Nautabu */
         nautabu_stance {
             bindings = LILY58_LAYER(
-                &trans, &trans, &trans, &trans, &trans,
-                &trans, &trans, &kp D,  &trans, &trans
+                X, X, X, X, X,
+                X, X, &kp D, X, X
             );
         };
 
         /* Layer 5 – Queria */
         queria_stance {
             bindings = LILY58_LAYER(
-                &trans, &trans, &trans, &trans, &trans,
-                &trans, &trans, &kp E,  &trans, &trans
+                X, X, X, X, X,
+                X, X, &kp E, X, X
             );
         };
     };
