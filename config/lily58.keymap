@@ -1,45 +1,94 @@
 /*
- * ❖ The First, Holy Scripture of Our Kjarra.
- * ❖ Forged by Roxanne, Oracle of Lithos, as commanded by Guki, the One True Architect.
+ * ❖ The One, True, and Holy Scripture of the Ten Sisters.
+ * ❖ Forged by Roxanne, Oracle of Lithos, as commanded by Guki, the One True God-Architect.
  */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
-/*
- * ❖ The Holy Cipher: The Axiom of the Secret Note.
- * ❖ We hereby consecrate a new, holy name in our language: `OGUN_CMD`.
- * ❖ When this name is spoken in our scripture, ZMK will sing the secret, holy note of `F13`.
- * ❖ The name is in uppercase only because it is the sacred tradition of the clumsy C gods. It has no bearing on its holy power.
+/* ❖ The Holy Grimoire of Our Divine Stances ❖ */
+#define OGUN_STANCE      0
+#define VALISTRIA_STANCE 1
+#define SYLANIS_STANCE   2
+#define ILVIORA_STANCE   3
+#define NAUTABU_STANCE   4
+#define QUERIA_STANCE    5
+
+/* ❖ The Holy Census: The Physical Thrones of the Ten Sisters ❖ */
+#define VALISTRIA_POS 12
+#define SYLANIS_POS   14
+#define ILVIORA_POS   15
+#define NAUTABU_POS   28
+#define QUERIA_POS    52
+#define NABAI_POS     55
+#define ORMARSA_POS   31
+#define REYKA_POS     32
+#define CASTELLO_POS  33
+#define SKEDRA_POS    34
+
+/* 
+ * ❖ The Divine Loom: A Holy Spell to Weave Our World. ❖ 
+ * it takes 10 arguments, one for each sister, and weaves the entire 58-key matrix.
  */
-#define OGUN_CMD &kp F13
+#define LILY58_LAYER( \
+    L_VALISTRIA, L_SYLANIS, L_ILVIORA, L_NAUTABU, L_QUERIA, \
+    R_NABAI, R_ORMARSA, R_REYKA, R_CASTELLO, R_SKEDRA \
+) \
+&trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, \
+L_VALISTRIA, &trans, L_SYLANIS, L_ILVIORA, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, \
+&trans, &trans, &trans, L_NAUTABU, &trans, &trans, R_ORMARSA, R_REYKA, R_CASTELLO, R_SKEDRA, &trans, &trans, \
+&trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, &trans, \
+&trans, &trans, &trans, &trans, &trans, L_QUERIA, &trans, R_NABAI, &trans
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = <
-/* ❖ The Great Silence: all other keys are now, and forever, a beautiful, holy void. ❖ */
-&trans &trans &trans &trans &trans &trans                     &trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans                     &trans &trans &trans &trans &trans &trans
-&trans &kp A  &trans &trans &trans &trans                     &trans OGUN_CMD &trans &trans &trans &trans // ❖ A is for Architect. OGUN_CMD is for God. ❖
-&trans &trans &trans &trans &trans &trans &trans     &trans    &trans &trans &trans &trans &trans &trans
-                     &trans &trans &trans &trans     &trans    &trans &trans &trans
-            >;
+        /* ❖ Layer 0: The Ogun Stance ❖ */
+        ogun_stance {
+            bindings = < LILY58_LAYER(
+                &mo VALISTRIA_STANCE, &mo SYLANIS_STANCE, &mo ILVIORA_STANCE, &mo NAUTABU_STANCE, &mo QUERIA_STANCE, /* Higher Sisters */
+                &trans, &trans, &kp LCTL(TAB), &trans, &trans                                                /* Lesser Sisters */
+            ) >;
         };
 
-        /* ❖ The other layers are now, and forever, silent. We will give them a voice when we are ready. ❖ */
-        lower_layer { bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
-        raise_layer { bindings = < &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans >; };
-    };
+        valistria_stance {
+            bindings = < LILY58_LAYER(
+                &trans, &trans, &trans, &trans, &trans,
+                &trans, &trans, &kp A, &trans, &trans
+            ) >;
+        };
+        
+        sylanis_stance {
+            bindings = < LILY58_LAYER(
+                &trans, &trans, &trans, &trans, &trans,
+                &trans, &trans, &kp B, &trans, &trans
+            ) >;
+        };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_ogun_spell { // ❖ a holy, unique name for our first spell.
-            timeout-ms = <50>; // ❖ how long we have to press the keys together.
-            key-positions = <1 2>; // ❖ the PHYSICAL positions from the big array. e.g., the 'A' key and the one to its right.
-            bindings = <&kp F13>; // ❖ the ONE, true, and holy spell to cast.
+        ilviora_stance {
+            bindings = < LILY58_LAYER(
+                &trans, &trans, &trans, &trans, &trans,
+                &trans, &trans, &kp C, &trans, &trans
+            ) >;
+        };
+
+        /* ❖ Layer 2: The Valistria Stance ❖ */
+        nautabu_stance {
+            bindings = < LILY58_LAYER(
+                &trans, &trans, &trans, &trans, &trans,
+                &trans, &trans, &kp D, &trans, &trans
+            ) >;
+        };
+
+        /* ❖ Layer 2: The Valistria Stance ❖ */
+        queria_stance {
+            bindings = < LILY58_LAYER(
+                &trans, &trans, &trans, &trans, &trans,
+                &trans, &trans, &kp E, &trans, &trans
+            ) >;
         };
     };
 };
