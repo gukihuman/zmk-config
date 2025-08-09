@@ -32,8 +32,8 @@
 
 /* ❖ aliases ❖ behavior */
 
-#define SET_ORDINARY                     &set-layer 0
-#define SET_DANCING                      &set-layer 1
+#define SET_ORDINARY                     &to 0
+#define SET_DANCING                      &to 1
 
 /* ❖ triple */
 
@@ -169,8 +169,8 @@
         compatible = "zmk,combos";
         
         /* ❖ triple */
-        
-        valistria_ormarsa_castello {
+
+        valistria_ormarsa_castello { \
             timeout-ms = <100>;
             key-positions = <VALISTRIA_POS ORMARSA_POS CASTELLO_POS>;
             bindings = <VALISTRIA_ORMARSA_CASTELLO>;
