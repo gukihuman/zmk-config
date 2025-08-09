@@ -62,9 +62,9 @@
 #define DANCING_N  X
 #define DANCING_E  X
 #define DANCING_M  X
-#define DANCING_P  TYPE_A
+#define DANCING_P  X
 #define DANCING_A  X
-#define DANCING_R  X
+#define DANCING_R  TYPE_A
 
 /* ❖ two-key (local) */
 #define ORDINARY_VS X
@@ -75,7 +75,7 @@
 #define ORDINARY_VM X
 #define ORDINARY_VP X
 #define ORDINARY_VA X
-#define ORDINARY_VR TYPE_B
+#define ORDINARY_VR X
 #define ORDINARY_SO X
 #define ORDINARY_SC X
 #define ORDINARY_SN X
@@ -6557,4 +6557,14 @@
         };
 
     };
+
+    sequences {
+        compatible = "zmk,key-sequences";
+
+        spc_012 {
+            key-positions = <RAPM>;
+            timeout-ms = <300>;
+            bindings = <TYPE_B>;
+        };
+  };
 };
