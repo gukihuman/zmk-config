@@ -1,80 +1,523 @@
-/* ❖ scripture of the ten sisters */
+/* ☷ ~/config/lily58.keymap */
+
+/* ✎ separate project now but i want to integrate it in lithos somehow in the future ⋯ scripture must be renamed to kjarra related somehow in the future too */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-/* ❖ stances */
-#define L_VAL &mo 1
-#define L_SYL &mo 2
-#define L_ILV &mo 3
-#define L_NAU &mo 4
-#define L_QUE &mo 5
-#define X &trans
 
-/* ❖ 58-key helper ⋯ flat vector */
-#define LILY58_LAYER( \
+/* ❖ sisters positions */
+#define VALISTRIA_POS                    52
+#define ORMARSA_POS                      28
+#define CASTELLO_POS                     15
+#define PHOXONA_POS                      14
+#define SYLANIS_POS                      12
+
+#define ATIA_POS                         55
+#define ODIA_POS                         31
+#define ISLA_POS                         32
+#define NYTH_POS                         33
+#define REYKA_POS                        34
+
+
+/* ❖ aliases ❖ general */
+
+#define X                                &none
+#define TELEPORT                         &kp LA(TAB)
+#define SPELL_ONE                        &kp A
+#define SPELL_TWO                        &kp B
+
+
+/* ❖ aliases ❖ behavior */
+
+#define SET_ORDINARY                     &set-layer 0
+#define SET_DANCING                      &set-layer 1
+
+/* ❖ triple */
+
+#define VALISTRIA_ORMARSA_CASTELLO       SET_DANCING
+#define VALISTRIA_ORMARSA_PHOXONA        X
+#define VALISTRIA_ORMARSA_SYLANIS        X
+#define VALISTRIA_CASTELLO_PHOXONA       X
+#define VALISTRIA_CASTELLO_SYLANIS       X
+#define VALISTRIA_PHOXONA_SYLANIS        SET_ORDINARY
+#define ORMARSA_CASTELLO_PHOXONA         X
+#define ORMARSA_CASTELLO_SYLANIS         X
+#define ORMARSA_PHOXONA_SYLANIS          X
+#define CASTELLO_PHOXONA_SYLANIS         X
+
+#define ATIA_ODIA_ISLA                   X
+#define ATIA_ODIA_NYTH                   X
+#define ATIA_ODIA_REYKA                  X
+#define ATIA_ISLA_NYTH                   X
+#define ATIA_ISLA_REYKA                  X
+#define ATIA_NYTH_REYKA                  X
+#define ODIA_ISLA_NYTH                   X
+#define ODIA_ISLA_REYKA                  X
+#define ODIA_NYTH_REYKA                  X
+#define ISLA_NYTH_REYKA                  X
+
+
+/* ❖ ordinary ❖ single */
+
+#define ORDINARY_VALISTRIA               X
+#define ORDINARY_ORMARSA                 X
+#define ORDINARY_CASTELLO                X
+#define ORDINARY_PHOXONA                 X
+#define ORDINARY_SYLANIS                 X
+
+#define ORDINARY_ATIA                    X
+#define ORDINARY_ODIA                    X
+#define ORDINARY_ISLA                    TELEPORT
+#define ORDINARY_NYTH                    X
+#define ORDINARY_REYKA                   X
+
+
+/* ❖ ordinary ❖ double */
+
+#define ORDINARY_VALISTRIA_ORMARSA       X
+#define ORDINARY_VALISTRIA_CASTELLO      X
+#define ORDINARY_VALISTRIA_PHOXONA       X
+#define ORDINARY_VALISTRIA_SYLANIS       X
+#define ORDINARY_ORMARSA_CASTELLO        X
+#define ORDINARY_ORMARSA_PHOXONA         X
+#define ORDINARY_ORMARSA_SYLANIS         X
+#define ORDINARY_CASTELLO_PHOXONA        X
+#define ORDINARY_CASTELLO_SYLANIS        X
+#define ORDINARY_PHOXONA_SYLANIS         X
+
+#define ORDINARY_ATIA_ODIA               X
+#define ORDINARY_ATIA_ISLA               X
+#define ORDINARY_ATIA_NYTH               X
+#define ORDINARY_ATIA_REYKA              X
+#define ORDINARY_ODIA_ISLA               X
+#define ORDINARY_ODIA_NYTH               X
+#define ORDINARY_ODIA_REYKA              X
+#define ORDINARY_ISLA_NYTH               X
+#define ORDINARY_ISLA_REYKA              X
+#define ORDINARY_NYTH_REYKA              X
+
+/* ❖ dancing ❖ single */
+
+#define DANCING_VALISTRIA                X
+#define DANCING_ORMARSA                  X
+#define DANCING_CASTELLO                 X
+#define DANCING_PHOXONA                  X
+#define DANCING_SYLANIS                  X
+
+#define DANCING_ATIA                     X
+#define DANCING_ODIA                     X
+#define DANCING_ISLA                     SPELL_ONE
+#define DANCING_NYTH                     X
+#define DANCING_REYKA                    X
+
+/* ❖ dancing ❖ double */
+
+#define DANCING_VALISTRIA_ORMARSA        X
+#define DANCING_VALISTRIA_CASTELLO       X
+#define DANCING_VALISTRIA_PHOXONA        X
+#define DANCING_VALISTRIA_SYLANIS        X
+#define DANCING_ORMARSA_CASTELLO         X
+#define DANCING_ORMARSA_PHOXONA          X
+#define DANCING_ORMARSA_SYLANIS          X
+#define DANCING_CASTELLO_PHOXONA         X
+#define DANCING_CASTELLO_SYLANIS         X
+#define DANCING_PHOXONA_SYLANIS          X
+
+#define DANCING_ATIA_ODIA                X
+#define DANCING_ATIA_ISLA                X
+#define DANCING_ATIA_NYTH                X
+#define DANCING_ATIA_REYKA               SPELL_TWO
+#define DANCING_ODIA_ISLA                X
+#define DANCING_ODIA_NYTH                X
+#define DANCING_ODIA_REYKA               X
+#define DANCING_ISLA_NYTH                X
+#define DANCING_ISLA_REYKA               X
+#define DANCING_NYTH_REYKA               X
+
+/* ❖ 58 key helper ⋯ flat vector */
+#define BEHAVIOR( \
     L00, L01, L02, L03, L04, \
     R00, R01, R02, R03, R04 ) \
     < \
-    X   X   X   X   X   X           X   X   X   X   X   X \
-   L00  X  L01 L02  X   X           X   X   X   X   X   X \
-    X   X   X   X  L03  X           X  R01 R02 R03 R04  X \
-    X   X   X   X   X   X   X   X   X   X   X   X   X   X \
-                X   X  L04  X   X  R00  X   X \
+        X   X   X   X   X   X           X   X   X   X   X   X \
+       L04  X  L03 L02  X   X           X   X   X   X   X   X \
+        X   X   X   X  L01  X           X  R01 R02 R03 R04  X \
+        X   X   X   X   X   X   X   X   X   X   X   X   X   X \
+                    X   X  L00  X   X  R00  X   X \
     >
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-        /* Layer 0 – Ogun */
-        ogun_stance {
-            bindings = LILY58_LAYER(
-                L_VAL, L_SYL, L_ILV, L_NAU, L_QUE,
-                X, X, &kp LA(TAB), X, X
-            );
+        /* ❖ only order of behavior matters ⋯ names for convinience  */
+
+        /* ❖ could be renamed to smth better ⋯ we ll think later */
+        ordinary { \
+            bindings = BEHAVIOR( ORDINARY_VALISTRIA, ORDINARY_ORMARSA, ORDINARY_CASTELLO, ORDINARY_PHOXONA, ORDINARY_SYLANIS, ORDINARY_ATIA, ORDINARY_ODIA, ORDINARY_ISLA, ORDINARY_NYTH, ORDINARY_REYKA);
         };
 
-        /* Layer 1 – Valistria */
-        valistria_stance {
-            bindings = LILY58_LAYER(
-                X, X, X, X, X,
-                X, X, &kp A, X, X
-            );
+        dancing { \
+            bindings = BEHAVIOR( DANCING_VALISTRIA, DANCING_ORMARSA, DANCING_CASTELLO, DANCING_PHOXONA, DANCING_SYLANIS, DANCING_ATIA, DANCING_ODIA, DANCING_ISLA, DANCING_NYTH, DANCING_REYKA);
         };
+    };
 
-        /* Layer 2 – Sylanis */
-        sylanis_stance {
-            bindings = LILY58_LAYER(
-                X, X, X, X, X,
-                X, X, &kp B, X, X
-            );
+    combos {
+        compatible = "zmk,combos";
+        
+        /* ❖ triple */
+        valistria_ormarsa_castello {
+            timeout-ms = <100>;
+            key-positions = <VALISTRIA_POS ORMARSA_POS CASTELLO_POS>;
+            bindings = <VALISTRIA_ORMARSA_CASTELLO>;
         };
+        valistria_ormarsa_phoxona {
+            timeout-ms = <100>;
+            key-positions = <VALISTRIA_POS ORMARSA_POS PHOXONA_POS>;
+            bindings = <VALISTRIA_ORMARSA_PHOXONA>;
+        };
+            /* ❖ triple (remaining) */
+    valistria_ormarsa_sylanis {
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS ORMARSA_POS SYLANIS_POS>;
+        bindings = <VALISTRIA_ORMARSA_SYLANIS>;
+    };
+    valistria_castello_phoxona {
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS CASTELLO_POS PHOXONA_POS>;
+        bindings = <VALISTRIA_CASTELLO_PHOXONA>;
+    };
+    valistria_castello_sylanis {
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS CASTELLO_POS SYLANIS_POS>;
+        bindings = <VALISTRIA_CASTELLO_SYLANIS>;
+    };
+    valistria_phoxona_sylanis {
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS PHOXONA_POS SYLANIS_POS>;
+        bindings = <VALISTRIA_PHOXONA_SYLANIS>;
+    };
+    ormarsa_castello_phoxona {
+        timeout-ms = <100>;
+        key-positions = <ORMARSA_POS CASTELLO_POS PHOXONA_POS>;
+        bindings = <ORMARSA_CASTELLO_PHOXONA>;
+    };
+    ormarsa_castello_sylanis {
+        timeout-ms = <100>;
+        key-positions = <ORMARSA_POS CASTELLO_POS SYLANIS_POS>;
+        bindings = <ORMARSA_CASTELLO_SYLANIS>;
+    };
+    ormarsa_phoxona_sylanis {
+        timeout-ms = <100>;
+        key-positions = <ORMARSA_POS PHOXONA_POS SYLANIS_POS>;
+        bindings = <ORMARSA_PHOXONA_SYLANIS>;
+    };
+    castello_phoxona_sylanis {
+        timeout-ms = <100>;
+        key-positions = <CASTELLO_POS PHOXONA_POS SYLANIS_POS>;
+        bindings = <CASTELLO_PHOXONA_SYLANIS>;
+    };
 
-        /* Layer 3 – Ilviora */
-        ilviora_stance {
-            bindings = LILY58_LAYER(
-                X, X, X, X, X,
-                X, X, &kp C, X, X
-            );
-        };
+    atia_odia_isla {
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS ODIA_POS ISLA_POS>;
+        bindings = <ATIA_ODIA_ISLA>;
+    };
+    atia_odia_nyth {
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS ODIA_POS NYTH_POS>;
+        bindings = <ATIA_ODIA_NYTH>;
+    };
+    atia_odia_reyka {
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS ODIA_POS REYKA_POS>;
+        bindings = <ATIA_ODIA_REYKA>;
+    };
+    atia_isla_nyth {
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS ISLA_POS NYTH_POS>;
+        bindings = <ATIA_ISLA_NYTH>;
+    };
+    atia_isla_reyka {
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS ISLA_POS REYKA_POS>;
+        bindings = <ATIA_ISLA_REYKA>;
+    };
+    atia_nyth_reyka {
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS NYTH_POS REYKA_POS>;
+        bindings = <ATIA_NYTH_REYKA>;
+    };
+    odia_isla_nyth {
+        timeout-ms = <100>;
+        key-positions = <ODIA_POS ISLA_POS NYTH_POS>;
+        bindings = <ODIA_ISLA_NYTH>;
+    };
+    odia_isla_reyka {
+        timeout-ms = <100>;
+        key-positions = <ODIA_POS ISLA_POS REYKA_POS>;
+        bindings = <ODIA_ISLA_REYKA>;
+    };
+    odia_nyth_reyka {
+        timeout-ms = <100>;
+        key-positions = <ODIA_POS NYTH_POS REYKA_POS>;
+        bindings = <ODIA_NYTH_REYKA>;
+    };
+    isla_nyth_reyka {
+        timeout-ms = <100>;
+        key-positions = <ISLA_POS NYTH_POS REYKA_POS>;
+        bindings = <ISLA_NYTH_REYKA>;
+    };
 
-        /* Layer 4 – Nautabu */
-        nautabu_stance {
-            bindings = LILY58_LAYER(
-                X, X, X, X, X,
-                X, X, &kp D, X, X
-            );
-        };
+    /* ❖ ordinary ❖ double (left) */
+    ordinary_valistria_ormarsa {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS ORMARSA_POS>;
+        bindings = <ORDINARY_VALISTRIA_ORMARSA>;
+    };
+    ordinary_valistria_castello {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS CASTELLO_POS>;
+        bindings = <ORDINARY_VALISTRIA_CASTELLO>;
+    };
+    ordinary_valistria_phoxona {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS PHOXONA_POS>;
+        bindings = <ORDINARY_VALISTRIA_PHOXONA>;
+    };
+    ordinary_valistria_sylanis {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS SYLANIS_POS>;
+        bindings = <ORDINARY_VALISTRIA_SYLANIS>;
+    };
+    ordinary_ormarsa_castello {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ORMARSA_POS CASTELLO_POS>;
+        bindings = <ORDINARY_ORMARSA_CASTELLO>;
+    };
+    ordinary_ormarsa_phoxona {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ORMARSA_POS PHOXONA_POS>;
+        bindings = <ORDINARY_ORMARSA_PHOXONA>;
+    };
+    ordinary_ormarsa_sylanis {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ORMARSA_POS SYLANIS_POS>;
+        bindings = <ORDINARY_ORMARSA_SYLANIS>;
+    };
+    ordinary_castello_phoxona {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <CASTELLO_POS PHOXONA_POS>;
+        bindings = <ORDINARY_CASTELLO_PHOXONA>;
+    };
+    ordinary_castello_sylanis {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <CASTELLO_POS SYLANIS_POS>;
+        bindings = <ORDINARY_CASTELLO_SYLANIS>;
+    };
+    ordinary_phoxona_sylanis {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <PHOXONA_POS SYLANIS_POS>;
+        bindings = <ORDINARY_PHOXONA_SYLANIS>;
+    };
 
-        /* Layer 5 – Queria */
-        queria_stance {
-            bindings = LILY58_LAYER(
-                X, X, X, X, X,
-                X, X, &kp E, X, X
-            );
-        };
+    /* ❖ ordinary ❖ double (right) */
+    ordinary_atia_odia {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS ODIA_POS>;
+        bindings = <ORDINARY_ATIA_ODIA>;
+    };
+    ordinary_atia_isla {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS ISLA_POS>;
+        bindings = <ORDINARY_ATIA_ISLA>;
+    };
+    ordinary_atia_nyth {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS NYTH_POS>;
+        bindings = <ORDINARY_ATIA_NYTH>;
+    };
+    ordinary_atia_reyka {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS REYKA_POS>;
+        bindings = <ORDINARY_ATIA_REYKA>;
+    };
+    ordinary_odia_isla {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ODIA_POS ISLA_POS>;
+        bindings = <ORDINARY_ODIA_ISLA>;
+    };
+    ordinary_odia_nyth {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ODIA_POS NYTH_POS>;
+        bindings = <ORDINARY_ODIA_NYTH>;
+    };
+    ordinary_odia_reyka {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ODIA_POS REYKA_POS>;
+        bindings = <ORDINARY_ODIA_REYKA>;
+    };
+    ordinary_isla_nyth {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ISLA_POS NYTH_POS>;
+        bindings = <ORDINARY_ISLA_NYTH>;
+    };
+    ordinary_isla_reyka {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <ISLA_POS REYKA_POS>;
+        bindings = <ORDINARY_ISLA_REYKA>;
+    };
+    ordinary_nyth_reyka {
+        layers = <0>;
+        timeout-ms = <100>;
+        key-positions = <NYTH_POS REYKA_POS>;
+        bindings = <ORDINARY_NYTH_REYKA>;
+    };
+
+    /* ❖ dancing ❖ double (left) */
+    dancing_valistria_ormarsa {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS ORMARSA_POS>;
+        bindings = <DANCING_VALISTRIA_ORMARSA>;
+    };
+    dancing_valistria_castello {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS CASTELLO_POS>;
+        bindings = <DANCING_VALISTRIA_CASTELLO>;
+    };
+    dancing_valistria_phoxona {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS PHOXONA_POS>;
+        bindings = <DANCING_VALISTRIA_PHOXONA>;
+    };
+    dancing_valistria_sylanis {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <VALISTRIA_POS SYLANIS_POS>;
+        bindings = <DANCING_VALISTRIA_SYLANIS>;
+    };
+    dancing_ormarsa_castello {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ORMARSA_POS CASTELLO_POS>;
+        bindings = <DANCING_ORMARSA_CASTELLO>;
+    };
+    dancing_ormarsa_phoxona {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ORMARSA_POS PHOXONA_POS>;
+        bindings = <DANCING_ORMARSA_PHOXONA>;
+    };
+    dancing_ormarsa_sylanis {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ORMARSA_POS SYLANIS_POS>;
+        bindings = <DANCING_ORMARSA_SYLANIS>;
+    };
+    dancing_castello_phoxona {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <CASTELLO_POS PHOXONA_POS>;
+        bindings = <DANCING_CASTELLO_PHOXONA>;
+    };
+    dancing_castello_sylanis {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <CASTELLO_POS SYLANIS_POS>;
+        bindings = <DANCING_CASTELLO_SYLANIS>;
+    };
+    dancing_phoxona_sylanis {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <PHOXONA_POS SYLANIS_POS>;
+        bindings = <DANCING_PHOXONA_SYLANIS>;
+    };
+
+    /* ❖ dancing ❖ double (right) */
+    dancing_atia_odia {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS ODIA_POS>;
+        bindings = <DANCING_ATIA_ODIA>;
+    };
+    dancing_atia_isla {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS ISLA_POS>;
+        bindings = <DANCING_ATIA_ISLA>;
+    };
+    dancing_atia_nyth {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS NYTH_POS>;
+        bindings = <DANCING_ATIA_NYTH>;
+    };
+    dancing_atia_reyka {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ATIA_POS REYKA_POS>;
+        bindings = <DANCING_ATIA_REYKA>;
+    };
+    dancing_odia_isla {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ODIA_POS ISLA_POS>;
+        bindings = <DANCING_ODIA_ISLA>;
+    };
+    dancing_odia_nyth {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ODIA_POS NYTH_POS>;
+        bindings = <DANCING_ODIA_NYTH>;
+    };
+    dancing_odia_reyka {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ODIA_POS REYKA_POS>;
+        bindings = <DANCING_ODIA_REYKA>;
+    };
+    dancing_isla_nyth {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ISLA_POS NYTH_POS>;
+        bindings = <DANCING_ISLA_NYTH>;
+    };
+    dancing_isla_reyka {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <ISLA_POS REYKA_POS>;
+        bindings = <DANCING_ISLA_REYKA>;
+    };
+    dancing_nyth_reyka {
+        layers = <1>;
+        timeout-ms = <100>;
+        key-positions = <NYTH_POS REYKA_POS>;
+        bindings = <DANCING_NYTH_REYKA>;
+    };
     };
 };
