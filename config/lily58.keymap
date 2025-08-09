@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-/* ❖ aliases ❖ general */
+/* ❖ general */
 #define X &none
 #define TIMEOUT 50
 
@@ -23,12 +23,14 @@
                     X   X   N   X   X   E   X   X \
     >
 
-/* ❖ aliases ❖ behavior */
+/* ❖ spells */
+#define TELEPORT &kp LA(TAB)
+#define TYPE_A &kp A
+#define TYPE_B &kp B
+
+/* ❖ behavior */
 #define SET_ORDINARY &to 0
 #define SET_DANCING  &to 1
-
-/* ❖ aliases ❖ spells */
-#define TELEPORT &kp LA(TAB)
 
 /* ❖ sisters positions */
 #define V_POS  12 // valistria
@@ -42,8 +44,7 @@
 #define A_POS  33 // atia
 #define R_POS  34 // reyka
 
-/* ❖ aliases ❖ combo actions */
-/* ❖ single-key aliases (local) */
+/* ❖ single-key (local) */
 #define ORDINARY_V X
 #define ORDINARY_S X
 #define ORDINARY_O X
@@ -58,14 +59,14 @@
 #define DANCING_S  X
 #define DANCING_O  X
 #define DANCING_C  X
-#define DANCING_N  &kp A
+#define DANCING_N  X
 #define DANCING_E  X
 #define DANCING_M  X
-#define DANCING_P  X
+#define DANCING_P  TYPE_A
 #define DANCING_A  X
 #define DANCING_R  X
 
-/* ❖ two-key aliases (local) */
+/* ❖ two-key (local) */
 #define ORDINARY_VS X
 #define ORDINARY_VO X
 #define ORDINARY_VC X
@@ -74,7 +75,7 @@
 #define ORDINARY_VM X
 #define ORDINARY_VP X
 #define ORDINARY_VA X
-#define ORDINARY_VR X
+#define ORDINARY_VR TYPE_B
 #define ORDINARY_SO X
 #define ORDINARY_SC X
 #define ORDINARY_SN X
@@ -104,7 +105,7 @@
 #define ORDINARY_EM X
 #define ORDINARY_EP X
 #define ORDINARY_EA X
-#define ORDINARY_ER &kp B
+#define ORDINARY_ER X
 #define ORDINARY_MP X
 #define ORDINARY_MA X
 #define ORDINARY_MR X
@@ -157,7 +158,7 @@
 #define DANCING_PR  X
 #define DANCING_AR  X
 
-/* ❖ 3-key aliases (global) */
+/* ❖ 3-key (global) */
 #define VSO X
 #define VSC X
 #define VSN X
@@ -194,8 +195,8 @@
 #define VPA X
 #define VPR X
 #define VAR X
-#define SOC X
-#define SON X
+#define SOC SET_DANCING
+#define SON SET_ORDINARY
 #define SOE X
 #define SOM X
 #define SOP X
@@ -279,7 +280,7 @@
 #define MAR X
 #define PAR X
 
-/* ❖ 4-key aliases (global) */
+/* ❖ 4-key (global) */
 #define VSOC X
 #define VSON X
 #define VSOE X
@@ -491,7 +492,7 @@
 #define EPAR X
 #define MPAR X
 
-/* ❖ 5-key aliases (global) */
+/* ❖ 5-key (global) */
 #define VSOCN X
 #define VSOCE X
 #define VSOCM X
@@ -745,7 +746,7 @@
 #define NMPAR X
 #define EMPAR X
 
-//* ❖ 6-key aliases (global) */
+//* ❖ 6-key (global) */
 #define VSOCNE X
 #define VSOCNM X
 #define VSOCNP X
@@ -957,7 +958,7 @@
 #define CEMPAR X
 #define NEMPAR X
 
-/* ❖ 7-key aliases (global) */
+/* ❖ 7-key (global) */
 #define VSOCNEM X
 #define VSOCNEP X
 #define VSOCNEA X
@@ -1079,7 +1080,7 @@
 #define ONEMPAR X
 #define CNEMPAR X
 
-/* ❖ 8-key aliases (global) */
+/* ❖ 8-key (global) */
 #define VSOCNEMP X
 #define VSOCNEMA X
 #define VSOCNEMR X
@@ -1126,7 +1127,7 @@
 #define SCNEMPAR X
 #define OCNEMPAR X
 
-/* ❖ 9-key aliases (global) */
+/* ❖ 9-key (global) */
 #define VSOCNEMPA X
 #define VSOCNEMPR X
 #define VSOCNEMAR X
@@ -1138,7 +1139,7 @@
 #define VOCNEMPAR X
 #define SOCNEMPAR X
 
-/* ❖ 10-key aliases (global) */
+/* ❖ 10-key (global) */
 #define VSOCNEMPAR X
 
 / {
