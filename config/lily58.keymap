@@ -6562,7 +6562,7 @@
         compatible = "zmk,key-sequences";
 
         spc_012 {
-            key-positions = <RAPM>;
+            key-positions = <R_POS A_POS P_POS M_POS>;
             timeout-ms = <300>;
             bindings = <TYPE_B>;
         };
