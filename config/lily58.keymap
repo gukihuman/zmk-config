@@ -9,7 +9,7 @@
 
 /* ❖ general */
 #define X &none
-#define TIMEOUT 40
+#define TIMEOUT 80
 
 /* ❖ sisters positions */
 #define S_POS  13    // sylanis
@@ -147,7 +147,7 @@
 #define DANCING_SL  X
 #define DANCING_ST  KP_D
 #define DANCING_SA  X
-#define DANCING_SO  X
+#define DANCING_SO  KP_BACKSPACE
 #define DANCING_SV  X
 #define DANCING_SI  X
 #define DANCING_SE  X
@@ -162,7 +162,7 @@
 #define DANCING_CL  KP_N
 #define DANCING_CT  KP_F
 #define DANCING_CA  X
-#define DANCING_CO  KP_BACKSPACE
+#define DANCING_CO  X
 #define DANCING_CV  KP_B
 #define DANCING_CI  X
 #define DANCING_CE  X
@@ -189,7 +189,7 @@
 #define DANCING_IE  X
 
 /* ❖ 3-key aliases (global) */
-#define SRC KP_ESCAPE
+#define SRC X
 #define SRL X
 #define SRT X
 #define SRA X
@@ -204,7 +204,7 @@
 #define SCV X
 #define SCI X
 #define SCE X
-#define SLT X
+#define SLT SET_ORDINARY
 #define SLA X
 #define SLO X
 #define SLV X
@@ -225,7 +225,7 @@
 #define SVI X
 #define SVE X
 #define SIE X
-#define RCL SET_ORDINARY
+#define RCL KP_ESCAPE
 #define RCT X
 #define RCA X
 #define RCO X
@@ -305,10 +305,10 @@
 #define AVI X
 #define AVE X
 #define AIE X
-#define OVI X
+#define OVI KP_ENTER
 #define OVE X
 #define OIE X
-#define VIE KP_ENTER
+#define VIE X
 
 /* ❖ 4-key aliases (global) */
 #define SRCL X
