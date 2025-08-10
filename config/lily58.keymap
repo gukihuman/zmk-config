@@ -9,7 +9,7 @@
 
 /* ❖ general */
 #define XX &none
-#define TIMEOUT 100
+#define TIMEOUT 50
 
 /* ❖ sisters positions */
 #define S_POS  13    // sylanis
