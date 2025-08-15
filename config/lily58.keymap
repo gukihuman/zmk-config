@@ -244,10 +244,10 @@
 
         layer_0 {
             bindings = <
-_ESC _LCT _W__ _LSH _D__ _DEL           _TAB _U__ _RSH _B__ _RCT _ENT
+_ESC _LCT _K__ _LSH _D__ _DEL           _TAB _U__ _RSH _Z__ _RCT _ENT
 _LAL _C__ _BSP _M__ _T__ _EQL           _DOT _E__ _X__ _SPC _G__ _RAL
-_N__ _V__ _F__ _K__ _DWN _UP_           _LFT _RGT _Z__ _P__ _Q__ _I__
-_H__ _L__ _LBR _LBK _LPR _NUM _MOR _RU_ _RUP _RPR _RBK _RBR _J__ _Y__
+_H__ _L__ _F__ _W__ _DWN _UP_           _LFT _RGT _B__ _P__ _Y__ _I__
+_N__ _V__ _LBR _LBK _LPR _NUM _MOR _RU_ _RUP _RPR _RBK _RBR _J__ _Q__
                 _LGU _LT_ _S__ _R__ _A__ _O__ _GT_ _RGU
             >;
         };
