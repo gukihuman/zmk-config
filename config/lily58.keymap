@@ -57,7 +57,7 @@
 // _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
 // _oo_ ____ ____ ____ ____  EQ            DOT  ____ ____ ____ ____ _oo_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
-// ____ ____ LBRC LBKT LPAR _oo_ _oo_ _oo_ _oo_ RPAR RBKT LBRC ____ ____
+// ____ ____ LBRC LBKT LPAR _oo_ _oo_ _oo_ _oo_ RPAR RBKT RBRC ____ ____
 //                _oo_  LT  ____ ____ ____ ____  GT  _oo_   
 
 #define DOT      &kp DOT       // .
@@ -242,17 +242,17 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 { \
+        layer_0 {
             bindings = < \
 ESC  LCTL BSPC LSHF  D   DEL            TAB   U   RSHF  B   RCTL ENTR \
 LALT  C    W    M    T    EQ            DOT   E    X   SPC   G   RALT \
  N    V    F    K   DOWN  UP            LEFT RGHT  Z    P    Q    I   \
- H    L   LBRC LBKT LPAR NUMB MORE  RU  RUUP RPAR RBKT LBRC  J    Y   \
+ H    L   LBRC LBKT LPAR NUMB MORE  RU  RUUP RPAR RBKT RBRC  J    Y   \
                LGUI  LT   S    R    A    O    GT  RGUI \
             >;
         };
 
-        layer_1_numbers { \
+        layer_1_numbers {
             bindings = < \
 _oo_  N2  _oo_  N1  ____ _oo_           _oo_ ____  N5  ____  N6  _oo_ \
  N3  ____ ____ ____ ____ ____           ____ ____ ____ ____ ____  N7  \
@@ -262,7 +262,7 @@ ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____ \
             >;
         };
 
-        layer_2_more { \
+        layer_2_more {
             bindings = < \
 ____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
 ____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
@@ -272,7 +272,7 @@ ____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ ____ ____ \
             >;
         };
 
-        layer_3_ru { \
+        layer_3_ru {
             bindings = < \
 ____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
 ____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
@@ -282,7 +282,7 @@ ____ ____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ ____ \
             >;
         };
 
-        layer_4_ru_uppercase { \
+        layer_4_ru_uppercase {
             bindings = < \
 ____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
 ____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
