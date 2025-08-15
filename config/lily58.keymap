@@ -1,208 +1,294 @@
-/* ☷ ~/config/lily58.keymap */
-
-/* ✎ separate project now but i want to integrate it in lithos somehow in the future ⋯ scripture must be renamed to kjarra related somehow in the future too */
-
+/<> ☷ ~/config/lily58.keymap <>/
+/<> ✎ separate project now but i want to integrate it in lithos somehow in the future ⋯ scripture must be renamed to kjarra related somehow in the future too <>/
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-// ______ ______ ______ 3      ______ ______               ______ ______ 8      ______ ______ ______
-// 12     13     14     15     16     17                   18     19     20     21     22     23
-// ______ 25     26     27     28     29                   30     31     32     33     34     ______
-// ______ ______ ______ 39     40     ______ ______ ______ ______ 45     46     47     ______ ______
-//                      ______ 51     52     ______ ______ 55     56  ______
+#define ____     &trans
+#define _oo_     &trans    // unavailable in layer
+#define _ww_     &trans    // to show what pressed in momentary layer
 
-#define ______  &none    // not pressable
-#define II      &none    // pressable
-#define IIIIII  &none    // currently pressed
-#define TIMEOUT 120      // timeout
+//////////////////////////////// positions /////////////////////////////
+//  0    1    2    3    4    5              6    7    8    9    10   11
+//  12   13   14   15   16   17             18   19   20   21   22   23
+//  24   25   26   27   28   29             30   31   32   33   34   35
+//  36   37   38   39   40   41   42   43   44   45   46   47   48   49
+//                 50   51   52   53   54   55   56   57
 
-#define D0      0        // default layer
-#define D1      1        // default middle left layer
-#define D2      2        // default middle right layer
-#define D3      3        // default pinky left layer
-#define D4      4        // default pinky right layer
+///////////////////////////////// fingers //////////////////////////////
+//  ::   ::   ::   ++   ++   ++             ++   ++   ++   ::   ::   ::
+//  <>   <>   ::   ::   ++   ++             ++   ++   ::   ::   <>   <> 
+//  **   **   <>   ::   ::   ++             ++   ::   ::   <>   **   ** 
+//  **   **   **   <>   ::   ##   ##   ##   ##   ::   <>   **   **   ** 
+//                 ##   ##   ##   ##   ##   ##   ##   ##
 
-#define I5      5        // input layer
-#define I6      6        // left middle input layer 
-#define I7      7        // right middle input layer 
-#define I8      8        // left pinky input layer
-#define I9      9        // right pinky input layer
+////////////////////////////// layer 0 system //////////////////////////
+// ESC  LCTL BSPC LSHF ____ DEL            TAB  ____ RSHF ____ RCTL ENTR
+// LALT ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ RALT
+// ____ ____ ____ ____ DOWN  UP            LEFT RGHT ____ ____ ____ ____
+// ____ ____ ____ ____ ____ NUMB MORE  RU  RUUP ____ ____ ____ ____ ____
+//                LGUI ____ ____ ____ ____ ____ ____  RGUI
 
-#define BS BACKSPACE     // backspace
-#define SP SPACE         // space
-#define LS LSFT          // left shift
-#define PL LPAR          // (
-#define PR RPAR          // )
-#define SL LBKT          // [
-#define SR RBKT          // ]
-#define CL LBRC          // {
-#define CR RBRC          // }
-#define UP UP            // arrow up
-#define DN DOWN          // arrow down
-#define LF LEFT          // arrow left
-#define RT RIGHT         // arrow right
-#define ES ESC           // escape
-#define DL DEL           // delete
-#define CM COMMA         // ,
-#define DT DOT           // .
-#define EX EXCL          // !
-#define QM QMARK         // ?
-#define TI TILDE         // ~
-#define SQ SQT           // '
-#define DQ DQT           // "
-#define GR GRAVE         // `
-#define LT LT            // <
-#define EQ EQL           // =
-#define GT GT            // >
-#define MN MINUS         // -
-#define PU PLUS          // +
-#define SE SEMI          // ;
-#define CO COLON         // :
-#define SF SLASH         // /
-#define SB BSLH          // \
-#define DR DLLR          // $
-#define CA CARET         // ^
-#define AN AMPS          // &
-#define OR PIPE          // |
-#define AS ASTRK         // *
-#define AT AT            // @
-#define UN UNDER         // _
-#define HS HASH          // #
-#define PC PRCNT         // %
+#define ESC      &kp ESCAPE
+#define LCTL     &kp LCTRL
+#define BSPC     &kp BACKSPACE
+#define LSHF     &kp LSHIFT
+#define DEL      &kp DELETE
+#define TAB      &kp TAB
+#define RSHF     &kp RSHIFT
+#define RCTL     &kp RCTRL
+#define ENTR     &kp ENTER
+#define LALT     &kp LALT
+#define RALT     &kp RALT
+#define DOWN     &kp DOWN
+#define UP       &kp UP
+#define LEFT     &kp LEFT
+#define RGHT     &kp RIGHT
+#define NUMB     &mt 1 N0
+#define MORE     &mo 2
+#define RU       &mo 3
+#define RUUP     &mo 4
+#define LGUI     &kp LGUI
+#define RGUI     &kp RGUI
+
+///////////////////// layer 0 typing non-alphabetical //////////////////
+// _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
+// _oo_ ____ ____ ____ ____  EQ            DOT  ____ ____ ____ ____ _oo_
+// ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
+// ____ ____ LBRC LBKT LPAR _oo_ _oo_ _oo_ _oo_ RPAR RBKT LBRC ____ ____
+//                _oo_  LT  ____ ____ ____ ____  GT  _oo_   
+
+#define DOT      &kp DOT       // .
+#define EQ       &kp EQUAL     // =
+#define LBRC     &kp LBRC      // {
+#define LBKT     &kp LBKT      // [
+#define LPAR     &kp LPAR      // (
+#define RPAR     &kp RPAR      // )
+#define RBKT     &kp RBKT      // ]
+#define RBRC     &kp RBRC      // }
+#define LT       &kp LT        // <
+#define GT       &kp GT        // >
+
+///////////////////// layer 0 typing alphabetical (27) /////////////////
+// _oo_ _oo_ _oo_ _oo_ (D)  _oo_           _oo_ (U)  _oo_  B   _oo_ _oo_
+// _oo_ [C]   W    M   (T)  _oo_           _oo_ (E)   X   SPC  [G]  _oo_
+//  N    V   [F]   K   _oo_ _oo_           _oo_ _oo_  Z   [P]   Q    I
+//  H    L   _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_  J    Y
+//                _oo_ _oo_  S    R    A    O   _oo_ _oo_   
+
+#define SPC      &kp SPACE
+#define A        &kp A
+#define B        &kp B
+#define C        &kp C
+#define D        &kp D
+#define E        &kp E
+#define F        &kp F
+#define G        &kp G
+#define H        &kp H
+#define I        &kp I
+#define J        &kp J
+#define K        &kp K
+#define L        &kp L
+#define M        &kp M
+#define N        &kp N
+#define O        &kp O
+#define P        &kp P
+#define Q        &kp Q
+#define R        &kp R
+#define S        &kp S
+#define T        &kp T
+#define U        &kp U
+#define V        &kp V
+#define W        &kp W
+#define X        &kp X
+#define Y        &kp Y
+#define Z        &kp Z
+
+///////////////////////// layer 1 typing numbers ///////////////////////
+// _oo_  N2  _oo_  N1  ____ _oo_           _oo_ ____  N5  ____  N6  _oo_
+//  N3  ____ ____ ____ ____ ____           ____ ____ ____ ____ ____  N7
+// ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
+//  N4  ____ ____ ____ ____ _ww_ _oo_ _oo_ _oo_ ____ ____ ____ ____  N9
+//                _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_   
+
+#define N1       &kp N1
+#define N2       &kp N2
+#define N3       &kp N3
+#define N4       &kp N4
+#define N5       &kp N5
+#define N6       &kp N6
+#define N7       &kp N7
+#define N8       &kp N8
+#define N9       &kp N9
+
+////////////////////////////// layer 2 more ////////////////////////////
+// _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
+// _oo_ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ _oo_
+// ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
+// ____ ____ ____ ____ ____ _oo_ _ww_ _oo_ _oo_ ____ ____ ____ ____ ____
+//                _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_   
+
+#define QMRK     &kp QMARK     // ?
+#define FSLH     &kp FSLH      // /
+#define DLLR     &kp DOLLAR    // $
+#define AND      &kp AMPERSAND // &
+#define OR       &kp PIPE      // |
+#define UNDR     &kp UNDER     // _
+#define GRAV     &kp GRAVE     // `
+#define COLN     &kp COLON     // :
+#define BSLH     &kp BSLH      // \
+#define MINS     &kp MINUS     // -
+#define COM      &kp COMMA     // ,
+#define EXCL     &kp EXCL      // !
+#define TILD     &kp TILDE     // ~
+#define SQT      &kp SQT       // '
+#define DQT      &kp DQT       // "
+#define PLUS     &kp PLUS      // +
+#define SEMI     &kp SEMICOLON // ;
+#define CART     &kp CARET     // ^
+#define ASTR     &kp ASTERISK  // *
+#define AT       &kp AT        // @
+#define HASH     &kp HASH      // #
+#define PRCN     &kp PERCENT   // %
+
+////////////////////////////// layer 3 ru (34) /////////////////////////
+// _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
+// _oo_ ____ ____ ____ ____ ____           _oo_ ____ ____ ____ ____ _oo_
+// ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
+// ____ ____ ____ ____ ____ _oo_ _oo_ _oo_ _oo_ ____ ____ ____ ____ ____
+//                _oo_ _oo_ ____ ____ ____ ____ _oo_ _oo_   
+
+// SPC used independently
+#define R_a      &text "а"
+#define R_b      &text "б"
+#define R_v      &text "в"
+#define R_g      &text "г"
+#define R_d      &text "д"
+#define R_e      &text "е"
+#define R_yo     &text "ё"
+#define R_zh     &text "ж"
+#define R_z      &text "з"
+#define R_i      &text "и"
+#define R_j      &text "й"
+#define R_k      &text "к"
+#define R_l      &text "л"
+#define R_m      &text "м"
+#define R_n      &text "н"
+#define R_o      &text "о"
+#define R_p      &text "п"
+#define R_r      &text "р"
+#define R_s      &text "с"
+#define R_t      &text "т"
+#define R_u      &text "у"
+#define R_f      &text "ф"
+#define R_h      &text "х"
+#define R_c      &text "ц"
+#define R_ch     &text "ч"
+#define R_sh     &text "ш"
+#define R_sc     &text "щ"
+#define R_hh     &text "ъ"
+#define R_y      &text "ы"
+#define R_x      &text "ь"
+#define R_ee     &text "э"
+#define R_yu     &text "ю"
+#define R_ya     &text "я"
+
+//////////////////////// layer 4 ru uppercase (33) /////////////////////
+// _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
+// _oo_ ____ ____ ____ ____ ____           _oo_ ____ ____ ____ ____ _oo_
+// ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
+// ____ ____ ____ ____ ____ _oo_ _oo_ _oo_ _oo_ ____ ____ ____ ____ ____
+//                _oo_ _oo_ ____ ____ ____ ____ _oo_ _oo_   
+
+// layout awaiting one `_oo_`: it depends on where SPC in ru goes
+
+#define R_A      &text "А"
+#define R_B      &text "Б"
+#define R_V      &text "В"
+#define R_G      &text "Г"
+#define R_D      &text "Д"
+#define R_E      &text "Е"
+#define R_YO     &text "Ё"
+#define R_ZH     &text "Ж"
+#define R_Z      &text "З"
+#define R_I      &text "И"
+#define R_J      &text "Й"
+#define R_K      &text "К"
+#define R_L      &text "Л"
+#define R_M      &text "М"
+#define R_N      &text "Н"
+#define R_O      &text "О"
+#define R_P      &text "П"
+#define R_R      &text "Р"
+#define R_S      &text "С"
+#define R_T      &text "Т"
+#define R_U      &text "У"
+#define R_F      &text "Ф"
+#define R_H      &text "Х"
+#define R_C      &text "Ц"
+#define R_CH     &text "Ч"
+#define R_SH     &text "Ш"
+#define R_SC     &text "Щ"
+#define R_HH     &text "Ъ"
+#define R_Y      &text "Ы"
+#define R_X      &text "Ь"
+#define R_EE     &text "Э"
+#define R_YU     &text "Ю"
+#define R_YA     &text "Я"
 
 / {
     keymap {
         compatible = "zmk,keymap";
 
-// ----------------------------------------- default -----------------------------------------------
-        default { \
-            bindings = default \
-______ ______ ______ &mo D1 ______ ______               ______ ______ &mo D2 ______ ______ ______ \
-&mo D3 II     II     II     II     II                   II     &tp    &to I5 II     II     &mo D4  \
-______ II     II     &kp DN &kp UP II                   II     &kp LF &kp LF II     II     ______ \
-______ ______ ______ II     II     ______ ______ ______ ______ II     II     ______ ______ ______ \
-                     ______ II     II     ______ ______ II     II     ______ \
-            >
-        };
-        
-        default_middle_left { \
+        layer_0 { \
             bindings = < \
-______ ______ ______ IIIIII ______ ______               ______ ______ ______ ______ ______ ______ \
-______ ______ ______ ______ &kp ES ______               II     II     II     II     II     ______ \
-______ ______ ______ ______ ______ ______               II     II     II     II     II     ______ \
-______ ______ ______ ______ ______ ______ ______ ______ ______ II     II     ______ ______ ______ \
-                     ______ ______ &kp DL ______ ______ II     II     ______ \
-            >
-        };
-        default_middle_right { \
-            bindings = < \
-______ ______ ______ ______ ______ ______               ______ ______ IIIIII ______ ______ ______ \
-______ II     II     II     II     II                   ______ &kp EN ______ ______ ______ ______ \
-______ II     II     II     II     II                   ______ ______ ______ ______ ______ ______ \
-______ ______ ______ II     II     ______ ______ ______ ______ ______ ______ ______ ______ ______ \
-                     ______ II     II     ______ ______ II     ______ ______ \
+ESC  LCTL BSPC LSHF  D   DEL            TAB   U   RSHF  B   RCTL ENTR \
+LALT  C    W    M    T    EQ            DOT   E    X   SPC   G   RALT \
+ N    V    F    K   DOWN  UP            LEFT RGHT  Z    P    Q    I   \
+ H    L   LBRC LBKT LPAR NUMB MORE  RU  RUUP RPAR RBKT LBRC  J    Y   \
+               LGUI  LT   S    R    A    O    GT  RGUI \
             >
         };
 
-        default_pinky_left { \
+        layer_1_numbers { \
             bindings = < \
-______ ______ ______ ______ ______ ______               ______ ______ ______ ______ ______ ______ \
-IIIIII ______ ______ ______ II     ______               II     II     II     II     II     ______ \
-______ ______ ______ ______ ______ ______               II     II     II     II     II     ______ \
-______ ______ ______ ______ ______ ______ ______ ______ ______ II     II     ______ ______ ______ \
-                     ______ ______ II     ______ ______ II     II     ______ \
-            >
-        };
-        default_pinky_right { \
-            bindings = < \
-______ ______ ______ ______ ______ ______               ______ ______ ______ ______ ______ ______ \
-______ II     II     II     II     II                   ______ &sften ______ ______ ______ IIIIII \
-______ II     II     II     II     II                   ______ ______ ______ ______ ______ ______ \
-______ ______ ______ II     II     ______ ______ ______ ______ ______ ______ ______ ______ ______ \
-                     ______ II     II     ______ ______ ______ II     ______ \
+_oo_  N2  _oo_  N1  ____ _oo_           _oo_ ____  N5  ____  N6  _oo_ \
+ N3  ____ ____ ____ ____ ____           ____ ____ ____ ____ ____  N7  \
+____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____ \
+ N4  ____ ____ ____ ____ _ww_ _oo_ _oo_ _oo_ ____ ____ ____ ____  N9  \
+               _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_   
             >
         };
 
-
-///////////////////////////////////////////// input ////////////////////////////////////////////////
-        input { \
+        layer_2_more { \
             bindings = < \
-______ ______ ______ &mo I6 ______ ______               ______ ______ &mo I7 ______ ______ ______ \
-&mo I8 &kp O  &kp G  &kp U  &kp X  &kp Z                &kp V  &kp F  &kp D  &kp B  &kp L  &mo I9 \
-______ &kp A  &kp P  &kp E  &kp I  &kp Q                &kp W  &kp S  &kp T  &kp C  &kp R  ______ \
-______ ______ ______ &kp G  &kp Y  ______ ______ ______ ______ &kp M  &kp K  ______ ______ ______ \
-                     ______ &kp LS &kp SP ______ ______ &kp N  &kp H  ______ \
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
+____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ ____ ____ \
+               ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ \
             >
         };
 
-        input_middle_left { \
+        layer_3_ru { \
             bindings = < \
-______ ______ ______ IIIIII ______ ______               ______ ______ ______ ______ ______ ______ \
-______ ______ ______ ______ &to D0 ______               II     &kp AS &kp DR &kp CA II     ______ \
-______ ______ ______ ______ ______ ______               II     &kp BS &kp BS &kp BS &kp BS ______ \
-______ ______ ______ ______ ______ ______ ______ ______ ______ &kp AT &kp UN ______ ______ ______ \
-                     ______ ______ &kp SB ______ ______ &kp OR II     ______ \
-            >
-        };
-        input_middle_right { \
-            bindings = < \
-______ ______ ______ ______ ______ ______               ______ ______ IIIIII ______ ______ ______ \
-______ II     &kp LT &kp EQ &kp GT II                   ______ &kp EN ______ ______ ______ ______ \
-______ &kp SP &kp SP &kp SP &kp SP II                   ______ ______ ______ ______ ______ ______ \
-______ ______ ______ &kp HS &kp PC ______ ______ ______ ______ ______ ______ ______ ______ ______ \
-                     ______ II     &kp AN ______ ______ &kp SF ______ ______ \
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
+____ ____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ ____ \
+               ____ ____ ____ ____ ____ ____ ____ ____ \
             >
         };
 
-        input_pinky_left { \
+        layer_4_ru_uppercase { \
             bindings = < \
-______ ______ ______ ______ ______ ______               ______ ______ ______ ______ ______ ______ \
-IIIIII ______ ______ ______ II     ______               &kp SR &kp CM &kp DT &kp EX &kp QM ______ \
-______ ______ ______ ______ ______ ______               &kp CR &kp N6 &kp N7 &kp N8 &kp N9 ______ \
-______ ______ ______ ______ ______ ______ ______ ______ ______ &kp PR &kp PU ______ ______ ______ \
-                     ______ ______ II     ______ ______ &kp N5 &kp CO ______ \
-            >
-        };
-        input_pinky_right { \
-            bindings = < \
-______ ______ ______ ______ ______ ______               ______ ______ ______ ______ ______ ______ \
-______ &kp TI &kp SQ &kp DQ &kp GR &kp SL               ______ &sften ______ ______ ______ IIIIII \
-______ &kp N1 &kp N2 &kp N3 &kp N4 &kp CL               ______ ______ ______ ______ ______ ______ \
-______ ______ ______ &kp MN &kp PL ______ ______ ______ ______ ______ ______ ______ ______ ______ \
-                     ______ &kp SE &kp N0 ______ ______ II     ______ ______ \
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
+____ ____ ____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ \
+               ____ ____ ____ ____ ____ ____ ____ ____ \
             >
         };
     };
-
-    behaviors {
-        tp: teleport {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TELEPORT";
-            #binding-cells = <0>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            bindings = <&mt LALT TAB>, <&kp LA(TAB)>;
-        };
-
-        sften: left_shift_enter {
-            compatible = "zmk,behavior-macro";
-            label = "SFTEN";
-            #binding-cells = <0>;
-            bindings = <&kp LS(EN)>;
-        };
-    };
-
-//    combos {
-//        compatible = "zmk,combos";
-//
-//        smth { \
-//            timeout-ms = <TIMEOUT>;
-//            key-positions = <0 1>;
-//            layer = <D0>
-//            bindings = <&kp A>;
-//        };
-//    };
 };
