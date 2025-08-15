@@ -25,8 +25,8 @@
 //                 ##   ##   ##   ##   ##   ##   ##   ##
 
 // layer 0 system
-// _ESC _LCT _BSP _LSH ____ _DEL            _TAB ____ _RSH ____ _RCT _ENT
-// _LAL ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ _RAL
+// _ESC _LCT ____ _LSH ____ _DEL            _TAB ____ _RSH ____ _RCT _ENT
+// _LAL ____ _BSP ____ ____ ____           ____ ____ ____ ____ ____ _RAL
 // ____ ____ ____ ____ _DWN  _UP_           _LFT _RGT ____ ____ ____ ____
 // ____ ____ ____ ____ ____ _NUM _MOR  _RU_ _RUP ____ ____ ____ ____ ____
 //                _LGU ____ ____ ____ ____ ____ ____  _RGU
@@ -54,8 +54,8 @@
 #define _RGU     &kp RGUI
 
 // layer 0 typing non-alphabetical
-// _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
-// _oo_ ____ ____ ____ ____ _EQL           _DOT ____ ____ ____ ____ _oo_
+// _oo_ _oo_ ____ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
+// _oo_ ____ _oo_ ____ ____ _EQL           _DOT ____ ____ ____ ____ _oo_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
 // ____ ____ _LBR _LBK _LPR _oo_ _oo_ _oo_ _oo_ _RPR _RBK _RBR ____ ____
 //                _oo_ _LT_ ____ ____ ____ ____ _GT_ _oo_
@@ -72,8 +72,8 @@
 #define _GT_     &kp GT        // >
 
 // layer 0 typing alphabetical (27)
-// _oo_ _oo_ _oo_ _oo_ _D__ _oo_           _oo_ _U__ _oo_ _B__ _oo_ _oo_
-// _oo_ _C__ _W__ _M__ _T__ _oo_           _oo_ _E__ _X__ _SPC _G__ _oo_
+// _oo_ _oo_ _W_ _oo_ _D__ _oo_           _oo_ _U__ _oo_ _B__ _oo_ _oo_
+// _oo_ _C__ _oo_ _M__ _T__ _oo_           _oo_ _E__ _X__ _SPC _G__ _oo_
 // _N__ _V__ _F__ _K__ _oo_ _oo_           _oo_ _oo_ _Z__ _P__ _Q__ _I__
 // _H__ _L__ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _J__ _Y__
 //                _oo_ _oo_ _S__ _R__ _A__ _O__ _oo_ _oo_
@@ -107,8 +107,8 @@
 #define _Z__     &kp Z
 
 // layer 1 typing numbers
-// _oo_ _N2_ _oo_ _N1_ ____ _oo_           _oo_ ____ _N6_ ____ _N7_ _oo_
-// _N3_ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ _N8_
+// _oo_ _N2_ ____ _N1_ ____ _oo_           _oo_ ____ _N6_ ____ _N7_ _oo_
+// _N3_ ____ _oo_ ____ ____ ____           ____ ____ ____ ____ ____ _N8_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
 // _N4_ ____ ____ ____ ____ _ww_ _oo_ _oo_ _N5_ ____ ____ ____ ____ _N9_
 //                _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_
@@ -124,8 +124,8 @@
 #define _N9_     &kp N9
 
 // layer 2 more
-// _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
-// _oo_ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ _oo_
+// _oo_ _oo_ ____ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
+// _oo_ ____ _oo_ ____ ____ ____           ____ ____ ____ ____ ____ _oo_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
 // ____ ____ ____ ____ ____ _oo_ _ww_ _oo_ _oo_ ____ ____ ____ ____ ____
 //                _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_
@@ -154,8 +154,8 @@
 #define _PRC     &kp PERCENT   // %
 
 // layer 3 ru (34)
-// _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
-// _oo_ ____ ____ ____ ____ ____           _oo_ ____ ____ ____ ____ _oo_
+// _oo_ _oo_ ____ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
+// _oo_ ____ _oo_ ____ ____ ____           _oo_ ____ ____ ____ ____ _oo_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
 // ____ ____ ____ ____ ____ _oo_ _oo_ _oo_ _oo_ ____ ____ ____ ____ ____
 //                _oo_ _oo_ ____ ____ ____ ____ _oo_ _oo_
@@ -196,8 +196,8 @@
 #define R_ya     &text "я"
 
 // layer 4 ru uppercase (33)
-// _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
-// _oo_ ____ ____ ____ ____ ____           _oo_ ____ ____ ____ ____ _oo_
+// _oo_ _oo_ ____ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
+// _oo_ ____ _oo_ ____ ____ ____           _oo_ ____ ____ ____ ____ _oo_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
 // ____ ____ ____ ____ ____ _oo_ _oo_ _oo_ _oo_ ____ ____ ____ ____ ____
 //                _oo_ _oo_ ____ ____ ____ ____ _oo_ _oo_
@@ -244,8 +244,8 @@
 
         layer_0 {
             bindings = <
-_ESC _LCT _BSP _LSH _D__ _DEL           _TAB _U__ _RSH _B__ _RCT _ENT
-_LAL _C__ _M__ _W__ _T__ _EQL           _DOT _E__ _X__ _SPC _G__ _RAL
+_ESC _LCT _W__ _LSH _D__ _DEL           _TAB _U__ _RSH _B__ _RCT _ENT
+_LAL _C__ _BSP _M__ _T__ _EQL           _DOT _E__ _X__ _SPC _G__ _RAL
 _N__ _V__ _F__ _K__ _DWN _UP_           _LFT _RGT _Z__ _P__ _Q__ _I__
 _H__ _L__ _LBR _LBK _LPR _NUM _MOR _RU_ _RUP _RPR _RBK _RBR _J__ _Y__
                 _LGU _LT_ _S__ _R__ _A__ _O__ _GT_ _RGU
@@ -254,7 +254,7 @@ _H__ _L__ _LBR _LBK _LPR _NUM _MOR _RU_ _RUP _RPR _RBK _RBR _J__ _Y__
 
         layer_1_numbers {
             bindings = <
-_oo_ _N2_ _oo_ _N1_ ____ _oo_           _oo_ ____ _N6_ ____ _N7_ _oo_
+_oo_ _N2_ ____ _N1_ ____ _oo_           _oo_ ____ _N6_ ____ _N7_ _oo_
 _N3_ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ _N8_
 ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
 _N4_ ____ ____ ____ ____ _ww_ _oo_ _oo_ _N5_ ____ ____ ____ ____ _N9_
