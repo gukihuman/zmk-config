@@ -10,285 +10,285 @@
 #define _oo_     &trans    // unavailable in layer
 #define _ww_     &trans    // to show what pressed in momentary layer
 
-//////////////////////////////// positions /////////////////////////////
+// positions
 //  0    1    2    3    4    5              6    7    8    9    10   11
 //  12   13   14   15   16   17             18   19   20   21   22   23
 //  24   25   26   27   28   29             30   31   32   33   34   35
 //  36   37   38   39   40   41   42   43   44   45   46   47   48   49
 //                 50   51   52   53   54   55   56   57
 
-///////////////////////////////// fingers //////////////////////////////
+// fingers
 //  ::   ::   ::   ++   ++   ++             ++   ++   ++   ::   ::   ::
 //  <>   <>   ::   ::   ++   ++             ++   ++   ::   ::   <>   <> 
 //  **   **   <>   ::   ::   ++             ++   ::   ::   <>   **   ** 
 //  **   **   **   <>   ::   ##   ##   ##   ##   ::   <>   **   **   ** 
 //                 ##   ##   ##   ##   ##   ##   ##   ##
 
-////////////////////////////// layer 0 system //////////////////////////
-// ESC  LCTL BSPC LSHF ____ DEL            TAB  ____ RSHF ____ RCTL ENTR
-// LALT ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ RALT
-// ____ ____ ____ ____ DOWN  UP            LEFT RGHT ____ ____ ____ ____
-// ____ ____ ____ ____ ____ NUMB MORE  RU  RUUP ____ ____ ____ ____ ____
-//                LGUI ____ ____ ____ ____ ____ ____  RGUI
+// layer 0 system
+// _ESC _LCT _BSP _LSH ____ _DEL            _TAB ____ _RSH ____ _RCT _ENT
+// _LAL ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ _RAL
+// ____ ____ ____ ____ _DWN  _UP_           _LFT _RGT ____ ____ ____ ____
+// ____ ____ ____ ____ ____ _NUM _MOR  _RU_ _RUP ____ ____ ____ ____ ____
+//                _LGU ____ ____ ____ ____ ____ ____  _RGU
 
-#define ESC      &kp ESCAPE
-#define LCTL     &kp LCTRL
-#define BSPC     &kp BACKSPACE
-#define LSHF     &kp LSHIFT
-#define DEL      &kp DELETE
-#define TAB      &kp TAB
-#define RSHF     &kp RSHIFT
-#define RCTL     &kp RCTRL
-#define ENTR     &kp ENTER
-#define LALT     &kp LALT
-#define RALT     &kp RALT
-#define DOWN     &kp DOWN
-#define UP       &kp UP
-#define LEFT     &kp LEFT
-#define RGHT     &kp RIGHT
-#define NUMB     &lt 1 N0
-#define MORE     &mo 2
-#define RU       &mo 3
-#define RUUP     &mo 4
-#define LGUI     &kp LGUI
-#define RGUI     &kp RGUI
+#define _ESC     &kp ESCAPE
+#define _LCT     &kp LCTRL
+#define _BSP     &kp BACKSPACE
+#define _LSH     &kp LSHIFT
+#define _DEL     &kp DELETE
+#define _TAB     &kp TAB
+#define _RSH     &kp RSHIFT
+#define _RCT     &kp RCTRL
+#define _ENT     &kp ENTER
+#define _LAL     &kp LALT
+#define _RAL     &kp RALT
+#define _DWN     &kp DOWN
+#define _UP_     &kp UP
+#define _LFT     &kp LEFT
+#define _RGT     &kp RIGHT
+#define _NUM     &lt 1 N0
+#define _MOR     &mo 2
+#define _RU_     &mo 3
+#define _RUP     &mo 4
+#define _LGU     &kp LGUI
+#define _RGU     &kp RGUI
 
-///////////////////// layer 0 typing non-alphabetical //////////////////
+// layer 0 typing non-alphabetical
 // _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
-// _oo_ ____ ____ ____ ____  EQ            DOT  ____ ____ ____ ____ _oo_
+// _oo_ ____ ____ ____ ____ _EQL           _DOT ____ ____ ____ ____ _oo_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
-// ____ ____ LBRC LBKT LPAR _oo_ _oo_ _oo_ _oo_ RPAR RBKT RBRC ____ ____
-//                _oo_  LT  ____ ____ ____ ____  GT  _oo_   
+// ____ ____ _LBR _LBK _LPR _oo_ _oo_ _oo_ _oo_ _RPR _RBK _RBR ____ ____
+//                _oo_ _LT_ ____ ____ ____ ____ _GT_ _oo_
 
-#define DOT      &kp DOT       // .
-#define EQ       &kp EQUAL     // =
-#define LBRC     &kp LBRC      // {
-#define LBKT     &kp LBKT      // [
-#define LPAR     &kp LPAR      // (
-#define RPAR     &kp RPAR      // )
-#define RBKT     &kp RBKT      // ]
-#define RBRC     &kp RBRC      // }
-#define LT       &kp LT        // <
-#define GT       &kp GT        // >
+#define _DOT     &kp DOT       // .
+#define _EQL     &kp EQUAL     // =
+#define _LBR     &kp LBRC      // {
+#define _LBK     &kp LBKT      // [
+#define _LPR     &kp LPAR      // (
+#define _RPR     &kp RPAR      // )
+#define _RBK     &kp RBKT      // ]
+#define _RBR     &kp RBRC      // }
+#define _LT_     &kp LT        // <
+#define _GT_     &kp GT        // >
 
-///////////////////// layer 0 typing alphabetical (27) /////////////////
-// _oo_ _oo_ _oo_ _oo_ (D)  _oo_           _oo_ (U)  _oo_  B   _oo_ _oo_
-// _oo_ [C]   W    M   (T)  _oo_           _oo_ (E)   X   SPC  [G]  _oo_
-//  N    V   [F]   K   _oo_ _oo_           _oo_ _oo_  Z   [P]   Q    I
-//  H    L   _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_  J    Y
-//                _oo_ _oo_  S    R    A    O   _oo_ _oo_   
+// layer 0 typing alphabetical (27)
+// _oo_ _oo_ _oo_ _oo_ _D__ _oo_           _oo_ _U__ _oo_ _B__ _oo_ _oo_
+// _oo_ _C__ _W__ _M__ _T__ _oo_           _oo_ _E__ _X__ _SPC _G__ _oo_
+// _N__ _V__ _F__ _K__ _oo_ _oo_           _oo_ _oo_ _Z__ _P__ _Q__ _I__
+// _H__ _L__ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _oo_ _J__ _Y__
+//                _oo_ _oo_ _S__ _R__ _A__ _O__ _oo_ _oo_
 
-#define SPC      &kp SPACE
-#define A        &kp A
-#define B        &kp B
-#define C        &kp C
-#define D        &kp D
-#define E        &kp E
-#define F        &kp F
-#define G        &kp G
-#define H        &kp H
-#define I        &kp I
-#define J        &kp J
-#define K        &kp K
-#define L        &kp L
-#define M        &kp M
-#define N        &kp N
-#define O        &kp O
-#define P        &kp P
-#define Q        &kp Q
-#define R        &kp R
-#define S        &kp S
-#define T        &kp T
-#define U        &kp U
-#define V        &kp V
-#define W        &kp W
-#define X        &kp X
-#define Y        &kp Y
-#define Z        &kp Z
+#define _SPC     &kp SPACE
+#define _A__     &kp A
+#define _B__     &kp B
+#define _C__     &kp C
+#define _D__     &kp D
+#define _E__     &kp E
+#define _F__     &kp F
+#define _G__     &kp G
+#define _H__     &kp H
+#define _I__     &kp I
+#define _J__     &kp J
+#define _K__     &kp K
+#define _L__     &kp L
+#define _M__     &kp M
+#define _N__     &kp N
+#define _O__     &kp O
+#define _P__     &kp P
+#define _Q__     &kp Q
+#define _R__     &kp R
+#define _S__     &kp S
+#define _T__     &kp T
+#define _U__     &kp U
+#define _V__     &kp V
+#define _W__     &kp W
+#define _X__     &kp X
+#define _Y__     &kp Y
+#define _Z__     &kp Z
 
-///////////////////////// layer 1 typing numbers ///////////////////////
-// _oo_  N2  _oo_  N1  ____ _oo_           _oo_ ____  N5  ____  N6  _oo_
-//  N3  ____ ____ ____ ____ ____           ____ ____ ____ ____ ____  N7
+// layer 1 typing numbers
+// _oo_ _N2_ _oo_ _N1_ ____ _oo_           _oo_ ____ _N6_ ____ _N7_ _oo_
+// _N3_ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ _N8_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
-//  N4  ____ ____ ____ ____ _ww_ _oo_ _oo_ _oo_ ____ ____ ____ ____  N9
-//                _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_   
+// _N4_ ____ ____ ____ ____ _ww_ _oo_ _oo_ _N5_ ____ ____ ____ ____ _N9_
+//                _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_
 
-#define N1       &kp N1
-#define N2       &kp N2
-#define N3       &kp N3
-#define N4       &kp N4
-#define N5       &kp N5
-#define N6       &kp N6
-#define N7       &kp N7
-#define N8       &kp N8
-#define N9       &kp N9
+#define _N1_     &kp N1
+#define _N2_     &kp N2
+#define _N3_     &kp N3
+#define _N4_     &kp N4
+#define _N5_     &kp N5
+#define _N6_     &kp N6
+#define _N7_     &kp N7
+#define _N8_     &kp N8
+#define _N9_     &kp N9
 
-////////////////////////////// layer 2 more ////////////////////////////
+// layer 2 more
 // _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
 // _oo_ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ _oo_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
 // ____ ____ ____ ____ ____ _oo_ _ww_ _oo_ _oo_ ____ ____ ____ ____ ____
-//                _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_   
+//                _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_
 
-#define QMRK     &kp QMARK     // ?
-#define FSLH     &kp FSLH      // /
-#define DLLR     &kp DOLLAR    // $
-#define AND      &kp AMPERSAND // &
-#define OR       &kp PIPE      // |
-#define UNDR     &kp UNDER     // _
-#define GRAV     &kp GRAVE     // `
-#define COLN     &kp COLON     // :
-#define BSLH     &kp BSLH      // \
-#define MINS     &kp MINUS     // -
-#define COM      &kp COMMA     // ,
-#define EXCL     &kp EXCL      // !
-#define TILD     &kp TILDE     // ~
-#define SQT      &kp SQT       // '
-#define DQT      &kp DQT       // "
-#define PLUS     &kp PLUS      // +
-#define SEMI     &kp SEMICOLON // ;
-#define CART     &kp CARET     // ^
-#define ASTR     &kp ASTERISK  // *
-#define AT       &kp AT        // @
-#define HASH     &kp HASH      // #
-#define PRCN     &kp PERCENT   // %
+#define _QST     &kp QMARK     // ?
+#define _SLH     &kp FSLH      // /
+#define _DLR     &kp DOLLAR    // $
+#define _AMP     &kp AMPERSAND // &
+#define _OR_     &kp PIPE      // |
+#define _UND     &kp UNDER     // _
+#define _GRV     &kp GRAVE     // `
+#define _CLN     &kp COLON     // :
+#define _BSL     &kp BSLH      // \
+#define _MIN     &kp MINUS     // -
+#define _COM     &kp COMMA     // ,
+#define _EXC     &kp EXCL      // !
+#define _TLD     &kp TILDE     // ~
+#define _SQT     &kp SQT       // '
+#define _DQT     &kp DQT       // "
+#define _PLS     &kp PLUS      // +
+#define _SEM     &kp SEMICOLON // ;
+#define _CRT     &kp CARET     // ^
+#define _AST     &kp ASTERISK  // *
+#define _ATS     &kp AT        // @
+#define _HSH     &kp HASH      // #
+#define _PRC     &kp PERCENT   // %
 
-////////////////////////////// layer 3 ru (34) /////////////////////////
+// layer 3 ru (34)
 // _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
 // _oo_ ____ ____ ____ ____ ____           _oo_ ____ ____ ____ ____ _oo_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
 // ____ ____ ____ ____ ____ _oo_ _oo_ _oo_ _oo_ ____ ____ ____ ____ ____
-//                _oo_ _oo_ ____ ____ ____ ____ _oo_ _oo_   
+//                _oo_ _oo_ ____ ____ ____ ____ _oo_ _oo_
 
 // SPC used independently
-#define R_a      &text "а"
-#define R_b      &text "б"
-#define R_v      &text "в"
-#define R_g      &text "г"
-#define R_d      &text "д"
-#define R_e      &text "е"
+#define R_a_     &text "а"
+#define R_b_     &text "б"
+#define R_v_     &text "в"
+#define R_g_     &text "г"
+#define R_d_     &text "д"
+#define R_e_     &text "е"
 #define R_yo     &text "ё"
 #define R_zh     &text "ж"
-#define R_z      &text "з"
-#define R_i      &text "и"
-#define R_j      &text "й"
-#define R_k      &text "к"
-#define R_l      &text "л"
-#define R_m      &text "м"
-#define R_n      &text "н"
-#define R_o      &text "о"
-#define R_p      &text "п"
-#define R_r      &text "р"
-#define R_s      &text "с"
-#define R_t      &text "т"
-#define R_u      &text "у"
-#define R_f      &text "ф"
-#define R_h      &text "х"
-#define R_c      &text "ц"
+#define R_z_     &text "з"
+#define R_i_     &text "и"
+#define R_j_     &text "й"
+#define R_k_     &text "к"
+#define R_l_     &text "л"
+#define R_m_     &text "м"
+#define R_n_     &text "н"
+#define R_o_     &text "о"
+#define R_p_     &text "п"
+#define R_r_     &text "р"
+#define R_s_     &text "с"
+#define R_t_     &text "т"
+#define R_u_     &text "у"
+#define R_f_     &text "ф"
+#define R_h_     &text "х"
+#define R_c_     &text "ц"
 #define R_ch     &text "ч"
 #define R_sh     &text "ш"
 #define R_sc     &text "щ"
 #define R_hh     &text "ъ"
-#define R_y      &text "ы"
-#define R_x      &text "ь"
+#define R_y_     &text "ы"
+#define R_x_     &text "ь"
 #define R_ee     &text "э"
 #define R_yu     &text "ю"
 #define R_ya     &text "я"
 
-//////////////////////// layer 4 ru uppercase (33) /////////////////////
+// layer 4 ru uppercase (33)
 // _oo_ _oo_ _oo_ _oo_ ____ _oo_           _oo_ ____ _oo_ ____ _oo_ _oo_
 // _oo_ ____ ____ ____ ____ ____           _oo_ ____ ____ ____ ____ _oo_
 // ____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
 // ____ ____ ____ ____ ____ _oo_ _oo_ _oo_ _oo_ ____ ____ ____ ____ ____
-//                _oo_ _oo_ ____ ____ ____ ____ _oo_ _oo_   
+//                _oo_ _oo_ ____ ____ ____ ____ _oo_ _oo_
 
-// layout awaiting one `_oo_`: it depends on where SPC in ru goes
+// layout awaiting one `_oo_`: it depends on where _SPC in ru goes
 
-#define R_A      &text "А"
-#define R_B      &text "Б"
-#define R_V      &text "В"
-#define R_G      &text "Г"
-#define R_D      &text "Д"
-#define R_E      &text "Е"
+#define R_A_     &text "А"
+#define R_B_     &text "Б"
+#define R_V_     &text "В"
+#define R_G_     &text "Г"
+#define R_D_     &text "Д"
+#define R_E_     &text "Е"
 #define R_YO     &text "Ё"
 #define R_ZH     &text "Ж"
-#define R_Z      &text "З"
-#define R_I      &text "И"
-#define R_J      &text "Й"
-#define R_K      &text "К"
-#define R_L      &text "Л"
-#define R_M      &text "М"
-#define R_N      &text "Н"
-#define R_O      &text "О"
-#define R_P      &text "П"
-#define R_R      &text "Р"
-#define R_S      &text "С"
-#define R_T      &text "Т"
-#define R_U      &text "У"
-#define R_F      &text "Ф"
-#define R_H      &text "Х"
-#define R_C      &text "Ц"
+#define R_Z_     &text "З"
+#define R_I_     &text "И"
+#define R_J_     &text "Й"
+#define R_K_     &text "К"
+#define R_L_     &text "Л"
+#define R_M_     &text "М"
+#define R_N_     &text "Н"
+#define R_O_     &text "О"
+#define R_P_     &text "П"
+#define R_R_     &text "Р"
+#define R_S_     &text "С"
+#define R_T_     &text "Т"
+#define R_U_     &text "У"
+#define R_F_     &text "Ф"
+#define R_H_     &text "Х"
+#define R_C_     &text "Ц"
 #define R_CH     &text "Ч"
 #define R_SH     &text "Ш"
 #define R_SC     &text "Щ"
 #define R_HH     &text "Ъ"
-#define R_Y      &text "Ы"
-#define R_X      &text "Ь"
+#define R_Y_     &text "Ы"
+#define R_X_     &text "Ь"
 #define R_EE     &text "Э"
 #define R_YU     &text "Ю"
 #define R_YA     &text "Я"
 
-/ {
+ / {
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
-            bindings = < \
-ESC  LCTL BSPC LSHF  D   DEL            TAB   U   RSHF  B   RCTL ENTR \
-LALT  C    W    M    T    EQ            DOT   E    X   SPC   G   RALT \
- N    V    F    K   DOWN  UP            LEFT RGHT  Z    P    Q    I   \
- H    L   LBRC LBKT LPAR NUMB MORE  RU  RUUP RPAR RBKT RBRC  J    Y   \
-               LGUI  LT   S    R    A    O    GT  RGUI \
+            bindings = <
+_ESC _LCT _BSP _LSH  _D__ _DEL            _TAB  _U__ _RSH  _B__ _RCT _ENT
+_LAL  _C__ _W__ _M__ _T__ _EQL            _DOT  _E__ _X__ _SPC  _G__ _RAL
+ _N__ _V__ _F__ _K__ _DWN  _UP_           _LFT _RGT  _Z__ _P__ _Q__ _I__
+ _H__ _L__ _LBR _LBK _LPR  _NUM _MOR _RU_ _RUP  _RPR _RBK _RBR  _J__ _Y__
+                _LGU _LT_  _S__ _R__ _A__ _O__ _GT_ _RGU
             >;
         };
 
         layer_1_numbers {
-            bindings = < \
-_oo_  N2  _oo_  N1  ____ _oo_           _oo_ ____  N5  ____  N6  _oo_ \
- N3  ____ ____ ____ ____ ____           ____ ____ ____ ____ ____  N7  \
-____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____ \
- N4  ____ ____ ____ ____ _ww_ _oo_ _oo_ _oo_ ____ ____ ____ ____  N9  \
-               _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_ \
+            bindings = <
+_oo_ _N2_ _oo_ _N1_ ____ _oo_           _oo_ ____ _N6_ ____ _N7_ _oo_
+_N3_ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ _N8_
+____ ____ ____ ____ _oo_ _oo_           _oo_ _oo_ ____ ____ ____ ____
+_N4_ ____ ____ ____ ____ _ww_ _oo_ _oo_ _N5_ ____ ____ ____ ____ _N9_
+               _oo_ _oo_ _oo_ _oo_ ____ ____ ____ _oo_
             >;
         };
 
         layer_2_more {
-            bindings = < \
-____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
-____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
-____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
-____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ ____ ____ \
-               ____ ____ ____ ____ ____ ____ ____ ____ \
+            bindings = <
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____
+____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ ____ ____
+               ____ ____ ____ ____ ____ ____ ____ ____
             >;
         };
 
         layer_3_ru {
-            bindings = < \
-____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
-____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
-____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
-____ ____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ ____ \
-               ____ ____ ____ ____ ____ ____ ____ ____ \
+            bindings = <
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____
+____ ____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ ____
+               ____ ____ ____ ____ ____ ____ ____ ____
             >;
         };
 
         layer_4_ru_uppercase {
-            bindings = < \
-____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
-____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
-____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____ \
-____ ____ ____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____ \
-               ____ ____ ____ ____ ____ ____ ____ ____ \
+            bindings = <
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____
+____ ____ ____ ____ ____ ____           ____ ____ ____ ____ ____ ____
+____ ____ ____ ____ ____ ____ ____ ____ _ww_ ____ ____ ____ ____ ____
+               ____ ____ ____ ____ ____ ____ ____ ____
             >;
         };
     };
