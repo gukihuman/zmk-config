@@ -1,5 +1,6 @@
-/<> ☷ ~/config/lily58.keymap <>/
-/<> ✎ separate project now but i want to integrate it in lithos somehow in the future ⋯ scripture must be renamed to kjarra related somehow in the future too <>/
+// ☷ ~/config/lily58.keymap
+// ✎ separate project now but i want to integrate it in lithos somehow in the future ⋯ scripture must be renamed to kjarra related somehow in the future too
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
