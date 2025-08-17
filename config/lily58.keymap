@@ -22,58 +22,57 @@
         compatible = "zmk,keymap";
         layer_0 {
             bindings = <
-&mo 3      _      &kp LSHFT  &mo 1     &kp ESC        _                      _      &kp ENTER  &mo 1        &kp RSHFT   _      &mo 3 
-&kp N    &kp H    &kp C      &kp W     &kp T        &altb 0 0              &kp TAB  &kp E      &kp SPACE    &kp P     &kp I    &kp Y
-&kp V    &kp L    &kp F      &kp M     &kp D          _                      _      &kp U      &kp LC(SEMI) &kp G     &kp J    &kp Q
-  _        _      &kp X      &kp K     &kp BSPC       _        _      _      _      &kp DEL    &kp B        &kp Z       _        _
-                               _       &kp R        &kp S    &mo 2  &mo 2  &kp A    &kp O        _
-            >;
-        };        
-        layer_1 {
-            bindings = <
-&none       _     &none      &none     &none        _                       _     &kp PLUS  &kp N0   &kp MINUS    _    &none 
-&none     &none   &none      &kp DOWN  &kp UP     &none                   &none   &kp N1    &kp N2   &kp N3     &none  &none
-&none     &none   &none      &kp LEFT  &kp RIGHT    _                       _     &kp N4    &kp N5   &kp N6     &none  &none 
-  _         _     &none      &none     &none        _       _       _       _     &kp N7    &kp N8   &kp N9       _      _
-                               _       &none      &none   &none   &none   &none   &none       _
+  _       &kp V    &nonw       _          _          _                      _        _          _         &none     &kp J     _
+&kp N       _      &kp F      &kp M     &altb 0 0    _                      _      &kp TAB    &kp BSPC    &kp G      _      &kp Y
+  -       &kp H    &kp C      &kp W     &kp T      &ESC                   &ENTER   &kp E      &kp SPACE   &kp P     &kp I    
+  _       &kp L    &kp X      &kp K     &kp D        _        _      _      _      &kp U      &kp B       &kp Z     &kp Q     _
+                               _        &kp R      &kp S      _      _    &kp A    &kp O        _
             >;
         };
-        layer_2 {
-            bindings = <
-&none       _       &none     &none     &none           _                     _       &none    &none         &none       _   &none 
-&kp RC(Z) &none     &kp RC(C) &kp RC(W) &kp RC(T)     &none                 &none     &none    &none         &kp LC(V) &none &kp LC(LS(Z))
-&none     &kp RC(L) &kp RC(F) &none     &kp RC(RS(I))   _                     _       &none    &kp LC(LS(T)) &none     &none &none 
-  _         _       &kp RC(X) &none     &none           _         _     _     _       &none    &none         &none       _     _
-                                _       &kp RC(R)     &kp RC(S) &none &none &kp RC(A) &none      _
-            >;
-        };
-        layer_3 {
-            bindings = <
-&none       _     &none     &none     &none       _                        _     &none    &none   &none      _      &none 
-&none     &none   &none     &none     &none     &none                    &none   &none    &none   &none    &none    &none 
-&none     &none   &none     &none     &none       _                        _     &none    &none   &none    &none    &none 
-  _         _     &none     &none     &none       _        _       _       _     &none    &none   &none      _        _
-                              _       &none     &none    &none   &none   &none   &none      _
-            >;
-        };
-        layer_4 {
-            bindings = <
-&none  _    &none &none &none   _                 _   &none               &none               &none                _       &none 
-&none &none &none &none &none &none             &none &msc SCRL_UP        &mmv MOVE_UP        &none              &mkp MB1  &none 
-&none &none &none &none &none   _                 _   &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT    &mkp MB2  &none 
-  _     _   &none &none &none   _     _     _     _   &msc SCRL_DOWN      &none               &none                _         _
-                    _   &none &none &mo 5 &none &none &none                 _
-            >;
-        };
-        layer_5 {
-            bindings = <
-&none  _    &none &none &none   _                 _   &none               &none              &none                _       &none 
-&none &none &none &none &none &none             &none &msc MOVE_Y(-100)   &mmv MOVE_Y(-5000) &none              &mkp MB1  &none 
-&none &none &none &none &none   _                 _   &mmv MOVE_X(-5000)  &mmv MOVE_Y(5000)  &mmv MOVE_X(5000)  &mkp MB2  &none 
-  _     _   &none &none &none   _     _     _     _   &msc MOVE_Y(100)    &none              &none                _         _
-                    _   &none &none &none &none &none &none                 _
-            >;
-        };
+//         layer_1 {
+//             bindings = <
+// &none       _     &none      &none     &none        _                       _     &none   &none   &none     _     &none
+// &none     &none   &none      &none     &none      &none                   &none   &none   &none   &none   &none   &none
+// &none     &none   &none      &none     &none        _                       _     &none   &none   &none   &none   &none
+//   _         _     &none      &none     &none        _       _       _       _     &none   &none   &none     _       _
+//                                _       &none      &none   &none   &none   &none   &none       _
+//             >;
+//         };
+//         layer_2 {
+//             bindings = <
+// &none       _     &none      &none     &none        _                       _     &kp PLUS  &kp N0   &kp MINUS    _    &none 
+// &none     &none   &none      &none     &none      &none                   &none   &kp N1    &kp N2   &kp N3     &none  &none
+// &none     &none   &none      &none     &none        _                       _     &kp N4    &kp N5   &kp N6     &none  &none 
+//   _         _     &none      &none     &none        _       _       _       _     &kp N7    &kp N8   &kp N9       _      _
+//                                _       &none      &none   &none   &none   &none   &none       _
+//             >;
+//        };
+//         layer_3 {
+//             bindings = <
+// &none       _       &none     &none     &none           _                     _       &none    &none         &none       _   &none 
+// &kp RC(Z) &none     &kp RC(C) &kp RC(W) &kp RC(T)     &none                 &none     &none    &none         &kp LC(V) &none &kp LC(LS(Z))
+// &none     &kp RC(L) &kp RC(F) &none     &kp RC(RS(I))   _                     _       &none    &kp LC(LS(T)) &none     &none &none 
+//   _         _       &kp RC(X) &none     &none           _         _     _     _       &none    &none         &none       _     _
+//                                 _       &kp RC(R)     &kp RC(S) &none &none &kp RC(A) &none      _
+//             >;
+//         };  
+//         layer_4 {
+//             bindings = <
+// &none       _     &none     &none     &none       _                        _     &none     &none     &none     _       &none 
+// &none     &none   &none     &none     &none     &none                    &none   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &none 
+//   _         _     &none     &none     &none       _        _       _       _     &none     &none     &none     _        _
+//                               _       &none     &none    &none   &none   &none   &none       _
+//             >;
+//         };
+//         layer_5 {
+//             bindings = <
+// &none  _    &none &none &none   _                 _   &none               &mkp MB1            &mkp MB2             _              &none
+// &none &none &none &none &none &none             &none &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP       &mmv MOVE_RIGHT  &none
+// &none &none &none &none &none   _                 _   &none               &msc SCRL_DOWN      &msc SCRL_UP       &none            &none
+//   _     _   &none &none &none   _     _     _     _   &none               &none               &none                _                _
+//                     _   &none &mo 6 &none &none &none &none                 _
+//             >;
+//         };
     };
     macros {
         alt_tab_tap: alt_tab_tap {
@@ -103,13 +102,9 @@
             bindings = <&alt_tab_hold>, <&alt_tab_tap>;
         };
     };
-    combos {
-        compatible = "zmk,combos";
-        mouse_abs {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            slow-release;
-            bindings = <&mo 4>;
-        };
-    };
+//    combos {
+//        compatible = "zmk,combos";
+//        mouse_abs { timeout-ms = <50>; key-positions = <3 53>; slow-release; bindings = <&mo 4>; };
+//        mouse_abs { timeout-ms = <50>; key-positions = <8 54>; slow-release; bindings = <&mo 4>; };
+//    };
 };
