@@ -6,7 +6,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/pointing.h>
 
 #define _ &none // to show where there is no buttons
 
@@ -56,15 +55,6 @@
                               _       &none     &none    &none   &none   &none   &none      _
             >;
         };
-        layer_4 {
-            bindings = <
-&none       _     &none      &none     &none        _                       _     &none     &none    &none        _    &none 
-&none     &none   &none      &none     &none      &none                   &none   &pos1     &pos2    &pos3      &none  &none
-&none     &none   &none      &none     &none        _                       _     &pos4     &pos5    &pos6      &none  &none 
-  _         _     &none      &none     &none        _       _       _       _     &pos7     &pos8    &pos9        _      _
-                               _       &none      &mo 0   &none   &none   &none   &none       _
-            >;
-        };
     };
     behaviors {
         alt_tab: alt_tab {
@@ -73,68 +63,5 @@
             flavor = "tap_preferred";
             bindings = <&mt LALT TAB>, <&kp LA(TAB)>;
         };
-        pos1: pos1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 120 &mmv (MOVE_X(-5000) | MOVE_Y(-5000))>,
-                    <&macro_tap_time 60  &mmv (MOVE_X(  512) | MOVE_Y(  240))>;
-        };
-        pos2: pos2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 120 &mmv (MOVE_X(-5000) | MOVE_Y(-5000))>,
-                    <&macro_tap_time 60  &mmv (MOVE_X( 1024) | MOVE_Y(  240))>;
-        };
-        pos3: pos3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 120 &mmv (MOVE_X(-5000) | MOVE_Y(-5000))>,
-                    <&macro_tap_time 60  &mmv (MOVE_X( 1536) | MOVE_Y(  240))>;
-        };
-        pos4: pos4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 120 &mmv (MOVE_X(-5000) | MOVE_Y(-5000))>,
-                    <&macro_tap_time 60  &mmv (MOVE_X(  512) | MOVE_Y(  480))>;
-        };
-        pos5: pos5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 120 &mmv (MOVE_X(-5000) | MOVE_Y(-5000))>,
-                    <&macro_tap_time 60  &mmv (MOVE_X( 1024) | MOVE_Y(  480))>;
-        };
-        pos6: pos6 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 120 &mmv (MOVE_X(-5000) | MOVE_Y(-5000))>,
-                    <&macro_tap_time 60  &mmv (MOVE_X( 1536) | MOVE_Y(  480))>;
-        };
-        pos7: pos7 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 120 &mmv (MOVE_X(-5000) | MOVE_Y(-5000))>,
-                    <&macro_tap_time 60  &mmv (MOVE_X(  512) | MOVE_Y(  720))>;
-        };
-        pos8: pos8 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 120 &mmv (MOVE_X(-5000) | MOVE_Y(-5000))>,
-                    <&macro_tap_time 60  &mmv (MOVE_X( 1024) | MOVE_Y(  720))>;
-        };
-        pos9: pos9 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap_time 120 &mmv (MOVE_X(-5000) | MOVE_Y(-5000))>,
-                    <&macro_tap_time 60  &mmv (MOVE_X( 1536) | MOVE_Y(  720))>;
-        };
     };
-    combos {
-        compatible = "zmk,combos";
-        mouse_abs {
-            timeout-ms = <50>;
-            key-positions = <2 3>;
-            slow-release;
-            bindings = <&mo 4>;
-        };
-    };  
 };
