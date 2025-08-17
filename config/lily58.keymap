@@ -41,7 +41,7 @@
             bindings = <
 &none       _       &none     &none     &none           _                     _       &none    &none         &none       _   &none 
 &kp RC(Z) &none     &kp RC(C) &kp RC(W) &kp RC(T)     &none                 &none     &none    &none         &kp LC(V) &none &kp LC(LS(Z))
-&none     &kp RC(L) &kp RC(F) &none     &kp RC(RS(I))   -                     -       &none    &kp LC(LS(T)) &none     &none &none 
+&none     &kp RC(L) &kp RC(F) &none     &kp RC(RS(I))   _                     _       &none    &kp LC(LS(T)) &none     &none &none 
   _         _       &kp RC(X) &none     &none           _         _     _     _       &none    &none         &none       _     _
                                 _       &kp RC(R)     &kp RC(S) &none &none &kp RC(A) &none      _
             >;
@@ -50,7 +50,7 @@
             bindings = <
 &none       _     &none     &none     &none       _                        _     &none    &none   &none      _      &none 
 &none     &none   &none     &none     &none     &none                    &none   &none    &none   &none    &none    &none 
-&none     &none   &none     &none     &none       -                        -     &none    &none   &none    &none    &none 
+&none     &none   &none     &none     &none       _                        _     &none    &none   &none    &none    &none 
   _         _     &none     &none     &none       _        _       _       _     &none    &none   &none      _        _
                               _       &none     &none    &none   &none   &none   &none      _
             >;
@@ -68,7 +68,7 @@
             bindings = <
 &none     _     &none   &none   &none    _                   _     &none   &none    &none     _   &none
 &none   &none   &none   &none   &none  &none               &none   &mul    &mup     &mur    &none &none
-&none   &none   &none   &none   &none    _                   _     &mleft  &mclick  &mright &none &none
+&none   &none   &none   &none   &none    _                   _     &mleft  &mk LCLK &mright &none &none
   _       _     &none   &none   &none    _     _      _      _     &mdl    &mdown   &mdr      _     _
                           _     &none  &none &none  &none  &none   _
             >;
@@ -99,8 +99,6 @@
         mur:    mur    { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&mmv  14 -14>; };
         mdl:    mdl    { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&mmv -14  14>; };
         mdr:    mdr    { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&mmv  14  14>; };
-
-        mclick: mclick { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&mkp LCLK &mku LCLK>;
         };
     };
     combos {
