@@ -23,7 +23,7 @@
         layer_0 {
             bindings = <
 &mo 3      _      &kp LSHFT  &mo 1     &kp ESC        _                      _      &kp ENTER  &mo 1        &kp RSHFT   _      &mo 3 
-&kp N    &kp H    &kp C      &kp W     &kp T        &altb 0 0              &kp TAB  &kp E      &kp SPACE    &kp P     &kp I    &kp Y
+&kp N    &kp H    &kp C      &kp W     &kp T        &altb                  &kp TAB  &kp E      &kp SPACE    &kp P     &kp I    &kp Y
 &kp V    &kp L    &kp F      &kp M     &kp D          _                      _      &kp U      &kp LC(SEMI) &kp G     &kp J    &kp Q
   _        _      &kp X      &kp K     &kp BSPC       _        _      _      _      &kp DEL    &kp B        &kp Z       _        _
                                _       &kp R        &kp S    &mo 2  &mo 2  &kp A    &kp O        _
@@ -56,12 +56,29 @@
                               _       &none     &none    &none   &none   &none   &none      _
             >;
         };
+        layer_4 {
+            bindings = <
+&none  _    &none &none &none   _                 _   &none               &none               &none      _        &none 
+&none &none &none &none &none &none             &none &none               &mmv MOVE_Y(-10000) &none               &none    &none 
+&none &none &none &none &none   _                 _   &mmv MOVE_X(-10000) &none               &mmv MOVE_X(-10000) &none    &none 
+  _     _   &none &none &none   _     _     _     _   &none               &mmv MOVE_Y(10000)               &none    _        _
+                    _   &none &none &mo 5 &none &none &none   _
+            >;
+        };
+        layer_5 {
+            bindings = <
+&none       _     &none     &none     &none       _                        _     &none    &none   &none      _      &none 
+&none     &none   &none     &none     &none     &none                    &none   &none    &none   &none    &none    &none 
+&none     &none   &none     &none     &none       _                        _     &none    &none   &none    &none    &none 
+  _         _     &none     &none     &none       _        _       _       _     &none    &none   &none      _        _
+                              _       &none     &none    &none   &none   &none   &none      _
+            >;
+        };
     };
     macros {
         alt_tab_tap: alt_tab_tap {
             compatible = "zmk,behavior-macro";
             label = "Alt‑Tab Tap";
-            #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <20>;
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>;
@@ -69,7 +86,6 @@
         alt_tab_hold: alt_tab_hold {
             compatible = "zmk,behavior-macro";
             label = "Alt‑Tab Hold";
-            #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <20>;
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_pause_for_release>, <&macro_release &kp LALT>;
@@ -87,10 +103,19 @@
         altb: alt_tab {
             compatible = "zmk,behavior-hold-tap";
             label = "Alt‑Tab Key";
-            #binding-cells = <2>;
+            binding-cells = <0>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&alt_tab_hold>, <&alt_tab_tap>;
+        };
+    };
+    combos {
+        compatible = "zmk,combos";
+        mouse_abs {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            slow-release;
+            bindings = <&mo 4>;
         };
     };
 };
