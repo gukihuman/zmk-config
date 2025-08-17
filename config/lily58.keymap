@@ -61,7 +61,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LALT>, <&kp LA(TAB)>;
+            bindings = <&kp LALT> <&kp LA(TAB)>;
         };
     };
 };
