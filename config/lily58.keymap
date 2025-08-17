@@ -68,7 +68,7 @@
             bindings = <
 &none     _     &none   &none   &none    _                   _     &none   &none    &none     _   &none
 &none   &none   &none   &none   &none  &none               &none   &mul    &mup     &mur    &none &none
-&none   &none   &none   &none   &none    _                   _     &mleft  &mk LCLK &mright &none &none
+&none   &none   &none   &none   &none    _                   _     &mleft  &mclick  &mright &none &none
   _       _     &none   &none   &none    _     _      _      _     &mdl    &mdown   &mdr      _     _
                           _     &none  &none &none  &none  &none   _
             >;
@@ -100,7 +100,8 @@
         mdl:    mdl    { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&mmv -14  14>; };
         mdr:    mdr    { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&mmv  14  14>; };
 
-        mclick: mclick { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&mk LCLK>; };
+        mclick: mclick { compatible = "zmk,behavior-macro"; #binding-cells = <0>; bindings = <&mkp LCLK &mku LCLK>;
+        };
     };
     combos {
         compatible = "zmk,combos";
