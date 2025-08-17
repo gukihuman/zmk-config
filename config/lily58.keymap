@@ -62,16 +62,7 @@
 &none     &none   &none      &none     &none      &none                   &none   &pos1     &pos2    &pos3      &none  &none
 &none     &none   &none      &none     &none        _                       _     &pos4     &pos5    &pos6      &none  &none 
   _         _     &none      &none     &none        _       _       _       _     &pos7     &pos8    &pos9        _      _
-                               _       &none      &mo 5   &none   &none   &none   &none       _
-            >;
-        };
-        layer_5 {
-            bindings = <
-&none     _     &none   &none   &none    _                   _     &none   &none    &none     _   &none
-&none   &none   &none   &none   &none  &none               &none   &mul    &mup     &mur    &none &none
-&none   &none   &none   &none   &none    _                   _     &mleft  &mkp LCLK &mright &none &none
-  _       _     &none   &none   &none    _     _      _      _     &mdl    &mdown   &mdr      _     _
-                          _     &none  &none &none  &none  &none   _
+                               _       &none      &mo 0   &none   &none   &none   &none       _
             >;
         };
     };
