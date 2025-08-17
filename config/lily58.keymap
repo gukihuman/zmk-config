@@ -22,7 +22,7 @@
         compatible = "zmk,keymap";
         layer_0 {
             bindings = <
-  _       &kp V    &nonw       _          _          _                      _        _          _         &none     &kp J     _
+  _       &kp V    &none       _          _          _                      _        _          _         &none     &kp J     _
 &kp N       _      &kp F      &kp M     &altb 0 0    _                      _      &kp TAB    &kp BSPC    &kp G      _      &kp Y
   -       &kp H    &kp C      &kp W     &kp T      &ESC                   &ENTER   &kp E      &kp SPACE   &kp P     &kp I    
   _       &kp L    &kp X      &kp K     &kp D        _        _      _      _      &kp U      &kp B       &kp Z     &kp Q     _
