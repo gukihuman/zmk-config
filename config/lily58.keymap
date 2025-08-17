@@ -79,8 +79,8 @@
             label = "Mouse Pattern";
             #binding-cells = <0>;
             wait-ms = <0>;
-            tap-ms = <10>;
-            bindings = <&mmv MOVE_X(-500000) &mmv MOVE_Y(-500000) &mmv MOVE_X(50000) &mmv MOVE_Y(50000)>;
+            tap-ms = <100>;
+            bindings = <&mmv MOVE_X(-50000) &mmv MOVE_Y(-50000) &mmv MOVE_X(5000) &mmv MOVE_Y(5000)>;
         };
     };
     behaviors {
