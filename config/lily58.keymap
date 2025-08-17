@@ -7,52 +7,52 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-#define _ &none // to show where there is no buttons
+#define ___ &none // to show where there is no buttons
 
 // LGUI      LALT      LCTRL     LSHFT     DOWN      LEFT      ESC       ENTER     BSPC      DEL       TAB                        
 // RGUI      RALT      RCTRL     RSHFT     UP        RIGHT
 
 // LPAR  (   RPAR  )   DLLR  $   DOT   .   COMMA ,   EQUAL =   LBRC  {   RBRC  }   FSLH  /   LT    <   GT    >
 // BSLH  \   LBKT  [   RBKT  ]   QMARK ?   AMPS  &   PIPE  |   EXCL  !   SQT   '   GRAVE `   COLON :   MINUS -
-// TILDE ~   UNDER _   DQT   "   PLUS  +   SEMI  ;   CARET ^   ASTRK *   AT    @   HASH  #   PRCNT % 
+// TILDE ~   UNDER ___   DQT   "   PLUS  +   SEMI  ;   CARET ^   ASTRK *   AT    @   HASH  #   PRCNT % 
 
  / {
     keymap {
         compatible = "zmk,keymap";
         layer_0 {
             bindings = <
-&mo 3      _      &kp LSHFT  &mo 1     &kp ESC        _                      _      &kp ENTER  &mo 1        &kp RSHFT   _      &mo 3 
+&mo 3      ___      &kp LSHFT  &mo 1     &kp ESC        ___                      ___      &kp ENTER  &mo 1        &kp RSHFT   ___      &mo 3 
 &kp N    &kp H    &kp C      &kp W     &kp T        &alt_tab               &kp TAB  &kp E      &kp SPACE    &kp P     &kp I    &kp Y
-&kp V    &kp L    &kp F      &kp M     &kp D          _                      _      &kp U      &kp LC(SEMI) &kp G     &kp J    &kp Q
-  _        _      &kp X      &kp K     &kp BSPC       _        _      _      _      &kp DEL    &kp B        &kp Z       _        _
-                               _       &kp R        &kp S    &mo 2  &mo 2  &kp A    &kp O        _
+&kp V    &kp L    &kp F      &kp M     &kp D          ___                      ___      &kp U      &kp LC(SEMI) &kp G     &kp J    &kp Q
+  ___        ___      &kp X      &kp K     &kp BSPC       ___        ___      ___      ___      &kp DEL    &kp B        &kp Z       ___        ___
+                               ___       &kp R        &kp S    &mo 2  &mo 2  &kp A    &kp O        ___
             >;
         };        
         layer_1 {
             bindings = <
-&none       _     &none      &none     &none        _                       _     &kp PLUS  &kp N0   &kp MINUS    _    &none 
+&none       ___     &none      &none     &none        ___                       ___     &kp PLUS  &kp N0   &kp MINUS    ___    &none 
 &none     &none   &none      &kp DOWN  &kp UP     &none                   &none   &kp N1    &kp N2   &kp N3     &none  &none
-&none     &none   &none      &kp LEFT  &kp RIGHT    _                       _     &kp N4    &kp N5   &kp N6     &none  &none 
-  _         _     &none      &none     &none        _       _       _       _     &kp N7    &kp N8   &kp N9       _      _
-                               _       &none      &none   &none   &none   &none   &none       _
+&none     &none   &none      &kp LEFT  &kp RIGHT    ___                       ___     &kp N4    &kp N5   &kp N6     &none  &none 
+  ___         ___     &none      &none     &none        ___       ___       ___       ___     &kp N7    &kp N8   &kp N9       ___      ___
+                               ___       &none      &none   &none   &none   &none   &none       ___
             >;
         };
         layer_2 {
             bindings = <
-&none       _       &none     &none     &none           _                     _       &none    &none         &none       _   &none 
+&none       ___       &none     &none     &none           ___                     ___       &none    &none         &none       ___   &none 
 &kp RC(Z) &none     &kp RC(C) &kp RC(W) &kp RC(T)     &none                 &none     &none    &none         &kp LC(V) &none &kp LC(LS(Z))
-&none     &kp RC(L) &kp RC(F) &none     &kp RC(RS(I))   _                     _       &none    &kp LC(LS(T)) &none     &none &none 
-  _         _       &kp RC(X) &none     &none           _         _     _     _       &none    &none         &none       _     _
-                                _       &kp RC(R)     &kp RC(S) &none &none &kp RC(A) &none      _
+&none     &kp RC(L) &kp RC(F) &none     &kp RC(RS(I))   ___                     ___       &none    &kp LC(LS(T)) &none     &none &none 
+  ___         ___       &kp RC(X) &none     &none           ___         ___     ___     ___       &none    &none         &none       ___     ___
+                                ___       &kp RC(R)     &kp RC(S) &none &none &kp RC(A) &none      ___
             >;
         };
         layer_3 {
             bindings = <
-&none       _     &none     &none     &none       _                        _     &none    &none   &none      _      &none 
+&none       ___     &none     &none     &none       ___                        ___     &none    &none   &none      ___      &none 
 &none     &none   &none     &none     &none     &none                    &none   &none    &none   &none    &none    &none 
-&none     &none   &none     &none     &none       _                        _     &none    &none   &none    &none    &none 
-  _         _     &none     &none     &none       _        _       _       _     &none    &none   &none      _        _
-                              _       &none     &none    &none   &none   &none   &none      _
+&none     &none   &none     &none     &none       ___                        ___     &none    &none   &none    &none    &none 
+  ___         ___     &none     &none     &none       ___        ___       ___       ___     &none    &none   &none      ___        ___
+                              ___       &none     &none    &none   &none   &none   &none      ___
             >;
         };
     };
