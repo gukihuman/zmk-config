@@ -23,7 +23,7 @@
         layer_0 {
             bindings = <
 &mo 3      _      &kp LSHFT  &mo 1     &kp ESC        _                      _      &kp ENTER  &mo 1        &kp RSHFT   _      &mo 3 
-&kp N    &kp H    &kp C      &kp W     &kp T        &altb 0 0              &kp TAB  &kp E      &kp SPACE    &kp P     &kp I    &kp Y
+&kp N    &kp H    &kp C      &kp W     &kp T        &altb                  &kp TAB  &kp E      &kp SPACE    &kp P     &kp I    &kp Y
 &kp V    &kp L    &kp F      &kp M     &kp D          _                      _      &kp U      &kp LC(SEMI) &kp G     &kp J    &kp Q
   _        _      &kp X      &kp K     &kp BSPC       _        _      _      _      &kp DEL    &kp B        &kp Z       _        _
                                _       &kp R        &kp S    &mo 2  &mo 2  &kp A    &kp O        _
@@ -33,7 +33,7 @@
             bindings = <
 &none       _     &none      &none     &none        _                       _     &kp PLUS  &kp N0   &kp MINUS    _    &none 
 &none     &none   &none      &kp DOWN  &kp UP     &none                   &none   &kp N1    &kp N2   &kp N3     &none  &none
-&none     &none   &none      &kp LEFT  &kp RIGHT    _                       _     &kp N4    &kp N5   &kp N6     &mouse_pattern  &none 
+&none     &none   &none      &kp LEFT  &kp RIGHT    _                       _     &kp N4    &kp N5   &kp N6     &none  &none 
   _         _     &none      &none     &none        _       _       _       _     &kp N7    &kp N8   &kp N9       _      _
                                _       &none      &none   &none   &none   &none   &none       _
             >;
@@ -60,7 +60,7 @@
             bindings = <
 &none  _    &none &none &none   _                 _   &none               &none               &none      _        &none 
 &none &none &none &none &none &none             &none &none               &mmv MOVE_Y(-10000) &none               &none    &none 
-&none &none &none &none &none   _                 _   &mmv MOVE_X(-10000) &none               &mmv MOVE_X(-10000) &none    &none 
+&none &none &none &none &none   _                 _   &mmv MOVE_X(-10000) &none               &mmv MOVE_X(10000) &none    &none 
   _     _   &none &none &none   _     _     _     _   &none               &mmv MOVE_Y(10000)               &none    _        _
                     _   &none &none &mo 5 &none &none &none   _
             >;
@@ -95,6 +95,7 @@
         altb: alt_tab {
             compatible = "zmk,behavior-hold-tap";
             label = "Alt‑Tab Key";
+            binding-cells = <0>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&alt_tab_hold>, <&alt_tab_tap>;
