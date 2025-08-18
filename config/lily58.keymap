@@ -23,7 +23,7 @@
         l0_main {
             bindings = <
 _     &td_X &kp DOT _       _         _           _           _       _         &kp QMARK &kp Z _
-&td_L _     &kp V   &lt 2 M &altb 0 0 _           _           &kp TAB &td_BSPC  &kp Q     _     &kp J
+&td_L _     &lt 3 V &lt 2 M &altb 0 0 _           _           &kp TAB &td_BSPC  &kp Q     _     &kp J
 _     &kp H &td_C   &td_W   &td_T     &kp ESC     &kp ENTER   &kp E   &kp SPACE &td_P     &kp I _
 _     &td_N &td_F   &kp K   &td_D     _       _ _ _           &kp U   &td_B     &kp G     &td_Y _
                     _       &td_R     &td_S   _ _ &mt LSHFT O &td_A   _
@@ -44,7 +44,16 @@ _     &none &none _     _     _         _         _              _              
 %none _     &none &none &none _         _         &none          &msc SCRL_DOWN &msc SCRL_UP _               &none
 _     &none &none &none &none &none     &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT _
 _     &none &none &none &none _     _ _ _         &none          &none          &none        &none           _
-                  _     &none &none _ _ &&mkp MB1 &mkp MB2       _
+                  _     &none &none _ _ &mkp MB1 &mkp MB2       _
+            >;
+        };
+        l3_volume {
+            bindings = <
+_     &none &none _     _     _         _          _     _                    &none                &none _
+&none _     &none &none &none _         _          &none &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC _     &none
+_     &none &none &none &none &none     &none      &none &kp C_VOLUME_DOWN    &kp C_VOLUME_UP      &none _
+_     &none &none &none &none _     _ _ _          &none &none                &none                &none _
+                  _     &none &none _ _ &kp C_MUTE &none _
             >;
         };
 //         layer_4 {
