@@ -22,31 +22,22 @@
         compatible = "zmk,keymap";
         layer_0 {
             bindings = <
-  _       &kp V    &none       _          _          _                      _         _          _         &none     &kp J     _
-&kp N       _      &kp F      &kp M     &altb 0 0    _                      _       &kp TAB    &kp BSPC    &kp G      _      &kp Y
-  _       &kp H    &kp C      &kp W     &kp T      &kp ESC                &kp ENTER &kp E      &kp SPACE   &kp P     &kp I     _
-  _       &kp L    &kp X      &kp K     &kp D        _        _      _      _       &kp U      &kp B       &kp Z     &kp Q     _
-                               _        &kp R      &kp S      _      _    &kp A     &kp O        _
+  _       &kp X    &lt 1 DOT      _         _          _                      _         _        _         &lt 1 QMARK &kp Z     _
+&kp N       _      &kp V      &kp M     &altb 0 0    _                      _       &kp TAB    &kp BSPC    &kp Q         _     &kp Y
+  _       &kp H    &kp C      &kp W     &kp T      &kp ESC                &kp ENTER &kp E      &kp SPACE   &kp P       &kp I     _
+  _       &kp L    &kp F      &kp K     &kp D        _        _      _      _       &kp U      &kp B       &kp G       &kp J     _
+                                _       &kp R      &kp S      _      _    &kp O     &kp A        _
             >;
         };
-//         layer_1 {
-//             bindings = <
-// &none       _     &none      &none     &none        _                       _     &none   &none   &none     _     &none
-// &none     &none   &none      &none     &none      &none                   &none   &none   &none   &none   &none   &none
-// &none     &none   &none      &none     &none        _                       _     &none   &none   &none   &none   &none
-//   _         _     &none      &none     &none        _       _       _       _     &none   &none   &none     _       _
-//                                _       &none      &none   &none   &none   &none   &none       _
-//             >;
-//         };
-//         layer_2 {
-//             bindings = <
-// &none       _     &none      &none     &none        _                       _     &kp PLUS  &kp N0   &kp MINUS    _    &none 
-// &none     &none   &none      &none     &none      &none                   &none   &kp N1    &kp N2   &kp N3     &none  &none
-// &none     &none   &none      &none     &none        _                       _     &kp N4    &kp N5   &kp N6     &none  &none 
-//   _         _     &none      &none     &none        _       _       _       _     &kp N7    &kp N8   &kp N9       _      _
-//                                _       &none      &none   &none   &none   &none   &none       _
-//             >;
-//        };
+        layer_1 {
+            bindings = <
+_       &none       &none        _          _          _                      _         _          _     &none      &none     _
+&none     _         &none      &none      &none        _                      _       &kp N7    &kp N8   &kp N9       _     &none
+_       &none       &none      &none      &none      &none                  &none     &kp N4    &kp N5   &kp N6     &none     _
+_       &none       &none      &none      &none        _        _      _      _       &kp N1    &kp N2   &kp N3     &none     _
+                                 _        &none      &none      _      _    &kp N0    &none        _
+            >;
+        };
 //         layer_3 {
 //             bindings = <
 // &none       _       &none     &none     &none           _                     _       &none    &none         &none       _   &none 
