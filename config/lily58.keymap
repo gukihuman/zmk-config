@@ -271,9 +271,9 @@ _     &none     &none     &none     &none    _     _ _ _     &none &none &none &
             bindings = <&kp T>, <&kp LC(T)>;
         };
     };
-//    combos {
-//        compatible = "zmk,combos";
-//        mouse_abs { key-positions = <3 53>; slow-release; bindings = <&mo 4>; };
-//        mouse_abs { key-positions = <8 54>; slow-release; bindings = <&mo 4>; };
-//    };
+    combos {
+        compatible = "zmk,combos";
+        tab_right { key-positions = <31 32>; slow-release; bindings = <&kp LC(TAB)>; };
+        tab_left  { key-positions = <27 28>; slow-release; bindings = <&kp LC(LS(TAB))>; };
+    };
 };
