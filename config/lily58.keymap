@@ -8,6 +8,9 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
 #define _ &none // to show where there is no buttons
 
 // LGUI      LALT      LCTRL     LSHFT     DOWN      LEFT      ESC       ENTER     BSPC      DEL       TAB                        
@@ -24,7 +27,7 @@
             bindings = <
 _     &td_X &kp DOT _       _         _           _           _       _         &kp QMARK &kp Z _
 &td_L _     &lt 3 V &lt 2 M &altb 0 0 _           _           &kp TAB &td_BSPC  &kp Q     _     &kp J
-_     &kp H &td_C   &td_W   &td_T     &kp ESC     &kp ENTER   &kp E   &kp SPACE &td_P     &kp I _
+_     &kp H &td_C   &td_W   &td_T     &td_ESC     &kp ENTER   &kp E   &kp SPACE &td_P     &kp I _
 _     &td_N &td_F   &kp K   &td_D     _       _ _ _           &kp U   &td_B     &kp G     &td_Y _
                     _       &td_R     &td_S   _ _ &mt LSHFT O &td_A   _
             >;
@@ -44,7 +47,7 @@ _     &none &none _     _     _         _         _              _              
 &none _     &none &none &none _         _         &none          &msc SCRL_DOWN &msc SCRL_UP _               &none
 _     &none &none &none &none &none     &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT _
 _     &none &none &none &none _     _ _ _         &none          &none          &none        &none           _
-                  _     &none &none _ _ &mkp MB1  &mkp MB2       _
+                  _     &none &none _ _ &mkp MB2  &mkp MB1       _
             >;
         };
         l3_volume {
@@ -56,15 +59,15 @@ _     &none &none &none &none _     _ _ _          &none &none                &n
                   _     &none &none _ _ &kp C_MUTE &none _
             >;
         };
-//         layer_4 {
-//             bindings = <
-// &none       _     &none     &none     &none       _                        _     &none     &none     &none     _       &none 
-// &none     &none   &none     &none     &none     &none                    &none   &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &none 
-//   _         _     &none     &none     &none       _        _       _       _     &none     &none     &none     _        _
-//                               _       &none     &none    &none   &none   &none   &none       _
-//             >;
-//         };
-
+        l4_route {
+            bindings = <
+_     &none &none _     _     _         _     _        _        &none  &none     _
+&none _     &none &none &none _         _     &none    &none    &none  _         &none
+_     &none &none &none &none &none     &none &kp LEFT &kp DOWN &kp UP &kp RIGHT _
+_     &none &none &none &none _     _ _ _     &none    &none    &none  &none     _
+                  _     &none &none _ _ &none &none    _
+            >;
+        };
     };
     macros {
         alt_tab_tap: alt_tab_tap {
@@ -93,7 +96,13 @@ _     &none &none &none &none _     _ _ _          &none &none                &n
             tapping-term-ms = <200>;
             bindings = <&alt_tab_hold>, <&alt_tab_tap>;
         };
-        td_BSPC: tap_dance_BSPC {
+        td_ESC: tap_dance_del {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <280>;
+            bindings = <&kp ESC>, <&kp DEL>;
+        };
+        td_BSPC: tap_dance_bspc {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <280>;
@@ -169,7 +178,7 @@ _     &none &none &none &none _     _ _ _          &none &none                &n
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <280>;
-            bindings = <&kp R>, <&kp LC(R)>;
+            bindings = <&lt 4 R>, <&kp LC(R)>;
         };
         td_S: tap_dance_s {
             compatible = "zmk,behavior-tap-dance";
