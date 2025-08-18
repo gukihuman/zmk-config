@@ -13,17 +13,18 @@
 
 #define _ &none // to show where there is no buttons
 
-// LGUI      LALT      LCTRL     LSHFT     DOWN      LEFT      ESC       ENTER     BSPC      DEL       TAB                        
-// RGUI      RALT      RCTRL     RSHFT     UP        RIGHT
+// ESC       ENTER     BSPC      DEL       TAB
+// LEFT      DOWN      UP        RIGHT
+// LGUI      LALT      LCTRL     LSHFT
+// RGUI      RALT      RCTRL     RSHFT
 
-// DOT   .   COMMA ,   QMARK ?   EXCL  !
+// UNDER _   DOT   .   COMMA ,   QMARK ?   EXCL  !
 // LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
 // GRAVE `   SQT   '   DQT   "   BSLH  \
 // LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |
 // PLUS  +   MINUS -   ASTRK *   FSLH  /
-
-// DLLR  $   COLON :
-// TILDE ~   UNDER _   SEMI  ;   CARET ^   ASTRK *   AT    @   HASH  #   PRCNT % 
+// DLLR  $   AT    @   HASH  #   PRCNT % 
+// CARET ^   TILDE ~   COLON :   SEMI  ;
 
  / {
     keymap {
@@ -32,7 +33,7 @@
             bindings = <
 _     &td_X &td_DOT _       _         _           _           _       _         &td_QMARK &kp Z _
 &td_L _     &lt 3 V &lt 2 M &altb 0 0 _           _           &kp TAB &td_BSPC  &lt 6 Q     _     &kp J
-_     &kp H &td_C   &td_W   &td_T     &td_ESC     &kp ENTER   &kp E   &kp SPACE &td_P     &kp I _
+_     &kp H &td_C   &td_W   &td_T     &td_ESC     &kp ENTER   &kp E   &td_SPACE &td_P     &kp I _
 _     &td_N &td_F   &kp K   &td_D     _       _ _ _           &kp U   &td_B     &kp G     &td_Y _
                     _       &td_R     &td_S   _ _ &mt LSHFT O &td_A   _
             >;
@@ -109,6 +110,24 @@ _     &none &none &none &none _     _ _ _        &none    &none     &none     &n
                   _     &none &none _ _ &none    &none _
             >;
         };
+        l9_World {
+            bindings = <
+_     &none &none _     _     _         _        _        _      &none    &none     _
+&none _     &none &none &none _         _        &none    &none  &none    _         &none
+_     &none &none &none &none &none     &none    &kp DLLR &kp AT &kp HASH &kp PRCNT _
+_     &none &none &none &none _     _ _ _        &none    &none  &none    &none     _
+                  _     &none &none _ _ &none    &none    _
+            >;
+        };
+        l10_SPACE {
+            bindings = <
+_     &none     &none     _         _        _         _     _     _     &none &none _
+&none _         &none     &none     &none    _         _     &none &none &none _     &none
+_     &kp CARET &kp TILDE &kp COLON &kp SEMI &none &none  &none &none &none &none &none _
+_     &none     &none     &none     &none    _     _ _ _     &none &none &none &none _
+                          _         &none    &none _ _ &none &none _
+            >;
+        };
     };
     macros {
         alt_tab_tap: alt_tab_tap {
@@ -136,6 +155,12 @@ _     &none &none &none &none _     _ _ _        &none    &none     &none     &n
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&alt_tab_hold>, <&alt_tab_tap>;
+        };
+        td_SPACE: tap_dance_space {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&lt 10 SPACE>, <&kp UNDER>;
         };
         td_DOT: tap_dance_dot {
             compatible = "zmk,behavior-tap-dance";
@@ -207,7 +232,7 @@ _     &none &none &none &none _     _ _ _        &none    &none     &none     &n
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&kp W>, <&kp LC(W)>;
+            bindings = <&lt 9 W>, <&kp LC(W)>;
         };
         td_X: tap_dance_x {
             compatible = "zmk,behavior-tap-dance";
