@@ -22,10 +22,10 @@
         compatible = "zmk,keymap";
         l0_main {
             bindings = <
-_       &td_X    &kp DOT  _       _          _                _         _             _            &kp QMARK  &kp Z _
-&td_N   _        &kp V    &kp M   &altb 0 0  _                _         &kp TAB &kp BSPC    &kp Q  _          &td_Y
-_       &kp H    &td_C    &td_W   &td_T      &kp ESC          &kp ENTER &kp E   &kp SPACE   &td_P  &kp I      _
-_       &td_L    &td_F    &kp K   &td_D      _         _ _    _         &kp U   &td_B       &kp G  &kp J      _
+_       &td_X    &kp DOT  _       _          _                _         _       _           &kp QMARK  &kp Z      _
+&td_N   _        &kp V    &kp M   &altb 0 0  _                _         &kp TAB &kp BSPC    &kp Q      _          &td_Y
+_       &kp H    &td_C    &td_W   &td_T      &kp ESC          &kp ENTER &kp E   &kp SPACE   &td_P      &kp I      _
+_       &td_L    &td_F    &kp K   &td_D      _         _ _    _         &kp U   &td_B       &kp G      &kp J      _
                           _       &td_R      &td_S     _ _    &kp O     &td_A   _
             >;
         };
@@ -77,7 +77,7 @@ _       &td_L    &td_F    &kp K   &td_D      _         _ _    _         &kp U   
     behaviors {
         altb: alt_tab {
             compatible = "zmk,behavior-hold-tap";
-            label = "Alt‑Tab Key";
+            label = "Alt-Tab Key";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
@@ -90,7 +90,7 @@ _       &td_L    &td_F    &kp K   &td_D      _         _ _    _         &kp U   
         td_P: tap_dance_p { compatible = "zmk,behavior-tap-dance"; bindings = <&kp P>, <&kp LC(V)>; };
         td_D: tap_dance_d { compatible = "zmk,behavior-tap-dance"; bindings = <&kp D>, <&kp LC(LS(I))>; };
         td_B: tap_dance_b { compatible = "zmk,behavior-tap-dance"; bindings = <&kp B>, <&kp LC(LS(T))>; };
-        td_W: tap_dance_s { compatible = "zmk,behavior-tap-dance"; bindings = <&kp W>, <&kp LC(W)>; };
+        td_W: tap_dance_w { compatible = "zmk,behavior-tap-dance"; bindings = <&kp W>, <&kp LC(W)>; };
         td_X: tap_dance_x { compatible = "zmk,behavior-tap-dance"; bindings = <&kp X>, <&kp LC(X)>; };
         td_L: tap_dance_l { compatible = "zmk,behavior-tap-dance"; bindings = <&kp L>, <&kp LC(L)>; };
         td_F: tap_dance_f { compatible = "zmk,behavior-tap-dance"; bindings = <&kp F>, <&kp LC(F)>; };
