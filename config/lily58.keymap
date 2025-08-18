@@ -22,22 +22,31 @@
         compatible = "zmk,keymap";
         l0_main {
             bindings = <
-_       &td_X    &kp DOT  _       _          _                _           _       _           &kp QMARK  &kp Z      _
-&td_L   _        &kp V    &kp M   &altb 0 0  _                _           &kp TAB &td_BSPC    &kp Q      _          &kp J
-_       &kp H    &td_C    &td_W   &td_T      &kp ESC          &kp ENTER   &kp E   &kp SPACE   &td_P      &kp I      _
-_       &td_N    &td_F    &kp K   &td_D      _         _ _    _           &kp U   &td_B       &kp G      &td_Y      _
-                          _       &td_R      &td_S     _ _    &mt LSHFT O &td_A   _
+_     &td_X &kp DOT _       _         _           _           _       _         &kp QMARK &kp Z _
+&td_L _     &kp V   &lt 2 M &altb 0 0 _           _           &kp TAB &td_BSPC  &kp Q     _     &kp J
+_     &kp H &td_C   &td_W   &td_T     &kp ESC     &kp ENTER   &kp E   &kp SPACE &td_P     &kp I _
+_     &td_N &td_F   &kp K   &td_D     _       _ _ _           &kp U   &td_B     &kp G     &td_Y _
+                    _       &td_R     &td_S   _ _ &mt LSHFT O &td_A   _
             >;
         };
         l1_numbers {
             bindings = <
-  _     &none       &none        _          _          _                      _         _         _      &none      &none     _
-&none     _         &none      &none      &none        _                      _       &kp N7    &kp N8   &kp N9       _     &none
-  _     &none       &none      &none      &none      &none                  &none     &kp N4    &kp N5   &kp N6     &none     _
-  _     &none       &none      &none      &none        _        _      _      _       &kp N1    &kp N2   &kp N3     &none     _
-                                 _        &none      &none      _      _    &kp N0    &none       _
+_     &none &none _     _     _         _      _      _      &none  &none _
+&none _     &none &none &none _         _      &kp N7 &kp N8 &kp N9 _     &none
+_     &none &none &none &none &none     &none  &kp N4 &kp N5 &kp N6 &none _
+_     &none &none &none &none _     _ _ _      &kp N1 &kp N2 &kp N3 &none _
+                  _     &none &none _ _ &kp N0 &none  _
             >;
         };
+        l2_mouse {
+            bindings = <
+_     &none &none _     _     _         _         _              _              &none        &none           _
+%none _     &none &none &none _         _         &none          &msc SCRL_DOWN &msc SCRL_UP _               &none
+_     &none &none &none &none &none     &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT _
+_     &none &none &none &none _     _ _ _         &none          &none          &none        &none           _
+                  _     &none &none _ _ &&mkp MB1 &mkp MB2       _
+//             >;
+//         };
 //         layer_4 {
 //             bindings = <
 // &none       _     &none     &none     &none       _                        _     &none     &none     &none     _       &none 
@@ -46,15 +55,7 @@ _       &td_N    &td_F    &kp K   &td_D      _         _ _    _           &kp U 
 //                               _       &none     &none    &none   &none   &none   &none       _
 //             >;
 //         };
-//         layer_5 {
-//             bindings = <
-// &none  _    &none &none &none   _                 _   &none               &mkp MB1            &mkp MB2             _              &none
-// &none &none &none &none &none &none             &none &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP       &mmv MOVE_RIGHT  &none
-// &none &none &none &none &none   _                 _   &none               &msc SCRL_DOWN      &msc SCRL_UP       &none            &none
-//   _     _   &none &none &none   _     _     _     _   &none               &none               &none                _                _
-//                     _   &none &mo 6 &none &none &none &none                 _
-//             >;
-//         };
+
     };
     macros {
         alt_tab_tap: alt_tab_tap {
@@ -93,7 +94,7 @@ _       &td_N    &td_F    &kp K   &td_D      _         _ _    _           &kp U 
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <280>;
-            bindings = <&kp N>, <&kp LC(Z)>;
+            bindings = <&lt 1 N>, <&kp LC(Z)>;
         };
         td_Y: tap_dance_y {
             compatible = "zmk,behavior-tap-dance";
