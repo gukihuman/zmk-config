@@ -123,7 +123,7 @@ _     &none &none &none &none _     _ _ _        &none    &none  &none    &none 
             bindings = <
 _     &none     &none     _         _        _         _     _     _     &none &none _
 &none _         &none     &none     &none    _         _     &none &none &none _     &none
-_     &kp CARET &kp TILDE &kp COLON &kp SEMI &none &none  &none &none &none &none &none _
+_     &kp CARET &kp TILDE &kp COLON &kp SEMI &none     &none &none &none &none &none &none _
 _     &none     &none     &none     &none    _     _ _ _     &none &none &none &none _
                           _         &none    &none _ _ &none &none _
             >;
@@ -273,7 +273,7 @@ _     &none     &none     &none     &none    _     _ _ _     &none &none &none &
     };
     combos {
         compatible = "zmk,combos";
-        tab_right { key-positions = <31 32>; slow-release; bindings = <&kp LC(TAB)>; };
-        tab_left  { key-positions = <27 28>; slow-release; bindings = <&kp LC(LS(TAB))>; };
+        tab_right { key-positions = <20 21>; slow-release; bindings = <&kp LC(TAB)>; };
+        tab_left  { key-positions = <15 16>; slow-release; bindings = <&kp LC(LS(TAB))>; };
     };
 };
