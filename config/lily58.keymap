@@ -135,7 +135,7 @@ _     &none     &none     &none     &none    _     _ _ _     &none &none &none &
             label = "Alt‑Tab Tap";
             #binding-cells = <0>;
             wait-ms = <20>;
-            tap-ms = <40>;
+            tap-ms = <20>;
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>;
         };
         alt_tab_hold: alt_tab_hold {
@@ -143,7 +143,7 @@ _     &none     &none     &none     &none    _     _ _ _     &none &none &none &
             label = "Alt‑Tab Hold";
             #binding-cells = <0>;
             wait-ms = <20>;
-            tap-ms = <40>;
+            tap-ms = <20>;
             bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_pause_for_release>, <&macro_release &kp LALT>;
         };
     };
