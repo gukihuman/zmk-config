@@ -7,8 +7,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-#define _________   &none   // to show where there is no buttons
-#define mmmmmmmmm   &none   // non available on current layer
+#define _________   &none
 #define TABL        LC(LS(TAB))
 #define TABR        LC(TAB)
 #define SAVE        LC(S)
@@ -68,7 +67,7 @@ _________ &none     &none     &none     _________ _________                     
 &kp NO    _________ &kp FIND  &none     &none     &none                         &none     &none     &none     &none     _________ &kp YES
 _________ &none     &kp COPY  &kp WDRAW &kp TABN  &none                         &none     &none     &none     &kp PASTE &none     _________
 &none     &kp LOC   &none     &none     &kp DVTLS _________ _________ _________ _________ &none     &kp BACK  &none     &none     &none
-                              _________ &kp SAVE  &kp RFSH  &none     &none     &none     &kp ALLn  _________
+                              _________ &kp SAVE  &kp RFSH  &none     &none     &none     &kp ALL   _________
         >; };
     };
     macros {
