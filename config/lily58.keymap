@@ -66,7 +66,7 @@ _     &kp QMARK &kp EXCL  &kp DOT   &kp COMMA &none             &none      &kp L
 _         &none     &none     &none     _               _                     _       _         &none         &none     &none _
 &kp LC(Z) _         &kp LC(F) &none     &none           &none                 &none   &none     &none         &none     _     &kp LC(LS(Z))
 _         &none     &kp LC(C) &kp LC(W) &kp LC(T)       &none                 &none   &none     &none         &kp LC(V) &none _
-&none     &kp LC(L) &none     &none     &kp (LC(LS(I))) _         _     _     _       &none     &kp LC(LS(T)) &none     &none &none
+&none     &kp LC(L) &none     &none     &kp LC(LS(I)) _         _     _     _       &none     &kp LC(LS(T)) &none     &none &none
                               _         &kp LC(S)       &kp LC(R) &none &none &none   &kp LC(A) _
             >;
         };
