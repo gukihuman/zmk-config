@@ -54,11 +54,11 @@ _     &kp COLON &kp LPAR  &kp LBKT &kp LBRC &none                &none    &kp AS
         };
         l3 {
             bindings = <
-_     &none  &none     &none     _         _                 _          _           &none        &none        &none           _
-&none _      &none     &none     &none     &none             &none      &none       &kp C_VOL_DN &kp C_VOL_UP _               &none
-_     &QMARK &kp EXCL  &kp DOT   &kp COMMA &none             &none      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT       _
-&none &none  &kp CARET &kp TILDE &none     _     _     _     _          &kp LC(TAB) &kp C_BRI_DN &kp C_BRI_UP &kp LC(LS(TAB)) &none
-                       _         &none     &none &none &none &kp C_MUTE &none    _
+_     &none     &none     &none     _         _                 _          _           &none        &none        &none           _
+&none _         &none     &none     &none     &none             &none      &none       &kp C_VOL_DN &kp C_VOL_UP _               &none
+_     &kp QMARK &kp EXCL  &kp DOT   &kp COMMA &none             &none      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT       _
+&none &none     &kp CARET &kp TILDE &none     _     _     _     _          &kp LC(TAB) &kp C_BRI_DN &kp C_BRI_UP &kp LC(LS(TAB)) &none
+                          _         &none     &none &none &none &kp C_MUTE &none    _
             >;
         };
         l4 {
