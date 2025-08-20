@@ -6,10 +6,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/pointing.h>
-
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 800  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 #define _ &none // to show where there is no buttons
 
@@ -18,114 +14,60 @@
 // LGUI      LALT      LCTRL     LSHFT
 // RGUI      RALT      RCTRL     RSHFT
 
-// UNDER _   DOT   .   COMMA ,   QMARK ?   EXCL  !
+// LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |   UNDER _
+// PLUS  +   MINUS -   ASTRK *   DLLR  $   AT    @   HASH  #   PRCNT %
+
+// GRAVE `   SQT   '   DQT   "   COLON :   SEMI  ;   FSLH  /   BSLH  \
 // LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
-// GRAVE `   SQT   '   DQT   "   BSLH  \
-// LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |
-// PLUS  +   MINUS -   ASTRK *   FSLH  /
-// DLLR  $   AT    @   HASH  #   PRCNT % 
-// CARET ^   TILDE ~   COLON :   SEMI  ;
+
+// DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~   
 
  / {
     keymap {
         compatible = "zmk,keymap";
-        l0_main {
+        l0 {
             bindings = <
-_     &lt 3 V &td_DOT _       _       _             _       _           _         &td_QMARK &lt 6 Q _
-&td_N  _      &td_F   &lt 2 M &td_ESC _             _       &kp ENTER   &td_BSPC  &kp G     _       &td_Y
-_     &kp H   &td_C   &td_W   &td_T   &altb 0 0     &kp TAB &kp E       &td_SPACE &td_P     &kp I   _
-_     &kp K   &td_X   &td_L   &td_D   _         _ _ _       &kp U       &td_B     &kp Z     &kp J   _
-                      _       &td_S   &td_R     _ _ &td_A   &mt LSHFT O _
+_         &mo 1 &mo 2 &kp X _         _                   _         _       &kp Z     &mo 2 &mo 1 _
+&kp N     _     &kp F &kp M &altb 0 0 &kp ESC             &kp ENTER &kp TAB &kp BSPC  &kp G _     &kp Y
+_         &kp H &kp C &kp W &kp T     &mo 3               &mo 3     &kp E   &kp SPACE &kp P &kp I _
+&kp LSHFT &kp L &kp V &kp K &kp D     _       _     _     _         &kp U   &kp B     &kp Q &kp J &kp RSHFT
+                      _     &kp S     &kp R   &mo 4 &mo 4 &kp O     &kp A   _
             >;
         };
-        l1_Numbers {
+        l1 {
             bindings = <
-_     &none &none _     _     _         _      _      _      &none  &none _
-&none _     &none &none &none _         _      &kp N7 &kp N8 &kp N9 _     &none
-_     &none &none &none &none &none     &none  &kp N4 &kp N5 &kp N6 &none _
-_     &none &none &none &none _     _ _ _      &kp N1 &kp N2 &kp N3 &none _
-                  _     &none &none _ _ &kp N0 &none  _
+_     &none     &none     &none    _        _                    _      _      &none  &none  &none _
+&none _         &kp GRAVE &kp SQT  &kp DQT  &none                &none  &kp N7 &kp N8 &kp N9 _     &none
+_     &kp COLON &kp LPAR  &kp LBKT &kp LBRC &none                &none  &kp N4 &kp N5 &kp N6 &none _
+&none &kp SEMI  &kp RPAR  &kp RBKT &kp RBRC _        _     _     _      &kp N1 &kp N2 &kp N3 &none &none
+                          _        &kp BSLH &kp FSLH &none &none &kp N0 &none  _
             >;
         };
-        l2_Mouse {
+        l2 {
             bindings = <
-_     &none &none _     _     _         _         _              _              &none        &none           _
-&none _     &none &none &none _         _         &none          &msc SCRL_DOWN &msc SCRL_UP _               &none
-_     &none &none &none &none &none     &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT _
-_     &none &none &none &none _     _ _ _         &none          &none          &none        &none           _
-                  _     &none &none _ _ &mkp MB2  &mkp MB1       _
+_     &none     &none     &none    _        _                    _        _         &none     &none     &none     _
+&none _         &kp GRAVE &kp SQT  &kp DQT  &none                &none    &kp LT    &kp GT    &kp EQUAL _         &none
+_     &kp COLON &kp LPAR  &kp LBKT &kp LBRC &none                &none    &kp ASTRK &kp UNDER &kp PLUS  &kp MINUS _
+&none &kp SEMI  &kp RPAR  &kp RBKT &kp RBRC _        _     _     _        &kp DLLR  &kp AT    &kp HASH  &kp PRCNT &none
+                          _        &kp BSLH &kp FSLH &none &none &kp AMPS &kp PIPE  _
             >;
         };
-        l3_Volume {
+        l3 {
             bindings = <
-_     &none &none _     _     _         _          _     _                    &none                &none _
-&none _     &none &none &none _         _          &none &kp C_BRIGHTNESS_DEC &kp C_BRIGHTNESS_INC _     &none
-_     &none &none &none &none &none     &none      &none &kp C_VOLUME_DOWN    &kp C_VOLUME_UP      &none _
-_     &none &none &none &none _     _ _ _          &none &none                &none                &none _
-                  _     &none &none _ _ &kp C_MUTE &none _
+_     &none  &none     &none     _         _                 _          _           &none        &none        &none           _
+&none _      &none     &none     &none     &none             &none      &none       &kp C_VOL_DN &kp C_VOL_UP _               &none
+_     &QMARK &kp EXCL  &kp DOT   &kp COMMA &none             &none      &kp LEFT    &kp DOWN     &kp UP       &kp RIGHT       _
+&none &none  &kp CARET &kp TILDE &none     _     _     _     _          &kp LC(TAB) &kp C_BRI_DN &kp C_BRI_UP &kp LC(LS(TAB)) &none
+                       _         &none     &none &none &none &kp C_MUTE &none    _
             >;
         };
-        l4_Route {
+        l4 {
             bindings = <
-_     &none &none _     _     _         _     _        _        &none  &none     _
-&none _     &none &none &none _         _     &none    &none    &none  _         &none
-_     &none &none &none &none &none     &none &kp LEFT &kp DOWN &kp UP &kp RIGHT _
-_     &none &none &none &none _     _ _ _     &none    &none    &none  &none     _
-                  _     &none &none _ _ &none &none    _
-            >;
-        };
-        l5_Parenthesis {
-            bindings = <
-_     &none    &none    _        _     _         _     _     _     &none &none _
-&none _        &none    &none    &none _         _     &none &none &none _     &none
-_     &kp LPAR &kp LBKT &kp LBRC &none &none     &none &none &none &none &none _
-_     &kp RPAR &kp RBKT &kp RBRC &none _     _ _ _     &none &none &none &none _
-                        _        &none &none _ _ &none &none _
-            >;
-        };
-        l6_Quote {
-            bindings = <
-_     &none     &none   _       _     _         _     _     _     &none &none _
-&none _         &none   &none   &none _         _     &none &none &none _     &none
-_     &kp GRAVE &kp SQT &kp DQT &kp BSLH &none &none  &none &none &none &none &none _
-_     &none     &none   &none   &none _     _ _ _     &none &none &none &none _
-                        _       &none &none _ _ &none &none _
-            >;
-        };
-        l7_Logic {
-            bindings = <
-_     &none &none _     _     _         _        _        _      &none     &none _
-&none _     &none &none &none _         _        &none    &none  &none     _     &none
-_     &none &none &none &none &none     &none    &kp LT   &kp GT &kp EQUAL _     _
-_     &none &none &none &none _     _ _ _        &none    &none  &none     &none _
-                  _     &none &none _ _ &kp AMPS &kp PIPE _
-            >;
-        };
-        l8_Calculus {
-            bindings = <
-_     &none &none _     _     _         _        _        _         &none     &none    _
-&none _     &none &none &none _         _        &none    &none     &none     _        &none
-_     &none &none &none &none &none     &none    &kp PLUS &kp MINUS &kp ASTRK &kp FSLH _
-_     &none &none &none &none _     _ _ _        &none    &none     &none     &none    _
-                  _     &none &none _ _ &none    &none _
-            >;
-        };
-        l9_World {
-            bindings = <
-_     &none &none _     _     _         _        _        _      &none    &none     _
-&none _     &none &none &none _         _        &none    &none  &none    _         &none
-_     &none &none &none &none &none     &none    &kp DLLR &kp AT &kp HASH &kp PRCNT _
-_     &none &none &none &none _     _ _ _        &none    &none  &none    &none     _
-                  _     &none &none _ _ &none    &none    _
-            >;
-        };
-        l10_SPACE {
-            bindings = <
-_     &none     &none     _         _        _         _     _     _     &none &none _
-&none _         &none     &none     &none    _         _     &none &none &none _     &none
-_     &kp CARET &kp TILDE &kp COLON &kp SEMI &none     &none &none &none &none &none &none _
-_     &none     &none     &none     &none    _     _ _ _     &none &none &none &none _
-                          _         &none    &none _ _ &none &none _
+_         &none     &none     &none     _               _                     _       _         &none         &none     &none _
+&kp LC(Z) _         &kp LC(F) &none     &none           &none                 &none   &none     &none         &none     _     &kp LC(LS(Z))
+_         &none     &kp LC(C) &kp LC(W) &kp LC(T)       &none                 &none   &none     &none         &kp LC(V) &none _
+&none     &kp LC(L) &none     &none     &kp (LC(LS(I))) _         _     _     _       &none     &kp LC(LS(T)) &none     &none &none
+                              _         &kp LC(S)       &kp LC(R) &none &none &none   &kp LC(A) _
             >;
         };
     };
@@ -156,124 +98,5 @@ _     &none     &none     &none     &none    _     _ _ _     &none &none &none &
             tapping-term-ms = <200>;
             bindings = <&alt_tab_hold>, <&alt_tab_tap>;
         };
-        td_SPACE: tap_dance_space {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&lt 10 SPACE>, <&kp UNDER>;
-        };
-        td_DOT: tap_dance_dot {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp DOT>, <&kp COMMA>;
-        };
-        td_QMARK: tap_dance_qmark {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-        };
-        td_ESC: tap_dance_del {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp ESC>, <&kp DEL>;
-        };
-        td_BSPC: tap_dance_bspc {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp BSPC>, <&kp LC(BSPC)>;
-        };
-        td_N: tap_dance_n {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&lt 1 N>, <&kp LC(Z)>;
-        };
-        td_Y: tap_dance_y {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp Y>, <&kp LC(LS(Z))>;
-        };
-        td_C: tap_dance_c {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&lt 8 C>, <&kp LC(C)>;
-        };
-        td_A: tap_dance_a {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp A>, <&kp LC(A)>;
-        };
-        td_P: tap_dance_p {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&lt 5 P>, <&kp LC(V)>;
-        };
-        td_D: tap_dance_d {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp D>, <&kp LC(LS(I))>;
-        };
-        td_B: tap_dance_b {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp B>, <&kp LC(LS(T))>;
-        };
-        td_W: tap_dance_w {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&lt 9 W>, <&kp LC(W)>;
-        };
-        td_X: tap_dance_x {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp X>, <&kp LC(X)>;
-        };
-        td_L: tap_dance_l {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&lt 7 L>, <&kp LC(L)>;
-        };
-        td_F: tap_dance_f {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp F>, <&kp LC(F)>;
-        };
-        td_R: tap_dance_r {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&lt 4 R>, <&kp LC(R)>;
-        };
-        td_S: tap_dance_s {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&mt LSHFT S>, <&kp LC(S)>;
-        };
-        td_T: tap_dance_t {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&kp T>, <&kp LC(T)>;
-        };
-    };
-    combos {
-        compatible = "zmk,combos";
-        tab_right { key-positions = <20 55>; slow-release; bindings = <&kp LC(TAB)>; };
-        tab_left  { key-positions = <15 52>; slow-release; bindings = <&kp LC(LS(TAB))>; };
     };
 };
