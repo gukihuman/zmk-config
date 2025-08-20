@@ -1,101 +1,100 @@
-// ☷ ~/config/lily58.keymap
-// separate project now but i want to integrate it in lithos somehow in the future
-// scripture must be renamed to kjarra related somehow in the future too
+    // ☷ ~/config/lily58.keymap
+    // separate project now but i want to integrate it in lithos somehow in the future
+    // scripture must be renamed to kjarra related somehow in the future too
 
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
+    #include <behaviors.dtsi>
+    #include <dt-bindings/zmk/keys.h>
+    #include <dt-bindings/zmk/bt.h>
+    #include <dt-bindings/zmk/ext_power.h>
 
-#define _________   &none
-#define TABL        LC(LS(TAB))
-#define TABR        LC(TAB)
-#define SAVE        LC(S)
-#define TABN        LC(T)
-#define WDRAW       LC(W)
-#define FIND        LC(F)
-#define COPY        LC(C)
-#define PASTE       LC(V)
-#define LOC         LC(L)
-#define WDRAW       LC(C)
-#define DVTLS       LC(LS(I))
-#define NO          LC(Z)
-#define YES         LC(LS(Z))
-#define BACK        LC(LS(T))
-#define RFSH        LC(R)
-#define ALL         LC(A)
+    #define _________   &none
+    #define TABL        LC(LS(TAB))
+    #define TABR        LC(TAB)
+    #define SAVE        LC(S)
+    #define TABN        LC(T)
+    #define WDRAW       LC(W)
+    #define FIND        LC(F)
+    #define COPY        LC(C)
+    #define PASTE       LC(V)
+    #define LOC         LC(L)
+    #define DVTLS       LC(LS(I))
+    #define NO          LC(Z)
+    #define YES         LC(LS(Z))
+    #define BACK        LC(LS(T))
+    #define RFSH        LC(R)
+    #define ALL         LC(A)
 
-// ESC       ENTER     BSPC      DEL       TAB
-// LEFT      DOWN      UP        RIGHT
-// LGUI      LALT      LCTRL     LSHFT
-// RGUI      RALT      RCTRL     RSHFT
+    // ESC       ENTER     BSPC      DEL       TAB
+    // LEFT      DOWN      UP        RIGHT
+    // LGUI      LALT      LCTRL     LSHFT
+    // RGUI      RALT      RCTRL     RSHFT
 
-// LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |   UNDER _
-// PLUS  +   MINUS -   ASTRK *   DLLR  $   AT    @   HASH  #   PRCNT %
+    // LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |   UNDER _
+    // PLUS  +   MINUS -   ASTRK *   DLLR  $   AT    @   HASH  #   PRCNT %
 
-// GRAVE `   SQT   '   DQT   "   COLON :   SEMI  ;   FSLH  /   BSLH  \
-// LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
+    // GRAVE `   SQT   '   DQT   "   COLON :   SEMI  ;   FSLH  /   BSLH  \
+    // LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
 
-// DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~   
+    // DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~   
 
- / {
-    keymap {
-        compatible = "zmk,keymap";
-        l0 { bindings = <
-_________ &mo 1     &mo 2     &kp TABL  _________ _________                     _________ _________ &kp TABR  &mo 2     &mo 1     _________
-&kp N     _________ &kp F     &kp M     &altb 0 0 &kp ESC                       &kp ENTER &kp TAB   &kp BSPC  &kp G     _________ &kp Y
-_________ &kp H     &kp C     &kp W     &kp T     &kp LSHFT                     &kp RSHFT &kp E     &kp SPACE &kp P     &kp I     _________
-&kp X     &kp L     &kp V     &kp K     &kp D     _________ _________ _________ _________ &kp U     &kp B     &kp Q     &kp J     &kp Z
-                              _________ &kp S     &kp R     &mo 3     &mo 3     &kp O     &kp A     _________
-        >; };
-        l1 { bindings = <
-_________ &none     &none     &none     _________ _________                     _________ _________ &none     &none     &none     _________
-&none     _________ &kp GRAVE &kp SQT   &kp DQT   &none                         &none     &kp N7    &kp N8    &kp N9    _________ &none
-_________ &kp COLON &kp LPAR  &kp LBKT  &kp LBRC  &none                         &none     &kp N4    &kp N5    &kp N6    &none     _________
-&none     &kp SEMI  &kp RPAR  &kp RBKT  &kp RBRC  _________ _________ _________ _________ &kp N1    &kp N2    &kp N3    &none     &none
-                              _________ &kp BSLH  &kp FSLH  &none     &none     &kp N0    &none     _________
-        >; };
-        l2 { bindings = <
-_________ &none     &none     &none     _________ _________                     _________ _________ &none     &none     &none     _________
-&none     _________ &kp CARET &kp ASTRK &kp TILDE &none                         &none     &kp LT    &kp GT    &kp EQUAL _________ &none
-_________ &kp QMARK &kp EXCL  &kp DOT   &kp COMMA &none                         &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT _________
-&none     &none     &kp UNDER &none     &none     _________ _________ _________ ________  &kp DLLR  &kp AT    &kp HASH  &kp PRCNT &none
-                              _________ &kp MINUS &kp PLUS  &none     &none     &kp AMPS  &kp PIPE  _________
-        >; };
-        l3 { bindings = <
-_________ &none     &none     &none     _________ _________                     _________ _________ &none     &none     &none     _________
-&kp NO    _________ &kp FIND  &none     &none     &none                         &none     &none     &none     &none     _________ &kp YES
-_________ &none     &kp COPY  &kp WDRAW &kp TABN  &none                         &none     &none     &none     &kp PASTE &none     _________
-&none     &kp LOC   &none     &none     &kp DVTLS _________ _________ _________ _________ &none     &kp BACK  &none     &none     &none
-                              _________ &kp SAVE  &kp RFSH  &none     &none     &none     &kp ALL   _________
-        >; };
-    };
-    macros {
-        alt_tab_tap: alt_tab_tap {
-            compatible = "zmk,behavior-macro";
-            label = "Alt‑Tab Tap";
-            #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>;
+    / {
+        keymap {
+            compatible = "zmk,keymap";
+            l0 { bindings = <
+    _________ &kp LSHFT &mo 1     &kp TABL  _________ _________                     _________ _________ &kp TABR  &mo 1     &kp RSHFT _________
+    &kp N     _________ &kp F     &kp M     &altb 0 0 &kp ESC                       &kp ENTER &kp TAB   &kp BSPC  &kp G     _________ &kp Y
+    _________ &kp H     &kp C     &kp W     &kp T     &mo 2                         &mo 2     &kp E     &kp SPACE &kp P     &kp I     _________
+    &kp X     &kp L     &kp V     &kp K     &kp D     _________ _________ _________ _________ &kp U     &kp B     &kp Q     &kp J     &kp Z
+                                  _________ &kp S     &kp R     &mo 3     &mo 3     &kp O     &kp A     _________
+            >; };
+            l1 { bindings = <
+    _________ &none     &none     &none     _________ _________                     _________ _________ &none     &none     &none     _________
+    &none     _________ &kp GRAVE &kp SQT   &kp DQT   &none                         &none     &kp N7    &kp N8    &kp N9    _________ &none
+    _________ &kp COMMA &kp LPAR  &kp LBKT  &kp LBRC  &none                         &none     &kp N4    &kp N5    &kp N6    &none     _________
+    &none     &none     &kp RPAR  &kp RBKT  &kp RBRC  _________ _________ _________ _________ &kp N1    &kp N2    &kp N3    &none     &none
+                                  _________ &kp BSLH  &kp FSLH  &none     &none     &kp N0    &none     _________
+            >; };
+            l2 { bindings = <
+    _________ &none     &none     &none     _________ _________                     _________ _________ &none     &none     &none     _________
+    &none     _________ &kp CARET &kp ASTRK &kp TILDE &none                         &none     &kp LT    &kp GT    &kp EQUAL _________ &none
+    _________ &kp QMARK &kp EXCL  &kp DOT   &kp COLON &none                         &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT _________
+    &none     &none     &kp UNDER &none     &kp SEMI  _________ _________ _________ ________  &kp DLLR  &kp AT    &kp HASH  &kp PRCNT &none
+                                  _________ &kp MINUS &kp PLUS  &none     &none     &kp AMPS  &kp PIPE  _________
+            >; };
+            l3 { bindings = <
+    _________ &none     &none     &none     _________ _________                     _________ _________ &none     &none     &none     _________
+    &kp NO    _________ &kp FIND  &none     &none     &none                         &none     &none     &none     &none     _________ &kp YES
+    _________ &none     &kp COPY  &kp WDRAW &kp TABN  &none                         &none     &none     &none     &kp PASTE &none     _________
+    &none     &kp LOC   &none     &none     &kp DVTLS _________ _________ _________ _________ &none     &kp BACK  &none     &none     &none
+                                  _________ &kp SAVE  &kp RFSH  &none     &none     &none     &kp ALL   _________
+            >; };
         };
-        alt_tab_hold: alt_tab_hold {
-            compatible = "zmk,behavior-macro";
-            label = "Alt‑Tab Hold";
-            #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_pause_for_release>, <&macro_release &kp LALT>;
+        macros {
+            alt_tab_tap: alt_tab_tap {
+                compatible = "zmk,behavior-macro";
+                label = "Alt‑Tab Tap";
+                #binding-cells = <0>;
+                wait-ms = <5>;
+                tap-ms = <10>;
+                bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>;
+            };
+            alt_tab_hold: alt_tab_hold {
+                compatible = "zmk,behavior-macro";
+                label = "Alt‑Tab Hold";
+                #binding-cells = <0>;
+                wait-ms = <5>;
+                tap-ms = <10>;
+                bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_pause_for_release>, <&macro_release &kp LALT>;
+            };
+        };
+        behaviors {
+            altb: alt_tab {
+                compatible = "zmk,behavior-hold-tap";
+                label = "Alt-Tab Key";
+                #binding-cells = <2>;
+                flavor = "tap-preferred";
+                tapping-term-ms = <200>;
+                bindings = <&alt_tab_hold>, <&alt_tab_tap>;
+            };
         };
     };
-    behaviors {
-        altb: alt_tab {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Alt-Tab Key";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&alt_tab_hold>, <&alt_tab_tap>;
-        };
-    };
-};
