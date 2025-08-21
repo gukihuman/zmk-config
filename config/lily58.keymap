@@ -44,7 +44,7 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 _________ &kp LSHFT &mo 4     _________ _________ _________                     _________ _________ _________ &mo 4     &kp RSHFT _________
-&kp N     _________ &kp F     &kp M     &altb 0 0 &kp ESC                       &kp TAB   &kp ENTER &kp BSPC  &kp G     _________ &kp Y
+&kp N     _________ &kp F     &kp M     &kp ESC   &altb 0 0                     &kp TAB   &kp ENTER &kp BSPC  &kp G     _________ &kp Y
 _________ &kp H     &kp C     &kp W     &kp T     &mo 3                         &mo 3     &kp E     &kp SPACE &kp P     &kp I     _________
 &kp X     &kp L     &kp V     &kp K     &kp D     _________ &kp DEL   _________ _________ &kp U     &kp B     &kp Q     &kp J     &kp Z
                               _________ &kp S     &kp R     &mo 1     &mo 1     &kp A     &kp O    _________
