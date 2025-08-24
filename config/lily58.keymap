@@ -6,104 +6,51 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/pointing.h>
 
-#define _________   &none
-#define xxxxxxxxx   &none
-#define mmmmmmmmm   &trans
+// ESC       ENTER     BSPC      DEL       TAB       LEFT      DOWN      UP        RIGHT
+// LGUI      LALT      LCTRL     LSHFT     RGUI      RALT      RCTRL     RSHFT
+// LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |   UNDER _
+// PLUS  +   MINUS -   ASTRK *   DLLR  $   AT    @   HASH  #   PRCNT %
+// GRAVE `   SQT   '   DQT   "   COLON :   SEMI  ;   FSLH  /   BSLH  \
+// LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
+// DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~
+
+#define _________       &none          // no physical key
+#define mmmmmmmmm       &none          // to assign press
 #define TABL        LC(LS(TAB))
 #define TABR        LC(TAB)
 #define SAVE        LC(S)
 #define TABN        LC(T)
 #define WDRAW       LC(W)
 #define FIND        LC(F)
+#define EXTR        LC(X)
 #define COPY        LC(C)
 #define PASTE       LC(V)
 #define LOC         LC(L)
 #define DVTLS       LC(LS(I))
-#define NO          LC(Z)
-#define YES         LC(LS(Z))
+#define UNDO        LC(Z)
+#define REDO        LC(LS(Z))
 #define BACK        LC(LS(T))
 #define RFSH        LC(R)
 #define ALL         LC(A)
 
-// ESC       ENTER     BSPC      DEL       TAB
-// LEFT      DOWN      UP        RIGHT
-// LGUI      LALT      LCTRL     LSHFT
-// RGUI      RALT      RCTRL     RSHFT
+&mkp LCLK
 
-// LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |   UNDER _
-// PLUS  +   MINUS -   ASTRK *   DLLR  $   AT    @   HASH  #   PRCNT %
-
-// GRAVE `   SQT   '   DQT   "   COLON :   SEMI  ;   FSLH  /   BSLH  \
-// LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
-
-// DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~   
+// 12 13 14 15
+// 26 27 28 29
+// 38 39 40 41
+// 52 53
 
 / {
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_________ &kp LSHFT &mo 4     _________ _________ _________                     _________ _________ _________ &mo 4     &kp RSHFT _________
-&kp N     _________ &kp F     &kp M     &kp ESC   &altb 0 0                     &kp TAB   &kp ENTER &kp BSPC  &kp G     _________ &kp Y
-_________ &kp H     &kp C     &kp W     &kp T     &mo 3                         &mo 3     &kp E     &kp SPACE &kp P     &kp I     _________
-&kp X     &kp L     &kp V     &kp K     &kp D     _________ &kp DEL   _________ _________ &kp U     &kp B     &kp Q     &kp J     &kp Z
-                              _________ &kp S     &kp R     &mo 1     &mo 1     &kp A     &kp O    _________
+_________ _________ _________ _________ _________ _________                     _________ _________ _________ _________ _________ _________
+mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _________                     _________ _________ _________ _________ _________ _________
+_________ _________ &mkp RCLK ALL       COPY      PASTE                     _________ _________ _________ _________ _________ _________
+_________ _________ UNDO      REDO      EXTR      SAVE      _________ _________ _________ _________ _________ _________ _________ _________
+                    _________ _________ mmmmmmmmm &mkp LCLK _________ _________ _________ _________
         >; };
-        l1 { bindings = <
-_________ xxxxxxxxx xxxxxxxxx _________ _________ _________                     _________ _________ _________ xxxxxxxxx xxxxxxxxx _________
-&none     _________ &kp EXCL  &kp QMARK mmmmmmmmm mmmmmmmmm                     mmmmmmmmm mmmmmmmmm mmmmmmmmm &kp ASTRK _________ &kp FSLH
-_________ &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &mo 2                         &mo 2     &kp LPAR  mmmmmmmmm &kp LBRC  &kp LBKT  _________
-&none     &kp UNDER &kp TILDE &kp PLUS  &kp MINUS _________ mmmmmmmmm _________ _________ &kp AMPS  &kp PIPE  &kp LT    &kp GT    &none
-                              _________ &kp COMMA &kp DOT   xxxxxxxxx xxxxxxxxx &kp EQUAL &kp COLON _________
-        >; };
-        l2 { bindings = <
-_________ xxxxxxxxx xxxxxxxxx _________ _________ _________                     _________ _________ _________ xxxxxxxxx xxxxxxxxx _________
-&none     _________ &none     &none     mmmmmmmmm mmmmmmmmm                     mmmmmmmmm mmmmmmmmm mmmmmmmmm &none     _________ &kp BSLH
-_________ &kp TABL  &none     &none     &kp TABR  xxxxxxxxx                     xxxxxxxxx &kp RBRC  mmmmmmmmm &kp RPAR  &kp RBKT  _________
-&none     &none     &none     &none     &none     _________ mmmmmmmmm _________ _________ &none     &none     &none     &none     &none   
-                              _________ &none     &none     xxxxxxxxx xxxxxxxxx &none     &kp SEMI  _________
-        >; };
-        l3 { bindings = <
-_________ xxxxxxxxx xxxxxxxxx _________ _________ _________                     _________ _________ _________ xxxxxxxxx xxxxxxxxx _________
-&none     _________ &none     &none     mmmmmmmmm mmmmmmmmm                     mmmmmmmmm mmmmmmmmm mmmmmmmmm &none     _________ &none
-_________ &kp N9    &kp N8    &kp N7    &kp N6    xxxxxxxxx                     xxxxxxxxx &kp GRAVE mmmmmmmmm &none     &none     _________
-&none     &kp N5    &kp N4    &kp N3    &kp N2    _________ mmmmmmmmm _________ _________ &kp DLLR  &kp AT    &kp HASH  &kp PRCNT &kp CARET
-                              _________ &kp N1    &kp N0    xxxxxxxxx xxxxxxxxx &kp DQT   &kp SQT   _________
-        >; };
-        l4 { bindings = <
-_________ mmmmmmmmm mmmmmmmmm _________ _________ _________                     _________ _________ _________ mmmmmmmmm mmmmmmmmm _________
-&kp NO    _________ &kp FIND  &none     mmmmmmmmm mmmmmmmmm                     mmmmmmmmm mmmmmmmmm mmmmmmmmm &none     _________ &kp YES
-_________ &none     &kp COPY  &kp WDRAW &kp TABN  xxxxxxxxx                     xxxxxxxxx &none     mmmmmmmmm &kp PASTE &none     _________
-&none     &kp LOC   &none     &none     &kp DVTLS _________ mmmmmmmmm _________ _________ &none     &kp BACK  &none     &none     &none
-                              _________ &kp SAVE  &kp RFSH  xxxxxxxxx xxxxxxxxx &kp ALL   &none     _________
-        >; };
-    };
-    macros {
-        alt_tab_tap: alt_tab_tap {
-            compatible = "zmk,behavior-macro";
-            label = "Alt‑Tab Tap";
-            #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>;
-        };
-        alt_tab_hold: alt_tab_hold {
-            compatible = "zmk,behavior-macro";
-            label = "Alt‑Tab Hold";
-            #binding-cells = <0>;
-            wait-ms = <5>;
-            tap-ms = <10>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_pause_for_release>, <&macro_release &kp LALT>;
-        };
-    };
-    behaviors {
-        altb: alt_tab {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Alt-Tab Key";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&alt_tab_hold>, <&alt_tab_tap>;
-        };
     };
 };
