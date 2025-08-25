@@ -10,45 +10,22 @@
 
 // ESC       ENTER     BSPC      DEL       TAB       LEFT      DOWN      UP        RIGHT
 // LGUI      LALT      LCTRL     LSHFT     RGUI      RALT      RCTRL     RSHFT
+
 // LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |   UNDER _
 // PLUS  +   MINUS -   ASTRK *   DLLR  $   AT    @   HASH  #   PRCNT %
 // GRAVE `   SQT   '   DQT   "   COLON :   SEMI  ;   FSLH  /   BSLH  \
 // LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
 // DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~
 
-<<<<<<< HEAD
-#define _____       &none          // no physical key
-#define mmmmm       &none          // to assign press
-
-#define TABL        &kp LC(LS(TAB))
-#define TABR        &kp LC(TAB)
-#define SAVE        &kp LC(S)
-#define TABN        &kp LC(T)
-#define WDRAW       &kp LC(W)
-#define FIND        &kp LC(F)
-#define EXTR        &kp LC(X)
-#define COPY        &kp LC(C)
-#define PASTE       &kp LC(V)
-#define LOC         &kp LC(L)
-#define DVTLS       &kp LC(LS(I))
-#define UNDO        &kp LC(Z)
-#define REDO        &kp LC(LS(Z))
-#define BACK        &kp LC(LS(T))
-#define RFSH        &kp LC(R)
-#define ALL         &kp LC(A)
-
-#define DEL         &kp DEL
-
-#define LMB         &mkp MB1
-#define RMB         &mkp MB2
-=======
-#define _________       &none          // no physical key
-#define mmmmmmmmm       &none          // to assign press
+#define _              &none          // no physical key
+#define _________   &none          // no physical key
+#define mmmmmmmmm   &none          // to assign press
 #define TABL        LC(LS(TAB))
 #define TABR        LC(TAB)
 #define SAVE        LC(S)
 #define TABN        LC(T)
 #define WDRAW       LC(W)
+#define BACK        LC(LS(T))
 #define FIND        LC(F)
 #define EXTR        LC(X)
 #define COPY        LC(C)
@@ -57,10 +34,8 @@
 #define DVTLS       LC(LS(I))
 #define UNDO        LC(Z)
 #define REDO        LC(LS(Z))
-#define BACK        LC(LS(T))
 #define RFSH        LC(R)
 #define ALL         LC(A)
->>>>>>> parent of a0cf255 (update)
 
 // 12 13 14 15
 // 26 27 28 29
@@ -70,32 +45,19 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-<<<<<<< HEAD
-        l0 {
-            bindings = <
-_____ _____ _____ _____ _____ _____             _____ _____ _____ _____ _____ _____
-mmmmm mmmmm mmmmm mmmmm _____ _____             _____ _____ _____ _____ _____ _____
-_____ _____ UNDO  REDO  LMB   RMB               _____ _____ _____ _____ _____ _____
-_____ _____ ALL   EXTR  COPY  PASTE _____ _____ _____ _____ _____ _____ _____ _____
-                  _____ _____ mmmmm DEL   _____ _____ _____ _____
-            >;
-        };
-    };
-    combos {
-        compatible = "zmk,combos";
-        midclick {
-            timeout-ms = <200>;
-            key-positions = <15 52>;
-            bindings = <&mkp MB3>;
-        };
-=======
         l0 { bindings = <
-_________ _________ _________ _________ _________ _________                     _________ _________ _________ _________ _________ _________
-mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _________                     _________ _________ _________ _________ _________ _________
-_________ _________ &mkp RCLK ALL       COPY      PASTE                     _________ _________ _________ _________ _________ _________
-_________ _________ UNDO      REDO      EXTR      SAVE      _________ _________ _________ _________ _________ _________ _________ _________
-                    _________ _________ mmmmmmmmm &mkp LCLK _________ _________ _________ _________
+_________ _________ _________ _________ &kp F     _________             _ _ _ _ _ _
+_________ &kp DEL   _________ &kp WDRAW &kp TABN  &kp BACK              _ _ _ _ _ _
+_________ _________ &kp UNDO  &kp REDO  &mkp LCLK &mkp RCLK             _ _ _ _ _ _
+_________ _________ &kp ALL   &kp EXTR  &kp COPY  &kp PASTE _________ _ _ _ _ _ _ _
+                              _________ _________ _________ &mo 1     _ _ _ _
         >; };
->>>>>>> parent of a0cf255 (update)
+        l1 { bindings = <
+_________ _________ _________ _________ &kp FIND  _________             _ _ _ _ _ _
+_________ mmmmmmmmm _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
+_________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
+_________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
+                              _________ _________ _________ mmmmmmmmm _ _ _ _
+        >; };
     };
 };
