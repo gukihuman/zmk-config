@@ -18,6 +18,7 @@
 
 #define _____       &none          // no physical key
 #define mmmmm       &none          // to assign press
+
 #define TABL        &kp LC(LS(TAB))
 #define TABR        &kp LC(TAB)
 #define SAVE        &kp LC(S)
@@ -34,9 +35,12 @@
 #define BACK        &kp LC(LS(T))
 #define RFSH        &kp LC(R)
 #define ALL         &kp LC(A)
-#define LCLK        &mkp LCLK
-#define RCLK        &mkp RCLK
+
 #define DEL         &kp DEL
+
+#define LMB         &mkp MB1
+#define RMB         &mkp MB2
+#define MMB         &mkp MB3
 
 // 12 13 14 15
 // 26 27 28 29
@@ -50,7 +54,7 @@
             bindings = <
 _____ _____ _____ _____ _____ _____             _____ _____ _____ _____ _____ _____
 mmmmm mmmmm mmmmm mmmmm _____ _____             _____ _____ _____ _____ _____ _____
-_____ _____ UNDO  REDO  LCLK  RCLK              _____ _____ _____ _____ _____ _____
+_____ _____ UNDO  REDO  LMB   RMB               _____ _____ _____ _____ _____ _____
 _____ _____ ALL   EXTR  COPY  PASTE _____ _____ _____ _____ _____ _____ _____ _____
                   _____ _____ mmmmm DEL   _____ _____ _____ _____
             >;
@@ -61,7 +65,7 @@ _____ _____ ALL   EXTR  COPY  PASTE _____ _____ _____ _____ _____ _____ _____ __
         midclick {
             timeout-ms = <200>;
             key-positions = <15 52>;
-            bindings = <&mkp MCLK>;
+            bindings = <MMB>;
         };
     };
 };
