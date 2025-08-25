@@ -24,24 +24,26 @@
 #define EXTR        LC(X)
 #define COPY        LC(C)
 #define PASTE       LC(V)
+#define ALL         LC(A)
 
 #define APP1        LG(1)
 #define APP2        LG(2)
 #define APP3        LG(3)
 
-#define TABL        LC(LS(TAB))
-#define TABR        LC(TAB)
-#define SAVE        LC(S)
-#define TABN        LC(T)
-#define WDRAW       LC(W)
-#define BACK        LC(LS(T))
-#define FIND        LC(F)
-#define LOC         LC(L)
-#define DVTLS       LC(LS(I))
 #define UNDO        LC(Z)
 #define REDO        LC(LS(Z))
+#define SAVE        LC(S)
+
+#define BACK        LC(LS(T))
+#define WDRAW       LC(W)
+#define TABN        LC(T)
+
+#define TABL        LC(LS(TAB))
+#define TABR        LC(TAB)
+
 #define RFSH        LC(R)
-#define ALL         LC(A)
+#define DVTLS       LC(LS(I))
+#define FIND        LC(F)
 
 // 25 26 53
 
@@ -57,22 +59,22 @@ _________ _________ _________ &kp EXTR  &kp COPY  &kp PASTE _________ _ _ _ _ _ 
         >; };
         l1 { bindings = <
 _________ _________ _________ _________ _________ _________             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
+_________ _________ _________ &kp BACK  &kp WDRAW &kp TABN              _ _ _ _ _ _
+_________ mmmmmmmmm mmmmmmmmm &kp UNDO  &kp REDO  &kp SAVE              _ _ _ _ _ _
+_________ _________ _________ &kp DEL   &kp ALL   &kp RFSH  _________ _ _ _ _ _ _ _
                               _________ _________ _________ mmmmmmmmm _ _ _ _
         >; };
         l2 { bindings = <
+_________ _________ _________ _________ _________ _________             _ _ _ _ _ _
 _________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
+_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm &kp FIND  &kp DVTLS             _ _ _ _ _ _
 _________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
                               _________ _________ _________ mmmmmmmmm _ _ _ _
         >; };
         l3 { bindings = <
 _________ _________ _________ _________ _________ _________             _ _ _ _ _ _
 _________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
+_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm &kp TABL  &kp TABR              _ _ _ _ _ _
 _________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
                               _________ _________ _________ mmmmmmmmm _ _ _ _
         >; };
@@ -86,7 +88,7 @@ _________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ 
         l5 { bindings = <
 _________ _________ _________ _________ _________ _________             _ _ _ _ _ _
 _________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm &kp DEL               _ _ _ _ _ _
+_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
 _________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
                               _________ _________ _________ mmmmmmmmm _ _ _ _
         >; };
@@ -96,12 +98,12 @@ _________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ 
         mo4 {
             timeout-ms = <200>;
             key-positions = <53 26>;
-            bindings = <&mo 5>;
+            bindings = <&mo 3>;
         };
         mo5 {
             timeout-ms = <200>;
             key-positions = <53 25>;
-            bindings = <&mo 6>;
+            bindings = <&mo 5>;
         };
     };
 };
