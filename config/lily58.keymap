@@ -16,6 +16,7 @@
 // LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
 // DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~
 
+<<<<<<< HEAD
 #define _____       &none          // no physical key
 #define mmmmm       &none          // to assign press
 
@@ -40,6 +41,26 @@
 
 #define LMB         &mkp MB1
 #define RMB         &mkp MB2
+=======
+#define _________       &none          // no physical key
+#define mmmmmmmmm       &none          // to assign press
+#define TABL        LC(LS(TAB))
+#define TABR        LC(TAB)
+#define SAVE        LC(S)
+#define TABN        LC(T)
+#define WDRAW       LC(W)
+#define FIND        LC(F)
+#define EXTR        LC(X)
+#define COPY        LC(C)
+#define PASTE       LC(V)
+#define LOC         LC(L)
+#define DVTLS       LC(LS(I))
+#define UNDO        LC(Z)
+#define REDO        LC(LS(Z))
+#define BACK        LC(LS(T))
+#define RFSH        LC(R)
+#define ALL         LC(A)
+>>>>>>> parent of a0cf255 (update)
 
 // 12 13 14 15
 // 26 27 28 29
@@ -49,6 +70,7 @@
 / {
     keymap {
         compatible = "zmk,keymap";
+<<<<<<< HEAD
         l0 {
             bindings = <
 _____ _____ _____ _____ _____ _____             _____ _____ _____ _____ _____ _____
@@ -66,5 +88,14 @@ _____ _____ ALL   EXTR  COPY  PASTE _____ _____ _____ _____ _____ _____ _____ __
             key-positions = <15 52>;
             bindings = <&mkp MB3>;
         };
+=======
+        l0 { bindings = <
+_________ _________ _________ _________ _________ _________                     _________ _________ _________ _________ _________ _________
+mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _________                     _________ _________ _________ _________ _________ _________
+_________ _________ &mkp RCLK ALL       COPY      PASTE                     _________ _________ _________ _________ _________ _________
+_________ _________ UNDO      REDO      EXTR      SAVE      _________ _________ _________ _________ _________ _________ _________ _________
+                    _________ _________ mmmmmmmmm &mkp LCLK _________ _________ _________ _________
+        >; };
+>>>>>>> parent of a0cf255 (update)
     };
 };
