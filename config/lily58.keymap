@@ -26,9 +26,9 @@
 #define PASTE       LC(V)
 #define ALL         LC(A)
 
-#define APP1        LG(1)
-#define APP2        LG(2)
-#define APP3        LG(3)
+#define APP1        LG(N1)
+#define APP2        LG(N2)
+#define APP3        LG(N3)
 
 #define UNDO        LC(Z)
 #define REDO        LC(LS(Z))
