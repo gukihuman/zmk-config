@@ -40,7 +40,6 @@
 
 #define LMB         &mkp MB1
 #define RMB         &mkp MB2
-#define MMB         &mkp MB3
 
 // 12 13 14 15
 // 26 27 28 29
@@ -65,7 +64,7 @@ _____ _____ ALL   EXTR  COPY  PASTE _____ _____ _____ _____ _____ _____ _____ __
         midclick {
             timeout-ms = <200>;
             key-positions = <15 52>;
-            bindings = <MMB>;
+            bindings = <&mkp MB3>;
         };
     };
 };
