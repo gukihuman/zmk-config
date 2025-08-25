@@ -16,24 +16,26 @@
 // LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
 // DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~
 
-#define _________   &none          // no physical key
-#define mmmmmmmmm   &none          // to assign press
-#define TABL        LC(LS(TAB))
-#define TABR        LC(TAB)
-#define SAVE        LC(S)
-#define TABN        LC(T)
-#define WDRAW       LC(W)
-#define FIND        LC(F)
-#define EXTR        LC(X)
-#define COPY        LC(C)
-#define PASTE       LC(V)
-#define LOC         LC(L)
-#define DVTLS       LC(LS(I))
-#define UNDO        LC(Z)
-#define REDO        LC(LS(Z))
-#define BACK        LC(LS(T))
-#define RFSH        LC(R)
-#define ALL         LC(A)
+#define _____       &none          // no physical key
+#define mmmmm       &none          // to assign press
+#define TABL        &kp LC(LS(TAB))
+#define TABR        &kp LC(TAB)
+#define SAVE        &kp LC(S)
+#define TABN        &kp LC(T)
+#define WDRAW       &kp LC(W)
+#define FIND        &kp LC(F)
+#define EXTR        &kp LC(X)
+#define COPY        &kp LC(C)
+#define PASTE       &kp LC(V)
+#define LOC         &kp LC(L)
+#define DVTLS       &kp LC(LS(I))
+#define UNDO        &kp LC(Z)
+#define REDO        &kp LC(LS(Z))
+#define BACK        &kp LC(LS(T))
+#define RFSH        &kp LC(R)
+#define ALL         &kp LC(A)
+#define LCLK        &mkp LCLK
+#define RCLK        &mkp RCLK
 
 // 12 13 14 15
 // 26 27 28 29
@@ -44,11 +46,19 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_________ _________ _________ _________ _________ _________                     _________ _________ _________ _________ _________ _________
-mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _________                     _________ _________ _________ _________ _________ _________
-_________ _________ &mkp RCLK &kp ALL   &kp COPY  &kp PASTE                         _________ _________ _________ _________ _________ _________
-_________ _________ &kp UNDO  &kp REDO  &kp EXTR  &kp SAVE  _________ _________ _________ _________ _________ _________ _________ _________
-                    _________ _________ mmmmmmmmm &mkp LCLK _________ _________ _________ _________
+_____ _____ _____ _____ _____ _____             _____ _____ _____ _____ _____ _____
+mmmmm mmmmm mmmmm mmmmm _____ _____             _____ _____ _____ _____ _____ _____
+_____ _____ UNDO  REDO  LCLK  RCLK              _____ _____ _____ _____ _____ _____
+_____ _____ ALL   EXTR  COPY  PASTE _____ _____ _____ _____ _____ _____ _____ _____
+                  _____ _____ mmmmm LCLK  _____ _____ _____ _____
         >; };
+    };
+    combos {
+        compatible = "zmk,combos";
+        midclick {
+            timeout-ms = <200>;
+            key-positions = <15 52>;
+            bindings = <&mkp MCLK>;
+        };
     };
 };
