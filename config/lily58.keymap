@@ -36,6 +36,7 @@
 #define ALL         &kp LC(A)
 #define LCLK        &mkp LCLK
 #define RCLK        &mkp RCLK
+#define DEL         &kp DEL
 
 // 12 13 14 15
 // 26 27 28 29
@@ -45,13 +46,15 @@
 / {
     keymap {
         compatible = "zmk,keymap";
-        l0 { bindings = <
+        l0 {
+            bindings = <
 _____ _____ _____ _____ _____ _____             _____ _____ _____ _____ _____ _____
 mmmmm mmmmm mmmmm mmmmm _____ _____             _____ _____ _____ _____ _____ _____
 _____ _____ UNDO  REDO  LCLK  RCLK              _____ _____ _____ _____ _____ _____
 _____ _____ ALL   EXTR  COPY  PASTE _____ _____ _____ _____ _____ _____ _____ _____
-                  _____ _____ mmmmm LCLK  _____ _____ _____ _____
-        >; };
+                  _____ _____ mmmmm DEL   _____ _____ _____ _____
+            >;
+        };
     };
     combos {
         compatible = "zmk,combos";
