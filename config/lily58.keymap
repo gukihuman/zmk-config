@@ -46,14 +46,14 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_________ _________ _________ _________ &kp F     _________             _ _ _ _ _ _
+_________ _________ _________ _________ &mkp MCLK _________             _ _ _ _ _ _
 _________ &kp DEL   _________ &kp BACK  &kp TABN  &kp WDRAW              _ _ _ _ _ _
 _________ _________ &kp UNDO  &kp REDO  &mkp LCLK &mkp RCLK             _ _ _ _ _ _
 _________ _________ &kp ALL   &kp EXTR  &kp COPY  &kp PASTE _________ _ _ _ _ _ _ _
                               _________ _________ _________ &mo 1     _ _ _ _
         >; };
         l1 { bindings = <
-_________ _________ _________ _________ &kp FIND  _________             _ _ _ _ _ _
+_________ _________ _________ _________ mmmmmmmmm _________             _ _ _ _ _ _
 _________ mmmmmmmmm _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
 _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
 _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
