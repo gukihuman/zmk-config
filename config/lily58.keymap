@@ -17,13 +17,13 @@
 // LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
 // DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~
 
-#define _           &none          // no physical key
-#define _________   &none          // no physical key
-#define mmmmmmmmm   &none          // to assign press
+#define ________   &none          // no physical key
+#define mmmmmmmm   &none          // free to assign press
+#define xxxxxxxx   &none          // unavailable
 
 #define EXTR        LC(X)
 #define COPY        LC(C)
-#define PASTE       LC(V)
+#define PST         LC(V)
 #define ALL         LC(A)
 
 #define APP1        LG(N1)
@@ -35,75 +35,46 @@
 #define SAVE        LC(S)
 
 #define BACK        LC(LS(T))
-#define WDRAW       LC(W)
+#define WDRW        LC(W)
 #define TABN        LC(T)
 
 #define TABL        LC(LS(TAB))
 #define TABR        LC(TAB)
 
 #define RFSH        LC(R)
-#define DVTLS       LC(LS(I))
+#define DVTL        LC(LS(I))
 #define FIND        LC(F)
-
-// 25 26 53
 
 / {
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_________ _________ _________ _________ _________ _________             _ _ _ _ _ _
-_________ _________ _________ &kp APP3  &kp APP2  &kp APP1              _ _ _ _ _ _
-_________ &mo 3     &mo 2     &mkp MB3  &mkp MB2  &mkp MB1              _ _ _ _ _ _
-_________ _________ _________ &kp EXTR  &kp COPY  &kp PASTE _________ _ _ _ _ _ _ _
-                              _________ _________ _________ &mo 1     _ _ _ _
+mmmmmmmm ________ mmmmmmmm mmmmmmmm mmmmmmmm ________                   mmmmmmmm mmmmmmmm ________ mmmmmmmm mmmmmmmm ________
+mmmmmmmm &mo 1    mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm                   mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________
+mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm                   mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
+mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
+                           ________ &mkp MB2 &mkp MB1 &mkp MB3 mmmmmmmm ________ ________ ________
         >; };
         l1 { bindings = <
-_________ _________ _________ _________ _________ _________             _ _ _ _ _ _
-_________ _________ _________ &kp BACK  &kp WDRAW &kp TABN              _ _ _ _ _ _
-_________ mmmmmmmmm mmmmmmmmm &kp UNDO  &kp REDO  &kp SAVE              _ _ _ _ _ _
-_________ _________ _________ &kp DEL   &kp ALL   &kp RFSH  _________ _ _ _ _ _ _ _
-                              _________ _________ _________ mmmmmmmmm _ _ _ _
+mmmmmmmm ________ mmmmmmmm mmmmmmmm mmmmmmmm ________                   mmmmmmmm mmmmmmmm ________ mmmmmmmm mmmmmmmm ________
+mmmmmmmm xxxxxxxx &mo 2    mmmmmmmm mmmmmmmm mmmmmmmm                   mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________
+mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm                   mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
+mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
+                           ________ mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
         >; };
         l2 { bindings = <
-_________ _________ _________ _________ _________ _________             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm &kp FIND  &kp DVTLS             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
-                              _________ _________ _________ mmmmmmmmm _ _ _ _
+mmmmmmmm ________ mmmmmmmm mmmmmmmm mmmmmmmm ________                   mmmmmmmm mmmmmmmm ________ mmmmmmmm mmmmmmmm ________
+mmmmmmmm &kp K    xxxxxxxx &mo 3    mmmmmmmm mmmmmmmm                   mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________
+mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm                   mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
+mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
+                           ________ mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
         >; };
         l3 { bindings = <
-_________ _________ _________ _________ _________ _________             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm &kp TABL  &kp TABR              _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
-                              _________ _________ _________ mmmmmmmmm _ _ _ _
+mmmmmmmm ________ mmmmmmmm mmmmmmmm mmmmmmmm ________                   mmmmmmmm mmmmmmmm ________ mmmmmmmm mmmmmmmm ________
+mmmmmmmm mmmmmmmm mmmmmmmm xxxxxxxx &kp S    mmmmmmmm                   mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________
+mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm                   mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
+mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
+                           ________ mmmmmmmm mmmmmmmm mmmmmmmm mmmmmmmm ________ ________ ________
         >; };
-        l4 { bindings = <
-_________ _________ _________ _________ _________ _________             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
-                              _________ _________ _________ mmmmmmmmm _ _ _ _
-        >; };
-        l5 { bindings = <
-_________ _________ _________ _________ _________ _________             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-_________ _________ _________ mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
-                              _________ _________ _________ mmmmmmmmm _ _ _ _
-        >; };
-    };
-    combos {
-        compatible = "zmk,combos";
-        mo4 {
-            timeout-ms = <200>;
-            key-positions = <53 26>;
-            bindings = <&mo 3>;
-        };
-        mo5 {
-            timeout-ms = <200>;
-            key-positions = <53 25>;
-            bindings = <&mo 5>;
-        };
     };
 };
