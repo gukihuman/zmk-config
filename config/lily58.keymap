@@ -44,11 +44,11 @@
 
 // SPACE     BSPC      DEL       ESC       ENTER     PSCRN
 
-// LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |   UNDER _
-// PLUS  +   MINUS -   ASTRK *   DLLR  $   AT    @   HASH  #   PRCNT %
-// GRAVE `   SQT   '   DQT   "   COLON :   SEMI  ;   FSLH  /   BSLH  \
 // LPAR  (   RPAR  )   LBRC  {   RBRC  }   LBKT  [   RBKT  ]
-// DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~
+// COMMA ,   DOT   .   QMARK ?   EXCL  !   GRAVE `   SQT   '   DQT   "   EQUAL =   COLON :   SEMI  ;
+
+// LT    <   GT    >   AMPS  &   PIPE  |   FSLH  /   BSLH  \   CARET ^   TILDE ~
+// UNDER _   MINUS -   PLUS  +   HASH  #   ASTRK *   DLLR  $   AT    @   PRCNT %
 
 / {
     keymap {
@@ -62,16 +62,16 @@ _________ &kp DEL   &kp ENTER _________ _________ _________             _ _ _ _ 
         >; };
         l1 { bindings = <
 _________ &kp BSPC  &kp SPACE _________ _________ _________             _ _ _ _ _ _
-&kp LPAR  &kp RPAR  mmmmmmmmm &kp COMMA &kp DOT   mmmmmmmmm             _ _ _ _ _ _
-&kp LBKT  &kp RBKT  mmmmmmmmm &kp LEFT  &kp RIGHT mmmmmmmmm              _ _ _ _ _ _
-&kp LBKT  &kp RBKT  mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm  _________ _ _ _ _ _ _ _
+&kp EQUAL &kp QMARK &kp COMMA &kp DOT   &kp LPAR  &kp RPAR              _ _ _ _ _ _
+&kp COLON &kp EXCL  &kp LEFT  &kp RIGHT &kp LBRC  &kp RBRC              _ _ _ _ _ _
+&kp SEMI  &kp SQT   &kp DQT   &kp GRAVE &kp LBKT  &kp RBKT  _________ _ _ _ _ _ _ _
                               mmmmmmmmm mmmmmmmmm xxxxxxxxx mmmmmmmmm _ _ _ _
         >; };
         l2 { bindings = <
-_________ mmmmmmmmm mmmmmmmmm _________ _________ _________             _ _ _ _ _ _
-mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
+_________ &kp PIPE  &kp AMPS  _________ _________ _________             _ _ _ _ _ _
+&kp FSLH  &kp UNDER &kp MINUS &kp PLUS  &kp CARET mmmmmmmmm             _ _ _ _ _ _
+&kp BSLH  &kp HASH  &kp ASTRK &kp DLLR  &kp TILDE mmmmmmmmm             _ _ _ _ _ _
+&kp LT    &kp GT    &kp AT    &kp PRCNT mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
                               mmmmmmmmm xxxxxxxxx mmmmmmmmm mmmmmmmmm _ _ _ _
         >; };
         l3 { bindings = <
