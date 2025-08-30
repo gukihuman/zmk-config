@@ -34,6 +34,8 @@
 #define mmmmmmmmm   &none          // free to assign press
 #define xxxxxxxxx   &none          // currently pressed
 
+
+
 #define BACK        LC(LS(T))
 #define WDRAW       LC(W)
 #define TABN        LC(T)
@@ -45,24 +47,24 @@
 // LT    <   GT    >   EQUAL =   AMPS  &   PIPE  |   UNDER _
 // PLUS  +   MINUS -   ASTRK *   DLLR  $   AT    @   HASH  #   PRCNT %
 // GRAVE `   SQT   '   DQT   "   COLON :   SEMI  ;   FSLH  /   BSLH  \
-// LPAR  (   RPAR  )   LBKT  [   RBKT  ]   LBRC  {   RBRC  }
+// LPAR  (   RPAR  )   LBRC  {   RBRC  }   LBKT  [   RBKT  ]
 // DOT   .   COMMA ,   QMARK ?   EXCL  !   CARET ^   TILDE ~
 
 / {
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_________ &kp ESC   &kp ENTER _________ _________ _________             _ _ _ _ _ _
-&kp UNDO  &kp REDO  &kp COPY  &kp PASTE &kp PSCRN &kp APP1              _ _ _ _ _ _
-&kp DEL   &kp ALL   &kp CUT   &kp SAVE  &mkp MB2  &kp APP2              _ _ _ _ _ _
-mmmmmmmmm &kp DVTLS &kp FIND  &kp RFSH  &mkp MB3  &kp APP3  _________ _ _ _ _ _ _ _
+_________ &kp DEL   &kp ENTER _________ _________ _________             _ _ _ _ _ _
+&kp ESC   &kp ALL   &kp COPY  &kp PASTE &kp PSCRN &kp APP1              _ _ _ _ _ _
+&kp UNDO  &kp REDO  &kp CUT   &kp SAVE  &mkp MB2  &kp APP2              _ _ _ _ _ _
+&kp BACK  &kp DVTLS &kp FIND  &kp RFSH  &mkp MB3  &kp APP3  _________ _ _ _ _ _ _ _
                               &mo 3     &mo 2     &mo 1     &mkp MB1  _ _ _ _
         >; };
         l1 { bindings = <
-_________ mmmmmmmmm mmmmmmmmm _________ _________ _________             _ _ _ _ _ _
-mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
+_________ &kp BSPC  &kp SPACE _________ _________ _________             _ _ _ _ _ _
+&kp LPAR  &kp RPAR  mmmmmmmmm &kp COMMA &kp DOT   mmmmmmmmm             _ _ _ _ _ _
+&kp LBKT  &kp RBKT  mmmmmmmmm &kp LEFT  &kp RIGHT mmmmmmmmm              _ _ _ _ _ _
+&kp LBKT  &kp RBKT  mmmmmmmmm mmmmmmmmm mmmmmmmmm mmmmmmmmm  _________ _ _ _ _ _ _ _
                               mmmmmmmmm mmmmmmmmm xxxxxxxxx mmmmmmmmm _ _ _ _
         >; };
         l2 { bindings = <
