@@ -28,6 +28,7 @@
 #define RFSH        LC(R)
 #define DVTLS       LC(LS(I))
 #define FIND        LC(F)
+#define SHENT       LS(ENTER)
 
 #define _________   &none          // no physical key
 #define _           &none          // no physical key
@@ -56,7 +57,7 @@
         l0 { bindings = <
 _________ _________ &kp REDO  &kp UNDO  _________ _________             _ _ _ _ _ _
 &kp ESC   _________ &kp QMARK &kp BSPC  &kp SAVE  &kp PSCRN             _ _ _ _ _ _
-_________ &kp DOT   &kp DEL   &kp SPACE &kp ENTER _________             _ _ _ _ _ _
+&kp LSHFT &kp DOT   &kp DEL   &kp SPACE &kp ENTER &kp SHENT             _ _ _ _ _ _
 _________ &kp ALL   &kp CUT   &kp COPY  &kp PASTE _________ _________ _ _ _ _ _ _ _
                               _________ &mkp MB2  &mkp MB1  &mkp MB3  _ _ _ _
         >; };
