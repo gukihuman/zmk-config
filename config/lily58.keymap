@@ -54,32 +54,11 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_________ &kp DEL   &kp ENTER _________ _________ _________             _ _ _ _ _ _
-&kp ESC   &kp ALL   &kp COPY  &kp PASTE &kp PSCRN &kp APP1              _ _ _ _ _ _
-&kp UNDO  &kp REDO  &kp CUT   &kp SAVE  &mkp MB2  &kp APP2              _ _ _ _ _ _
-&kp BACK  &kp DVTLS &kp FIND  &kp RFSH  &mkp MB3  &kp APP3  _________ _ _ _ _ _ _ _
-                              &mo 3     &mo 2     &mo 1     &mkp MB1  _ _ _ _
-        >; };
-        l1 { bindings = <
-_________ &kp BSPC  &kp SPACE _________ _________ _________             _ _ _ _ _ _
-&kp EQUAL &kp QMARK &kp COMMA &kp DOT   &kp LPAR  &kp RPAR              _ _ _ _ _ _
-&kp COLON &kp EXCL  &kp LEFT  &kp RIGHT &kp LBRC  &kp RBRC              _ _ _ _ _ _
-&kp SEMI  &kp SQT   &kp DQT   &kp GRAVE &kp LBKT  &kp RBKT  _________ _ _ _ _ _ _ _
-                              mmmmmmmmm mmmmmmmmm xxxxxxxxx mmmmmmmmm _ _ _ _
-        >; };
-        l2 { bindings = <
-_________ &kp PIPE  &kp AMPS  _________ _________ _________             _ _ _ _ _ _
-&kp FSLH  &kp UNDER &kp MINUS &kp PLUS  &kp CARET mmmmmmmmm             _ _ _ _ _ _
-&kp BSLH  &kp HASH  &kp ASTRK &kp DLLR  &kp TILDE mmmmmmmmm             _ _ _ _ _ _
-&kp LT    &kp GT    &kp AT    &kp PRCNT mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
-                              mmmmmmmmm xxxxxxxxx mmmmmmmmm mmmmmmmmm _ _ _ _
-        >; };
-        l3 { bindings = <
-_________ &kp N0    mmmmmmmmm mmmmmmmmm mmmmmmmmm _________             _ _ _ _ _ _
-&kp N1    &kp N2    &kp N3    mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-&kp N4    &kp N5    &kp N6    mmmmmmmmm mmmmmmmmm mmmmmmmmm             _ _ _ _ _ _
-&kp N7    &kp N8    &kp N9    mmmmmmmmm mmmmmmmmm mmmmmmmmm _________ _ _ _ _ _ _ _
-                              xxxxxxxxx mmmmmmmmm mmmmmmmmm mmmmmmmmm _ _ _ _
+_________ _________ &kp REDO  &kp UNDO  _________ _________             _ _ _ _ _ _
+&kp ESC   _________ &kp DEL   &kp BSPC  &kp SAVE  &kp PSCRN             _ _ _ _ _ _
+_________ &kp DOT   &kp QMARK &kp SPACE &kp ENTER _________             _ _ _ _ _ _
+_________ &kp ALL   &kp CUT   &kp COPY  &kp PASTE _________ _________ _ _ _ _ _ _ _
+                              _________ &mkp MB2  &mkp MB1  &mkp MB3  _ _ _ _
         >; };
     };
 };
