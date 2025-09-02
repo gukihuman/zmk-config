@@ -56,7 +56,7 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 _________ &kp REDO  &kp UNDO  _________ _________ _________             _ _ _ _ _ _
-&kp ESC   _________ &kp DEL   &kp F13   &kp SAVE  &kp PSCRN             _ _ _ _ _ _
+&kp ESC   _________ &kp DEL   &kp F14   &kp SAVE  &kp PSCRN             _ _ _ _ _ _
 &kp LSHFT &kp DOT   &kp BSPC  &kp SPACE &kp ENTER &kp SHENT             _ _ _ _ _ _
 _________ &kp ALL   &kp CUT   &kp COPY  &kp PASTE _________ _________ _ _ _ _ _ _ _
                               _________ &mkp MB2  &mkp MB1  &mkp MB3  _ _ _ _
