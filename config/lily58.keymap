@@ -8,158 +8,158 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define A        &kp A
-#define B        &kp B
-#define C        &kp C
-#define D        &kp D
-#define E        &kp E
-#define F        &kp F
-#define G        &kp G
-#define H        &kp H
-#define I        &kp I
-#define J        &kp J
-#define K        &kp K
-#define L        &kp L
-#define M        &kp M
-#define N        &kp N
-#define O        &kp O
-#define P        &kp P
-#define Q        &kp Q
-#define R        &kp R
-#define S        &kp S
-#define T        &kp T
-#define U        &kp U
-#define V        &kp V
-#define W        &kp W
-#define X        &kp X
-#define Y        &kp Y
-#define Z        &kp Z
+#define _A        &kp A
+#define _B        &kp B
+#define _C        &kp C
+#define _D        &kp D
+#define _E        &kp E
+#define _F        &kp F
+#define _G        &kp G
+#define _H        &kp H
+#define _I        &kp I
+#define _J        &kp J
+#define _K        &kp K
+#define _L        &kp L
+#define _M        &kp M
+#define _N        &kp N
+#define _O        &kp O
+#define _P        &kp P
+#define _Q        &kp Q
+#define _R        &kp R
+#define _S        &kp S
+#define _T        &kp T
+#define _U        &kp U
+#define _V        &kp V
+#define _W        &kp W
+#define _X        &kp X
+#define _Y        &kp Y
+#define _Z        &kp Z
 
-#define N0       &kp N0
-#define N1       &kp N1
-#define N2       &kp N2
-#define N3       &kp N3
-#define N4       &kp N4
-#define N5       &kp N5
-#define N6       &kp N6
-#define N7       &kp N7
-#define N8       &kp N8
-#define N9       &kp N9
+#define _N0       &kp N0
+#define _N1       &kp N1
+#define _N2       &kp N2
+#define _N3       &kp N3
+#define _N4       &kp N4
+#define _N5       &kp N5
+#define _N6       &kp N6
+#define _N7       &kp N7
+#define _N8       &kp N8
+#define _N9       &kp N9
 
-#define F1       &kp F1
-#define F2       &kp F2
-#define F3       &kp F3
-#define F4       &kp F4
-#define F5       &kp F5
-#define F6       &kp F6
-#define F7       &kp F7
-#define F8       &kp F8
-#define F9       &kp F9
-#define F10      &kp F10
-#define F11      &kp F11
-#define F12      &kp F12
-#define F13      &kp F13
-#define F14      &kp F14
-#define F15      &kp F15
-#define F16      &kp F16
-#define F17      &kp F17
-#define F18      &kp F18
-#define F19      &kp F19
-#define F20      &kp F20
-#define F21      &kp F21
-#define F22      &kp F22
-#define F23      &kp F23
-#define F24      &kp F24
+#define _F1       &kp F1
+#define _F2       &kp F2
+#define _F3       &kp F3
+#define _F4       &kp F4
+#define _F5       &kp F5
+#define _F6       &kp F6
+#define _F7       &kp F7
+#define _F8       &kp F8
+#define _F9       &kp F9
+#define _F10      &kp F10
+#define _F11      &kp F11
+#define _F12      &kp F12
+#define _F13      &kp F13
+#define _F14      &kp F14
+#define _F15      &kp F15
+#define _F16      &kp F16
+#define _F17      &kp F17
+#define _F18      &kp F18
+#define _F19      &kp F19
+#define _F20      &kp F20
+#define _F21      &kp F21
+#define _F22      &kp F22
+#define _F23      &kp F23
+#define _F24      &kp F24
 
-#define SPC      &kp SPACE
-#define BSPC     &kp BSPC
-#define DEL      &kp DEL
-#define ESC      &kp ESC
-#define ENTR     &kp ENTER
-#define TAB      &kp TAB
-#define PSCR     &kp PSCRN
+#define _SP       &kp SPACE
+#define _BSP      &kp BSPC
+#define _DEL      &kp DEL
+#define _ESC      &kp ESC
+#define _ENT      &kp ENTER
+#define _TAB      &kp TAB
+#define _PSR      &kp PSCRN
 
-#define LPAR     &kp LPAR
-#define RPAR     &kp RPAR
-#define LBRC     &kp LBRC
-#define RBRC     &kp RBRC
-#define LBKT     &kp LBKT
-#define RBKT     &kp RBKT
-#define COM      &kp COMMA
-#define DOT      &kp DOT
-#define QMRK     &kp QMARK
-#define EXCL     &kp EXCL
-#define GRAV     &kp GRAVE
-#define SQT      &kp SQT
-#define DQT      &kp DQT
-#define EQL      &kp EQUAL
-#define CLN      &kp COLON
-#define SEMI     &kp SEMI
-#define LT       &kp LT
-#define GT       &kp GT
-#define AMPS     &kp AMPS
-#define PIPE     &kp PIPE
-#define FSLH     &kp FSLH
-#define BSLH     &kp BSLH
-#define CRT      &kp CARET
-#define TLD      &kp TILDE
-#define UND      &kp UNDER
-#define MNUS     &kp MINUS
-#define PLUS     &kp PLUS
-#define HASH     &kp HASH
-#define ASTR     &kp ASTRK
-#define DLLR     &kp DLLR
-#define AT       &kp AT
-#define PRCN     &kp PRCNT
+#define _LPR      &kp LPAR
+#define _RPR      &kp RPAR
+#define _LBR      &kp LBRC
+#define _RBR      &kp RBRC
+#define _LBK      &kp LBKT
+#define _RBK      &kp RBKT
+#define _COM      &kp COMMA
+#define _DOT      &kp DOT
+#define _QMK      &kp QMARK
+#define _EXL      &kp EXCL
+#define _GRV      &kp GRAVE
+#define _SQT      &kp SQT
+#define _DQT      &kp DQT
+#define _EQL      &kp EQUAL
+#define _CL       &kp COLON
+#define _SCL      &kp SEMI
+#define _LT       &kp LT
+#define _GT       &kp GT
+#define _AMP      &kp AMPS
+#define _PIP      &kp PIPE
+#define _FSH      &kp FSLH
+#define _BSH      &kp BSLH
+#define _CRT      &kp CARET
+#define _TLD      &kp TILDE
+#define _UND      &kp UNDER
+#define _MNS      &kp MINUS
+#define _PLS      &kp PLUS
+#define _HSH      &kp HASH
+#define _AST      &kp ASTRK
+#define _DLR      &kp DLLR
+#define _AT       &kp AT
+#define _PNT      &kp PRCNT
 
-#define LEFT     &kp LEFT
-#define DOWN     &kp DOWN
-#define UP       &kp UP
-#define RGHT     &kp RIGHT
+#define _LFT      &kp LEFT
+#define _DWN      &kp DOWN
+#define _UP       &kp UP
+#define _RHT      &kp RIGHT
 
-#define LGUI     &kp LGUI
-#define LALT     &kp LALT
-#define LCTL     &kp LCTRL
-#define LSHF     &kp LSHFT
-#define RGUI     &kp RGUI
-#define RALT     &kp RALT
-#define RCTL     &kp RCTRL
-#define RSHF     &kp RSHFT
+#define _LG       &kp LGUI
+#define _LA       &kp LALT
+#define _LC       &kp LCTRL
+#define _LS       &kp LSHFT
+#define _RG       &kp RGUI
+#define _RA       &kp RALT
+#define _RC       &kp RCTRL
+#define _RS       &kp RSHFT
 
-#define CUT      &kp LC(X)
-#define COPY     &kp LC(C)
-#define PST      &kp LC(V)
-#define ALL      &kp LC(A)
-#define UNDO     &kp LC(Z)
-#define REDO     &kp LC(LS(Z))
-#define SAVE     &kp LC(S)
-#define RFSH     &kp LC(R)
-#define DVTS     &kp LC(LS(I))
-#define FIND     &kp LC(F)
-#define SHEN     &kp LS(ENTER)
+#define _CUT      &kp LC(X)
+#define _COP      &kp LC(C)
+#define _PST      &kp LC(V)
+#define _ALL      &kp LC(A)
+#define _UDO      &kp LC(Z)
+#define _RDO      &kp LC(LS(Z))
+#define _SAV      &kp LC(S)
+#define _RSH      &kp LC(R)
+#define _DTS      &kp LC(LS(I))
+#define _FND      &kp LC(F)
+#define _SEN      &kp LS(ENTER)
 
-#define APP1     &kp LG(N1)
-#define APP2     &kp LG(N2)
-#define APP3     &kp LG(N3)
+#define _BCK      &kp LC(LS(T))
+#define _WDW      &kp LC(W)
+#define _TBN      &kp LC(T)
+#define _TBL      &kp LC(LS(TAB))
+#define _TBR      &kp LC(TAB)
 
-#define BACK     &kp LC(LS(T))
-#define WDRW     &kp LC(W)
-#define TABN     &kp LC(T)
-#define TABL     &kp LC(LS(TAB))
-#define TABR     &kp LC(TAB)
+#define _MB1      &mkp MB1
+#define _MB2      &mkp MB2
+#define _MB3      &mkp MB3
 
-#define ____     &none
-#define mmmm     &none
+#define ____      &none
+#define mmmm      &none
 
 / {
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
 ____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-ESC  ____ P    BSPC A    mmmm           mmmm S    F    W    ____ mmmm
-Y    I    G    SPC  O    mmmm           mmmm R    N    M    H    L
-____ Q    J    B    Z    ____ ____ ____ ____ X    C    K    V    ____
-               ____ U    E    mmmm mmmm T    D    ____
+_ESC ____ _P   _BSP _A   mmmm           mmmm _S   _F   _W   ____ mmmm
+_Y   _I   _G   _SP  _O   mmmm           mmmm _R   _N   _M   _H   _L
+____ _Q   _J   _B   _Z   ____ ____ ____ ____ _X   _C   _K   _V   ____
+               ____ _U   _E   mmmm mmmm _T   _D   ____
          >; };
     };
 };
