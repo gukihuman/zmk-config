@@ -8,11 +8,6 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// ============================================================================
-// DEFINITIONS
-// ============================================================================
-
-// Letters
 #define A        &kp A
 #define B        &kp B
 #define C        &kp C
@@ -40,7 +35,6 @@
 #define Y        &kp Y
 #define Z        &kp Z
 
-// Numbers
 #define N0       &kp N0
 #define N1       &kp N1
 #define N2       &kp N2
@@ -52,7 +46,6 @@
 #define N8       &kp N8
 #define N9       &kp N9
 
-// Function keys
 #define F1       &kp F1
 #define F2       &kp F2
 #define F3       &kp F3
@@ -78,31 +71,29 @@
 #define F23      &kp F23
 #define F24      &kp F24
 
-// Common keys
-#define SPACE    &kp SPACE
+#define SPC      &kp SPACE
 #define BSPC     &kp BSPC
 #define DEL      &kp DEL
 #define ESC      &kp ESC
-#define ENTER    &kp ENTER
+#define ENTR     &kp ENTER
 #define TAB      &kp TAB
-#define PSCRN    &kp PSCRN
+#define PSCR     &kp PSCRN
 
-// Symbols
-#define LPAR     &kp LEFT_PAREN
-#define RPAR     &kp RIGHT_PAREN
-#define LBRC     &kp LEFT_BRACE
-#define RBRC     &kp RIGHT_BRACE
-#define LBKT     &kp LEFT_BRACKET
-#define RBKT     &kp RIGHT_BRACKET
-#define COMMA    &kp COMMA
+#define LPAR     &kp LPAR
+#define RPAR     &kp RPAR
+#define LBRC     &kp LBRC
+#define RBRC     &kp RBRC
+#define LBKT     &kp LBKT
+#define RBKT     &kp RBKT
+#define COM      &kp COMMA
 #define DOT      &kp DOT
-#define QMARK    &kp QUESTION
+#define QMRK     &kp QMARK
 #define EXCL     &kp EXCL
-#define GRAVE    &kp GRAVE
+#define GRAV     &kp GRAVE
 #define SQT      &kp SQT
 #define DQT      &kp DQT
-#define EQUAL    &kp EQUAL
-#define COLON    &kp COLON
+#define EQL      &kp EQUAL
+#define CLN      &kp COLON
 #define SEMI     &kp SEMI
 #define LT       &kp LT
 #define GT       &kp GT
@@ -110,91 +101,69 @@
 #define PIPE     &kp PIPE
 #define FSLH     &kp FSLH
 #define BSLH     &kp BSLH
-#define CARET    &kp CARET
-#define TILDE    &kp TILDE
-#define UNDER    &kp UNDER
-#define MINUS    &kp MINUS
+#define CRT      &kp CARET
+#define TLD      &kp TILDE
+#define UND      &kp UNDER
+#define MNUS     &kp MINUS
 #define PLUS     &kp PLUS
 #define HASH     &kp HASH
-#define ASTRK    &kp ASTRK
+#define ASTR     &kp ASTRK
 #define DLLR     &kp DLLR
 #define AT       &kp AT
-#define PRCNT    &kp PRCNT
+#define PRCN     &kp PRCNT
 
-// Navigation
 #define LEFT     &kp LEFT
 #define DOWN     &kp DOWN
 #define UP       &kp UP
-#define RIGHT    &kp RIGHT
+#define RGHT     &kp RIGHT
 
-// Modifiers
 #define LGUI     &kp LGUI
 #define LALT     &kp LALT
-#define LCTRL    &kp LCTRL
-#define LSHFT    &kp LSHFT
+#define LCTL     &kp LCTRL
+#define LSHF     &kp LSHFT
 #define RGUI     &kp RGUI
 #define RALT     &kp RALT
-#define RCTRL    &kp RCTRL
-#define RSHFT    &kp RSHFT
+#define RCTL     &kp RCTRL
+#define RSHF     &kp RSHFT
 
-// Editing
 #define CUT      &kp LC(X)
 #define COPY     &kp LC(C)
-#define PASTE    &kp LC(V)
+#define PST      &kp LC(V)
 #define ALL      &kp LC(A)
 #define UNDO     &kp LC(Z)
 #define REDO     &kp LC(LS(Z))
 #define SAVE     &kp LC(S)
 #define RFSH     &kp LC(R)
-#define DVTLS    &kp LC(LS(I))
+#define DVTS     &kp LC(LS(I))
 #define FIND     &kp LC(F)
-#define SHENT    &kp LS(ENTER)
+#define SHEN     &kp LS(ENTER)
 
-// Apps
 #define APP1     &kp LG(N1)
 #define APP2     &kp LG(N2)
 #define APP3     &kp LG(N3)
 
-// Tabs
 #define BACK     &kp LC(LS(T))
-#define WDRAW    &kp LC(W)
+#define WDRW     &kp LC(W)
 #define TABN     &kp LC(T)
 #define TABL     &kp LC(LS(TAB))
 #define TABR     &kp LC(TAB)
 
-// Mouse
 #define MB1      &mkp MB1
 #define MB2      &mkp MB2
 #define MB3      &mkp MB3
 
-// Placeholders
-#define _____    &none
-#define mmmmm    &none
-#define xxxxx    &none
-
-// ============================================================================
-// KEYMAP
-// ============================================================================
+#define ____     &none
+#define mmmm     &none
 
 / {
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
- _____ REDO  UNDO  _____ _____ _____             _ _ _ _ _ _
- ESC   _____ DEL   F14   SAVE  PSCRN             _ _ _ _ _ _
- LSHFT DOT   BSPC  SPACE ENTER SHENT             _ _ _ _ _ _
- _____ ALL   CUT   COPY  PASTE _____ _____ _ _ _ _ _ _ _
-                               _____ MB2  MB1  MB3  _ _ _ _
+____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+ESC  ____ P    BSPC A    mmmm           mmmm S    F    W    ____ mmmm
+Y    I    G    SPC  O    mmmm           mmmm R    N    M    H    L
+____ Q    J    B    Z    ____ ____ ____ ____ X    C    K    V    ____
+               ____ U    E    mmmm mmmm T    D    ____
          >; };
     };
 };
-
-// ============================================================================
-// LEGACY COMMENTED LAYOUT
-// ============================================================================
-
-// _____ &kp REDO  &kp UNDO  _____ _____ _____             _ _ _ _ _ _
-// &kp ESC   _____ &kp DEL   &kp F14   &kp SAVE  &kp PSCRN             _ _ _ _ _ _
-// &kp LSHFT &kp DOT   &kp BSPC  &kp SPACE &kp ENTER &kp SHENT             _ _ _ _ _ _
-// _____ &kp ALL   &kp CUT   &kp COPY  &kp PASTE _____ _____ _ _ _ _ _ _ _
-//                               _____ &mkp MB2  &mkp MB1  &mkp MB3  _ _ _ _
