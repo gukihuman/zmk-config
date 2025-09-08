@@ -148,10 +148,6 @@
 #define TABL     &kp LC(LS(TAB))
 #define TABR     &kp LC(TAB)
 
-#define MB1      &mkp MB1
-#define MB2      &mkp MB2
-#define MB3      &mkp MB3
-
 #define ____     &none
 #define mmmm     &none
 
