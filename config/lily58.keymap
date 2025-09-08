@@ -133,7 +133,7 @@
 #define _UDO      &kp LC(Z)
 #define _RDO      &kp LC(LS(Z))
 #define _SAV      &kp LC(S)
-#define _RSH      &kp LC(R)
+#define _REF      &kp LC(R)
 #define _DTS      &kp LC(LS(I))
 #define _FND      &kp LC(F)
 #define _SEN      &kp LS(ENTER)
@@ -148,6 +148,9 @@
 #define _MB2      &mkp MB2
 #define _MB3      &mkp MB3
 
+#define _L0       &to 0
+#define _L1       &to 1
+
 #define ____      &none
 #define mmmm      &none
 
@@ -155,11 +158,18 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_ESC ____ _P   _BSP _A   mmmm           mmmm _S   _F   _W   ____ mmmm
-_Y   _I   _G   _SP  _O   mmmm           mmmm _R   _N   _M   _H   _L
+____ _MB2 _MB1 ____ ____ ____           ____ ____ ____ _MB1 _MB2 ____
+_MB3 ____ _N7  _N8  _N9  _L0            _L0  _UDO _ESC _RDO ____ _MB3
+mmmm mmmm _N4  _N5  _N6  _L1            _L1  _ALL _COP _CUT mmmm _DEL
+____ mmmm _N1  _N2  _N3  ____ ____ ____ ____ mmmm mmmm mmmm _PNT ____
+               ____ mmmm _N0  mmmm _ENT _PST _SAV ____
+        >; };
+        l1 { bindings = <
+____ mmmm _LS  ____ ____ ____           ____ ____ ____ _RS  mmmm ____
+_COM ____ _P   _BSP _A   _L0            _L0  _S   _F   _W   ____ _QMK
+_Y   _I   _G   _SP  _O   _L1            _L1  _R   _N   _M   _H   _L
 ____ _Q   _J   _B   _Z   ____ ____ ____ ____ _X   _C   _K   _V   ____
-               ____ _U   _E   mmmm mmmm _T   _D   ____
-         >; };
+               ____ _U   _E   _DOT _ENT _T   _D   ____
+        >; };
     };
 };
