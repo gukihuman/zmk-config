@@ -162,14 +162,14 @@ ____ _MB2 _MB1 ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 _MB3 ____ _ESC _DEL _PSR _L0            _L0  _N7  _N8  _N9  ____ mmmm
 mmmm _ALL _CUT _COP _F14 _L1            _L1  _N4  _N5  _N6  mmmm mmmm
 ____ _LS  _LC  _RDO _UDO ____ ____ ____ ____ _N1  _N2  _N3  mmmm ____
-               ____ _SAV _PST _ENT _BSP _N0  mmmm ____
+               ____ _SAV _PST _ENT mmmm _N0  mmmm ____
         >; };
         l1 { bindings = <
 ____ mmmm _LS  ____ ____ ____           ____ ____ ____ _RS  mmmm ____
-_COM ____ _DOT _V   _Z   _L0            _L0  _X   _C   _K   ____ _QMK
+_COM ____ _V   _BSP _Z   _L0            _L0  _X   _C   _K   ____ _QMK
 _J   _I   _G   _SP  _O   _L1            _L1  _R   _N   _M   _H   _Q
 ____ _Y   _P   _B   _A   ____ ____ ____ ____ _S   _F   _W   _L   ____
-               ____ _U   _E   _ENT _BSP _T   _D   ____
+               ____ _U   _E   _ENT _DOT _T   _D   ____
         >; };
     };
 };
