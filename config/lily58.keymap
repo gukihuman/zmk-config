@@ -166,10 +166,10 @@ ____ mmmm _N1  _N2  _N3  ____ ____ ____ ____ _LFT _DWN _UP  _RHT ____
         >; };
         l1 { bindings = <
 ____ mmmm _LS  ____ ____ ____           ____ ____ ____ _RS  mmmm ____
-_COM ____ _P   _BSP _Z   _L0            _L0  _X   _F   _W   ____ _QMK
-_Y   _I   _G   _SP  _O   _L1            _L1  _R   _N   _M   _H   _L
-____ _Q   _J   _B   _A   ____ ____ ____ ____ _S   _C   _K   _V   ____
-               ____ _U   _E   _DOT _ENT _T   _D   ____
+_COM ____ _DOT _V   _Z   _L0            _L0  _X   _F   _K   ____ _QMK
+_J   _I   _G   _SP  _O   _L1            _L1  _R   _N   _M   _H   _Q
+____ _Y   _P   _B   _A   ____ ____ ____ ____ _S   _C   _W   _L   ____
+               ____ _U   _E   _BSP _ENT _T   _D   ____
         >; };
     };
 };
