@@ -148,8 +148,16 @@
 #define _MB2      &mkp MB2
 #define _MB3      &mkp MB3
 
-#define _L0       &to 0
-#define _L1       &to 1
+#define _L1       &mo 1
+#define _L2       &mo 2
+#define _L3       &mo 3
+#define _L4       &mo 4
+#define _L5       &mo 5
+#define _L6       &mo 6
+#define _L7       &mo 7
+#define _L8       &mo 8
+#define _L9       &mo 9
+#define _L10      &mo 10
 
 #define ____      &none
 #define mmmm      &none
@@ -158,18 +166,11 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _RDO _UDO ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_ESC ____ _ALL _DEL _PSR _L0            _L0  _N7  _N8  _N9  ____ mmmm
-_ENT _COP _CUT _F14 _PST _L1            _L1  _N4  _N5  _N6  mmmm mmmm
-____ _LFT _COM _DOT _RHT ____ ____ ____ ____ _N1  _N2  _N3  mmmm ____
-               ____ _MB2 _MB1 _MB3 mmmm _N0  mmmm ____
-        >; };
-        l1 { bindings = <
-____ mmmm _LS  ____ ____ ____           ____ ____ ____ _RS  mmmm ____
-_X   ____ _V   _BSP _J   _L0            _L0  _B   _C   _K   ____ _Z
-_ENT _I   _G   _SP  _O   _L1            _L1  _R   _N   _M   _H   _QMK
-____ _Y   _P   _Q   _A   ____ ____ ____ ____ _S   _F   _W   _L   ____
-               ____ _U   _E   _COM _DOT _T   _D   ____
+____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+mmmm ____ _V   _Q   _J   ____           ____ _B   _K   _C   ____ mmmm
+_DOT _I   _G   _E   _O   _COM           _BSP _R   _N   _W   _T   _X
+____ _Y   _P   _U   _A   ____ ____ ____ ____ _S   _F   _M   _D   ____
+               ____ _Z   _SP  mmmm _ENT _H   _L   ____
         >; };
     };
 };
