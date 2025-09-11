@@ -168,8 +168,8 @@
         l0 { bindings = <
 ____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 mmmm ____ _V   _Q   _J   ____           ____ _B   _K   _C   ____ mmmm
-_DOT _I   _G   _E   _O   _COM           _BSP _R   _N   _W   _T   _X
-____ _Y   _P   _U   _A   ____ ____ ____ ____ _S   _F   _M   _D   ____
+_DOT _I   _G   _E   _O   _COM           _BSP _T   _N   _W   _S   _X
+____ _Y   _P   _U   _A   ____ ____ ____ ____ _D   _F   _M   _R   ____
                ____ _Z   _SP  mmmm _ENT _H   _L   ____
         >; };
     };
