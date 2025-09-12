@@ -159,17 +159,17 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 ____ mmmm _L1  ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_X   ____ _P   _U   _DOT ____           ____ _B   _M   _F   ____ _Z
-____ _I   _G   _E   _O   _BSP           _ENT _T   _W   _N   _R   ____
-____ _Y   _V   _J   _A   ____ ____ ____ ____ _D   _K   _C   _S   ____
+_DOT ____ _J   _U   _V   ____           ____ _B   _M   _F   ____ _ENT
+____ _G   _I   _E   _O   _X             _Z   _T   _W   _N   _R   ____
+____ _P   _Y   _BSP _A   ____ ____ ____ ____ _D   _K   _C   _S   ____
                ____ _Q   _SP  ____ ____ _H   _L   ____
         >; };
         l1 { bindings = <
 ____ _MB2 xxxx ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-mmmm ____ mmmm mmmm _MB3 ____           ____ mmmm mmmm mmmm ____ mmmm
+mmmm ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ mmmm
 ____ mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm ____
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
-               ____ mmmm _MB1 ____ ____ mmmm mmmm ____
+               ____ _MB3 _MB1 ____ ____ mmmm mmmm ____
         >; };
     };
 };
