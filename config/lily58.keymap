@@ -149,6 +149,7 @@
 #define _MB3      &mkp MB3
 
 #define _L1       &mo 1
+#define _L2       &mo 2
 
 #define ____      &none
 #define mmmm      &none
@@ -158,11 +159,11 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _DOT _L1  ____ ____ ____           ____ ____ ____ _L2  _QMK ____
-_Q   ____ _J   _U   _X   ____           ____ _V   _W   _F   ____ _B
+____ _QMK _L1  ____ ____ ____           ____ ____ ____ _L2  _Z   ____
+_DOT ____ _J   _U   _X   ____           ____ _V   _W   _F   ____ _B
 ____ _G   _I   _E   _O   ____           ____ _R   _M   _N   _T   ____
 ____ _P   _Y   _BSP _A   ____ ____ ____ ____ _S   _K   _C   _D   ____
-               ____ _Z   _SP  ____ ____ _H   _L   ____
+               ____ _Q   _SP  ____ ____ _H   _L   ____
         >; };
         l1 { bindings = <
 ____ _MB2 xxxx ____ ____ ____           ____ ____ ____ mmmm mmmm ____
@@ -172,8 +173,8 @@ ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  mmmm ____
                ____ _MB3 _MB1 ____ ____ _N0  mmmm ____
         >; };
         l2 { bindings = <
-____ _COM mmmm ____ ____ ____           ____ ____ ____ xxxx mmmm ____
-mmmm ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ mmmm
+____ _EXL mmmm ____ ____ ____           ____ ____ ____ xxxx mmmm ____
+_COM ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ mmmm
 ____ mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm ____
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
                ____ mmmm _ENT ____ ____ mmmm mmmm ____
