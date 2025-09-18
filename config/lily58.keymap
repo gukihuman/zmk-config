@@ -170,21 +170,21 @@ ____ _J   _Q   _BSP _DOT ____ ____ ____ ____ _COM _K   _C   _Z   ____
 ____ xxxx _ALL ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 _CUT mmmm mmmm _COP mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ mmmm mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm mmmm ____
-____ ____ mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
+____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
                ____ ____ _PST ____ ____ mmmm ____ ____
         >; };
         l2 { bindings = <
 ____ mmmm xxxx ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 _MB2 mmmm mmmm _MB3 mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
 ____ mmmm mmmm mmmm mmmm ____           ____ _N4  _N5  _N6  mmmm ____
-____ ____ mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  ____ ____
+____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  mmmm ____
                ____ ____ _MB1 ____ ____ _N0  ____ ____
         >; };
         l3 { bindings = <
 ____ mmmm mmmm ____ ____ ____           ____ ____ ____ xxxx mmmm ____
-_EQL mmmm _GRV _COM _QMK mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+_EQL _FSH _GRV _QMK _LPR _RPR           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ _CL  mmmm _UND _MNS ____           ____ mmmm mmmm mmmm mmmm ____
-____ ____ mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
+____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
                ____ ____ _SP  ____ ____ _ENT ____ ____
         >; };
     };
