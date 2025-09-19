@@ -1,8 +1,11 @@
-# zephyr/module.yaml
-name: zmk-behavior-oneshot-layer # any name; must be unique
-build:
-  cmake: . # use the repo root CMakeLists.txt
-  # optional Kconfig: not needed here
-  settings:
-    board_root: .
-    dts_root: . # so our bindings are picked up
+# SPDX-License-Identifier: MIT
+title: ZMK One-shot Layer
+description: One-shot layer activated on press; cancels before next keypress
+compatible: "zmk,behavior-oneshot-layer"
+include: one_param.yaml
+properties:
+  release-after-ms:
+    type: int
+    default: 1000
+  pre-cancel:
+    type: boolean
