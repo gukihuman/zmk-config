@@ -10,7 +10,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include <zmk/behavior.h>
 #include <zmk/event_manager.h>
-#include <zmk/layers.h>
+#include <zmk/keymap.h>
 #include <zmk/events/keycode_state_changed.h>
 
 struct osl_cfg {
