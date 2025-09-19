@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: MIT
-title: ZMK One-shot Layer
 description: One-shot layer activated on press; cancels before next keypress
 compatible: "zmk,behavior-oneshot-layer"
 include: one_param.yaml
