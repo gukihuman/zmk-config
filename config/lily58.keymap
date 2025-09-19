@@ -148,8 +148,9 @@
 #define _MB2      &mkp MB2
 #define _MB3      &mkp MB3
 
-#define _SL1      &osl_pre 1
-#define _L2       &mo 2
+#define _OL1      &ol 1
+#define _MO2      &mo 2
+#define _MO3      &mo 3
 
 #define ____      &none
 #define mmmm      &none
@@ -159,22 +160,36 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ mmmm mmmm ____ ____ ____           ____ ____ ____ _F14 mmmm ____
-_G   _P   _Y   _E   _DOT _BSP           _V   _B   _SL1 _C   _K   _M
-____ _L   _I   _O   _A   _X             _Z   _R   _T   _N   _W   ____
-____ ____ _J   _Q   _U   ____ ____ ____ ____ _S   _D   _F   ____ ____
-               ____ mmmm _SP  ____ ____ _H   mmmm ____
+____ mmmm _MO2 ____ ____ ____           ____ ____ ____ _F14 mmmm ____
+_G   _P   _Y   _E   _DOT _X             _V   _D   _OL1 _C   _K   _M
+____ _L   _I   _O   _A   _BSP           _Z   _R   _T   _N   _W   ____
+____ ____ _J   _Q   _U   ____ ____ ____ ____ _S   _B   _F   ____ ____
+               ____ _MO3 _SP  ____ ____ _H   mmmm ____
         >; };
-        sl1 { bindings = <
+        ol1 { bindings = <
 ____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-mmmm mmmm mmmm _DOT mmmm mmmm           mmmm mmmm xxxx mmmm mmmm mmmm
-____ mmmm mmmm _COM mmmm mmmm           mmmm mmmm mmmm mmmm mmmm ____
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
+mmmm mmmm mmmm mmmm _COM mmmm           mmmm mmmm xxxx mmmm mmmm mmmm
+____ mmmm mmmm mmmm mmmm _DEL           mmmm mmmm mmmm mmmm mmmm ____
+____ ____ mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
                ____ mmmm _ENT ____ ____ mmmm mmmm ____
+        >; };
+        mo2 { bindings = <
+____ mmmm xxxx ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+_MB2 mmmm mmmm _MB3 mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
+____ mmmm mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6  mmmm ____
+____ ____ mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  ____ ____
+               ____ mmmm _MB1 ____ ____ _N0  mmmm ____
+        >; };
+        mo3 { bindings = <
+____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ _ALL _COP _SAV mmmm mmmm           mmmm mmmm mmmm mmmm mmmm ____
+____ ____ _CUT _PST mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
+               ____ xxxx mmmm ____ ____ mmmm mmmm ____
         >; };
     };
     behaviors {
-        osl_pre: osl_pre {
+        ol: ol {
             compatible = "zmk,behavior-oneshot-layer";
             #binding-cells = <1>;
             release-after-ms = <800>;
