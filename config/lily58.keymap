@@ -1,4 +1,4 @@
-// ☷ ~/config/lily58.keymap
+// config/lily58.keymap
 // separate project now but i want to integrate it in lithos somehow in the future
 // scripture must be renamed to kjarra related somehow in the future too
 
@@ -148,7 +148,7 @@
 #define _MB2      &mkp MB2
 #define _MB3      &mkp MB3
 
-#define _SL1      &sl 1
+#define _SL1      &osl_pre 1
 #define _L2       &mo 2
 
 #define ____      &none
@@ -172,5 +172,13 @@ ____ mmmm mmmm _COM mmmm mmmm           mmmm mmmm mmmm mmmm mmmm ____
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
                ____ mmmm _ENT ____ ____ mmmm mmmm ____
         >; };
+    };
+    behaviors {
+        osl_pre: osl_pre {
+            compatible = "zmk,behavior-oneshot-layer";
+            #binding-cells = <1>;
+            release-after-ms = <800>;
+            pre-cancel;
+        };
     };
 };
