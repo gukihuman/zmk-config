@@ -10,66 +10,64 @@
 #include <zmk/behavior.h>
 #include <zmk/keymap.h>
 #include <zmk/event_manager.h>
-#include <zmk/events/position_state_changed.h>  // underscores, not hyphens
+#include <zmk/events/position_state_changed.h>
+#include <zmk/events/keycode_state_changed.h>
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #if DT_HAS_COMPAT_STATUS_OKAY(DT_DRV_COMPAT)
 
-/* ----- Devicetree-configured props ----- */
+/* DT props */
 struct osl_cfg {
-    int32_t release_after_ms;   /* 0/absent => no timeout */
-    bool pre_cancel;            /* if true: cancel on first non-source press */
+    int32_t release_after_ms; /* 0/absent => no timeout */
 };
 
-/* ----- Per-instance runtime state ----- */
+/* Runtime state (one per DT instance) */
 struct osl_data {
-    bool    active;
-    uint8_t layer;              /* target layer (from binding cell) */
-    uint8_t src_pos;            /* key position that armed the oneshot */
+    bool    active;           /* armed and layer is ON */
+    uint8_t layer;            /* target layer (from binding cell) */
+    uint8_t src_pos;          /* physical position that armed it */
     struct k_work_delayable timeout_work;
 };
 
-/* ----- Helpers ----- */
-static void osl_deactivate(struct osl_data *data) {
-    if (!data->active) return;
-    zmk_keymap_layer_deactivate(data->layer);
-    data->active = false;
-    k_work_cancel_delayable(&data->timeout_work);
+/* --------- helpers --------- */
+static void osl_deactivate(struct osl_data *d) {
+    if (!d->active) return;
+    zmk_keymap_layer_deactivate(d->layer);
+    d->active = false;
+    k_work_cancel_delayable(&d->timeout_work);
 }
 
 static void osl_timeout_cb(struct k_work *work) {
     struct k_work_delayable *dwork = CONTAINER_OF(work, struct k_work_delayable, work);
-    struct osl_data *data = CONTAINER_OF(dwork, struct osl_data, timeout_work);
-    osl_deactivate(data);
+    struct osl_data *d = CONTAINER_OF(dwork, struct osl_data, timeout_work);
+    osl_deactivate(d);
 }
 
-/* ----- Behavior API (correct 3-arg signatures) ----- */
+/* --------- behavior api (3-arg signatures) --------- */
 static int osl_pressed(const struct device *dev,
                        struct zmk_behavior_binding *binding,
                        struct zmk_behavior_binding_event event) {
     const struct osl_cfg *cfg = dev->config;
-    struct osl_data *data = dev->data;
+    struct osl_data *d = dev->data;
 
-    data->active  = true;
-    data->src_pos = event.position;
-    data->layer   = binding->param1;              /* layer id from keymap cell */
+    d->layer   = binding->param1;   /* layer id comes from keymap cell */
+    d->src_pos = event.position;
+    d->active  = true;
 
-    zmk_keymap_layer_activate(data->layer);
+    zmk_keymap_layer_activate(d->layer);
 
     if (cfg->release_after_ms > 0) {
-        k_work_schedule(&data->timeout_work, K_MSEC(cfg->release_after_ms));
+        k_work_schedule(&d->timeout_work, K_MSEC(cfg->release_after_ms));
     }
-    return ZMK_BEHAVIOR_OPAQUE;                   /* no underlying keycode */
+    return ZMK_BEHAVIOR_OPAQUE;     /* this behavior emits no keycode by itself */
 }
 
 static int osl_released(const struct device *dev,
                         struct zmk_behavior_binding *binding,
                         struct zmk_behavior_binding_event event) {
-    ARG_UNUSED(dev);
-    ARG_UNUSED(binding);
-    ARG_UNUSED(event);
-    /* release ignored; timeout or next press will cancel */
+    ARG_UNUSED(dev); ARG_UNUSED(binding); ARG_UNUSED(event);
+    /* release of arming key is irrelevant; we drop after the NEXT key press */
     return ZMK_BEHAVIOR_OPAQUE;
 }
 
@@ -78,46 +76,55 @@ static const struct behavior_driver_api osl_api = {
     .binding_released = osl_released,
 };
 
-/* ----- Global listener: optional pre-cancel ----- */
-static int osl_listener_cb(const zmk_event_t *eh) {
-    const struct zmk_position_state_changed *ev = as_zmk_position_state_changed(eh);
-    if (!ev || !ev->state) return ZMK_EV_EVENT_BUBBLE; /* only presses */
+/*
+ * Core rule (exactly what you asked):
+ * - When the oneshot is PRESSED: turn layer ON.
+ * - The VERY NEXT key PRESS (any keycode) should be produced on that layer.
+ * - Immediately AFTER that press is produced, turn the layer OFF.
+ *
+ * Implementation detail:
+ * - We listen to keycode_state_changed (post-mapping). On the first keycode
+ *   press while armed, we deactivate. That preserves the just-produced
+ *   key on the oneshot layer and returns to base for everything after.
+ */
+static int osl_keycode_listener_cb(const zmk_event_t *eh) {
+    const struct zmk_keycode_state_changed *ev = as_zmk_keycode_state_changed(eh);
+    if (!ev || !ev->state) return ZMK_EV_EVENT_BUBBLE; /* only on PRESS */
 
-#define OSL_FOR_EACH_INST(n)                                                         \
-    {                                                                                \
-        const struct device *dev = DEVICE_DT_INST_GET(n);                            \
-        const struct osl_cfg  *cfg = dev->config;                                    \
-        struct osl_data       *dat = dev->data;                                      \
-        if (dat->active && cfg->pre_cancel && ev->position != dat->src_pos) {        \
-            osl_deactivate(dat);                                                     \
-        }                                                                            \
+#define OSL_FOR_EACH(n)                                                            \
+    {                                                                              \
+        const struct device *dev = DEVICE_DT_INST_GET(n);                          \
+        struct osl_data *d = dev->data;                                            \
+        if (d->active) {                                                           \
+            /* This keycode was just produced with the layer ON -> drop now */     \
+            osl_deactivate(d);                                                     \
+        }                                                                          \
     }
 
-    DT_INST_FOREACH_STATUS_OKAY(OSL_FOR_EACH_INST)
-#undef OSL_FOR_EACH_INST
+    DT_INST_FOREACH_STATUS_OKAY(OSL_FOR_EACH)
+#undef OSL_FOR_EACH
 
     return ZMK_EV_EVENT_BUBBLE;
 }
 
-ZMK_LISTENER(osl_listener, osl_listener_cb);
-ZMK_SUBSCRIPTION(osl_listener, zmk_position_state_changed);
+ZMK_LISTENER(osl_keycode_listener, osl_keycode_listener_cb);
+ZMK_SUBSCRIPTION(osl_keycode_listener, zmk_keycode_state_changed);
 
-/* ----- Init + Instances ----- */
+/* --------- init + instances --------- */
 static int osl_init(const struct device *dev) {
-    struct osl_data *data = dev->data;
-    data->active = false;
-    data->layer  = 0;
-    data->src_pos = 0;
-    k_work_init_delayable(&data->timeout_work, osl_timeout_cb);
+    struct osl_data *d = dev->data;
+    d->active = false;
+    d->layer = 0;
+    d->src_pos = 0;
+    k_work_init_delayable(&d->timeout_work, osl_timeout_cb);
     return 0;
 }
 
-/* Create one device per DT instance and REGISTER AS A BEHAVIOR */
+/* Register as a BEHAVIOR device */
 #define OSL_INST(n)                                                                \
     static struct osl_data osl_data_##n;                                           \
     static const struct osl_cfg osl_cfg_##n = {                                    \
         .release_after_ms = DT_INST_PROP_OR(n, release_after_ms, 800),             \
-        .pre_cancel       = DT_INST_NODE_HAS_PROP(n, pre_cancel),                  \
     };                                                                             \
     BEHAVIOR_DT_INST_DEFINE(n,                                                     \
         osl_init, NULL,                                                            \
