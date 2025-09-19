@@ -10,27 +10,27 @@
 #include <zmk/behavior.h>
 #include <zmk/keymap.h>
 #include <zmk/event_manager.h>
-#include <zmk/events/position_state_changed.h>  // NOTE: underscores, not hyphens
+#include <zmk/events/position_state_changed.h>  // underscores, not hyphens
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #if DT_HAS_COMPAT_STATUS_OKAY(DT_DRV_COMPAT)
 
-/* Devicetree-configured props */
+/* ----- Devicetree-configured props ----- */
 struct osl_cfg {
-    int32_t release_after_ms;   /* timeout; 0/absent = no timeout */
+    int32_t release_after_ms;   /* 0/absent => no timeout */
     bool pre_cancel;            /* if true: cancel on first non-source press */
 };
 
-/* Per-instance runtime state */
+/* ----- Per-instance runtime state ----- */
 struct osl_data {
     bool    active;
-    uint8_t layer;              /* target layer for this arming */
-    uint8_t src_pos;            /* arming key position */
+    uint8_t layer;              /* target layer (from binding cell) */
+    uint8_t src_pos;            /* key position that armed the oneshot */
     struct k_work_delayable timeout_work;
 };
 
-/* ---- helpers ---- */
+/* ----- Helpers ----- */
 static void osl_deactivate(struct osl_data *data) {
     if (!data->active) return;
     zmk_keymap_layer_deactivate(data->layer);
@@ -38,35 +38,35 @@ static void osl_deactivate(struct osl_data *data) {
     k_work_cancel_delayable(&data->timeout_work);
 }
 
-/* timeout -> drop layer */
 static void osl_timeout_cb(struct k_work *work) {
     struct k_work_delayable *dwork = CONTAINER_OF(work, struct k_work_delayable, work);
     struct osl_data *data = CONTAINER_OF(dwork, struct osl_data, timeout_work);
     osl_deactivate(data);
 }
 
-/* ---- behavior API ---- */
-/* NOTE: pressed/released signatures are the 2-arg form; fetch dev via helper */
-static int osl_pressed(struct zmk_behavior_binding *binding,
+/* ----- Behavior API (correct 3-arg signatures) ----- */
+static int osl_pressed(const struct device *dev,
+                       struct zmk_behavior_binding *binding,
                        struct zmk_behavior_binding_event event) {
-    const struct device *dev = zmk_behavior_get_binding(binding);
     const struct osl_cfg *cfg = dev->config;
     struct osl_data *data = dev->data;
 
     data->active  = true;
     data->src_pos = event.position;
-    data->layer   = binding->param1;                   /* layer from keymap cell */
+    data->layer   = binding->param1;              /* layer id from keymap cell */
 
     zmk_keymap_layer_activate(data->layer);
 
     if (cfg->release_after_ms > 0) {
         k_work_schedule(&data->timeout_work, K_MSEC(cfg->release_after_ms));
     }
-    return ZMK_BEHAVIOR_OPAQUE;
+    return ZMK_BEHAVIOR_OPAQUE;                   /* no underlying keycode */
 }
 
-static int osl_released(struct zmk_behavior_binding *binding,
+static int osl_released(const struct device *dev,
+                        struct zmk_behavior_binding *binding,
                         struct zmk_behavior_binding_event event) {
+    ARG_UNUSED(dev);
     ARG_UNUSED(binding);
     ARG_UNUSED(event);
     /* release ignored; timeout or next press will cancel */
@@ -78,10 +78,10 @@ static const struct behavior_driver_api osl_api = {
     .binding_released = osl_released,
 };
 
-/* ---- global listener: cancel on first non-source press (if pre_cancel) ---- */
+/* ----- Global listener: optional pre-cancel ----- */
 static int osl_listener_cb(const zmk_event_t *eh) {
     const struct zmk_position_state_changed *ev = as_zmk_position_state_changed(eh);
-    if (!ev || !ev->state) return ZMK_EV_EVENT_BUBBLE; /* only handle presses */
+    if (!ev || !ev->state) return ZMK_EV_EVENT_BUBBLE; /* only presses */
 
 #define OSL_FOR_EACH_INST(n)                                                         \
     {                                                                                \
@@ -102,15 +102,17 @@ static int osl_listener_cb(const zmk_event_t *eh) {
 ZMK_LISTENER(osl_listener, osl_listener_cb);
 ZMK_SUBSCRIPTION(osl_listener, zmk_position_state_changed);
 
-/* ---- init + instances ---- */
+/* ----- Init + Instances ----- */
 static int osl_init(const struct device *dev) {
     struct osl_data *data = dev->data;
     data->active = false;
+    data->layer  = 0;
+    data->src_pos = 0;
     k_work_init_delayable(&data->timeout_work, osl_timeout_cb);
     return 0;
 }
 
-/* Create one device per DT instance */
+/* Create one device per DT instance and REGISTER AS A BEHAVIOR */
 #define OSL_INST(n)                                                                \
     static struct osl_data osl_data_##n;                                           \
     static const struct osl_cfg osl_cfg_##n = {                                    \
