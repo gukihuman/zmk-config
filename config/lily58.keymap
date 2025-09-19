@@ -148,9 +148,8 @@
 #define _MB2      &mkp MB2
 #define _MB3      &mkp MB3
 
-#define _L1       &mo 1
+#define _SL1      &sl 1
 #define _L2       &mo 2
-#define _L3       &mo 3
 
 #define ____      &none
 #define mmmm      &none
@@ -160,32 +159,18 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _L1  _L2  ____ ____ ____           ____ ____ ____ _F14 _L3  ____
-_G   _P   _Y   _E   _DOT _X             _V   _COM _D   _C   _K   _M
-____ _L   _I   _O   _U   ____           ____ _R   _T   _N   _W   ____
-____ _Q   _J   _BSP _U   ____ ____ ____ ____ _S   _B   _F   _Z   ____
-               ____ ____ _SP  ____ ____ _H   ____ ____
+____ mmmm mmmm ____ ____ ____           ____ ____ ____ _F14 mmmm ____
+_G   _P   _Y   _E   _DOT _BSP           _V   _B   _SL1 _C   _K   _M
+____ _L   _I   _O   _A   _X             _Z   _R   _T   _N   _W   ____
+____ ____ _J   _Q   _U   ____ ____ ____ ____ _S   _D   _F   ____ ____
+               ____ mmmm _SP  ____ ____ _H   mmmm ____
         >; };
-        l1 { bindings = <
-____ xxxx _ALL ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_CUT mmmm mmmm _COP mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ mmmm mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm mmmm ____
+        sl1 { bindings = <
+____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+mmmm mmmm mmmm _DOT mmmm mmmm           mmmm mmmm xxxx mmmm mmmm mmmm
+____ mmmm mmmm _COM mmmm mmmm           mmmm mmmm mmmm mmmm mmmm ____
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
-               ____ ____ _PST ____ ____ mmmm ____ ____
-        >; };
-        l2 { bindings = <
-____ mmmm xxxx ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_MB2 mmmm mmmm _MB3 mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
-____ mmmm mmmm mmmm mmmm ____           ____ _N4  _N5  _N6  mmmm ____
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  mmmm ____
-               ____ ____ _MB1 ____ ____ _N0  ____ ____
-        >; };
-        l3 { bindings = <
-____ mmmm mmmm ____ ____ ____           ____ ____ ____ xxxx mmmm ____
-_EQL _FSH _GRV _QMK _LPR _RPR           mmmm mmmm mmmm mmmm mmmm mmmm
-____ _CL  mmmm _UND _MNS ____           ____ mmmm mmmm mmmm mmmm ____
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
-               ____ ____ _SP  ____ ____ _ENT ____ ____
+               ____ mmmm _ENT ____ ____ mmmm mmmm ____
         >; };
     };
 };
