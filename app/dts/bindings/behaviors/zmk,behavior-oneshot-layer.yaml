@@ -1,4 +1,4 @@
-description: One-shot layer: enable a layer on press; drop it after the VERY next key press, or after a timeout
+description: "One-shot layer: enable a layer on press; drop it after the VERY next key press, or after a timeout"
 compatible: "zmk,behavior-oneshot-layer"
 
 include: one_param.yaml
