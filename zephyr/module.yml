@@ -5,4 +5,4 @@ build:
   # optional Kconfig: not needed here
   settings:
     board_root: .
-    dts_root: . # so our bindings are picked up
+    dts_root: dts # so our bindings are picked up
