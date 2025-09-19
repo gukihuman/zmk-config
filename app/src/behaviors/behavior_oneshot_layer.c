@@ -45,9 +45,11 @@ static void osl_timeout_cb(struct k_work *work) {
 }
 
 /* Behavior API */
-static int osl_pressed(const struct device *dev,
-                       struct zmk_behavior_binding *binding,
+// **FIX 1: Updated function signature**
+static int osl_pressed(struct zmk_behavior_binding *binding,
                        struct zmk_behavior_binding_event event) {
+    // **FIX 2: Get the device from the binding**
+    const struct device *dev = zmk_behavior_get_binding(binding->behavior_dev);
     const struct osl_cfg *cfg = dev->config;
     struct osl_data *d = dev->data;
 
@@ -76,10 +78,10 @@ static int osl_pressed(const struct device *dev,
     return ZMK_BEHAVIOR_OPAQUE;
 }
 
-static int osl_released(const struct device *dev,
-                        struct zmk_behavior_binding *binding,
+// **FIX 3: Updated function signature**
+static int osl_released(struct zmk_behavior_binding *binding,
                         struct zmk_behavior_binding_event event) {
-    ARG_UNUSED(dev); ARG_UNUSED(binding); ARG_UNUSED(event);
+    ARG_UNUSED(binding); ARG_UNUSED(event);
     LOG_INF("OSL: released (ignored; we drop on next key press)");
     return ZMK_BEHAVIOR_OPAQUE;
 }
@@ -99,8 +101,9 @@ static int osl_keycode_listener_cb(const zmk_event_t *eh) {
         const struct device *dev = DEVICE_DT_INST_GET(n);                          \
         struct osl_data *d = dev->data;                                            \
         if (d->active) {                                                           \
-            LOG_INF("OSL: observed first keycode press (usage=0x%04X), drop layer %u", \
-                    ev->usage, d->layer);                                          \
+            /* **FIX 4: Changed ev->usage to ev->keycode** */                      \
+            LOG_INF("OSL: observed first keycode press (keycode=0x%04X), drop layer %u", \
+                    ev->keycode, d->layer);                                        \
             osl_deactivate(d);                                                     \
         }                                                                          \
     }
