@@ -178,7 +178,6 @@ ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
             compatible = "zmk,behavior-oneshot-layer";
             #binding-cells = <1>;
             release-after-ms = <800>;
-            pre-cancel;
         };
     };
 };

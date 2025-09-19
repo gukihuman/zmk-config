@@ -1,10 +1,17 @@
 # SPDX-License-Identifier: MIT
-description: One-shot layer activated on press; cancels before next keypress
+description: One-shot layer that activates on press and (optionally) cancels before the next non-source press
+
 compatible: "zmk,behavior-oneshot-layer"
+
 include: one_param.yaml
+
 properties:
   release-after-ms:
     type: int
-    default: 1000
+    description: Timeout; deactivate layer after this many ms if still active
+    required: false
+    default: 800
   pre-cancel:
     type: boolean
+    description: If present, cancel the layer as soon as any other key is pressed
+    required: false
