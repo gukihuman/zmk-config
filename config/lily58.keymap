@@ -159,11 +159,11 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _MB1 _MB3 ____ ____ ____           ____ ____ ____ _F14 mmmm ____
-_MB2 _X   _V   _G   _J   _Q             _K   _W   _S   _C   _P   _OL1
-____ _A   _U   _E   _I   ____           ____ _T   _R   _N   _L   ____
-____ _O   _M   _BSP _Y   ____ ____ ____ ____ _D   _B   _F   _Z   ____
-               ____ _MO2 _SP  ____ ____ _H   mmmm ____
+____ _MB1 _MB3  ____ ____ ____           ____ ____ ____ _F14 mmmm ____
+_DOT _A   _U   _E   _Y   _Q             _K   _W   _S   _C   _P   _OL1
+____ _O   _M   _G   _I   ____           ____ _T   _R   _N   _L   ____
+____ _X   _Z   _BSP _V   ____ ____ ____ ____ _D   _B   _F   _J   ____
+               ____ _MB1 _SP  ____ ____ _H   mmmm ____
         >; };
         ol1 { bindings = <
 ____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
