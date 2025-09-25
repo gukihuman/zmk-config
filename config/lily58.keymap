@@ -160,9 +160,9 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 ____ _MB2 _MB1 ____ ____ ____           ____ ____ ____ _F14 mmmm ____
-_MO2 _DOT _A   _E   _Y   _Q             _K   _B   _S   _L   _P   _M
-____ _U   _O   _G   _I   ____           ____ _T   _R   _N   _C   ____
-____ _Z   _X   _BSP _J   ____ ____ ____ ____ _D   _W   _F   _V   ____
+_MO2 _DOT _A   _E   _Y   _Q             _K   _W   _D   _L   _P   _M
+____ _U   _O   _G   _I   ____           ____ _R   _T   _N   _C   ____
+____ _Z   _X   _BSP _J   ____ ____ ____ ____ _S   _B   _F   _V   ____
                ____ _MB3 _SP  ____ ____ _H   _OL1 ____
         >; };
         ol1 { bindings = <
@@ -173,11 +173,11 @@ ____ _LPR _RPR mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
                ____ mmmm mmmm ____ ____ mmmm mmmm ____
         >; };
         mo2 { bindings = <
-____ _MB1 _MB3 ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+____ _MB2 _MB1 ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 xxxx _ALL _COP _PST _UDO _PSR           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ mmmm _CUT _SAV _RDO ____           ____ mmmm mmmm mmmm mmmm ____
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
-               ____ _MB1 _ENT ____ ____ mmmm mmmm ____
+               ____ _MB3 _ENT ____ ____ mmmm mmmm ____
         >; };
     };
     behaviors {
