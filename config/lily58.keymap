@@ -174,9 +174,9 @@ ____ ____ ____ mmmm mmmm mmmm ____ ____ mmmm mmmm mmmm ____ ____ ____
         >; };
         mo2 { bindings = <
 xxxx mmmm _ALL _COP _UDO _RDO           mmmm mmmm mmmm mmmm mmmm mmmm
-____ mmmm mmmm _CUT _PST mmmm           ____ mmmm mmmm mmmm mmmm ____
-____ ____ mmmm mmmm mmmm mmmm           ____ mmmm mmmm mmmm ____ ____
-____ ____ ____ mmmm _SAV mmmm ____ ____ mmmm mmmm mmmm ____ ____ ____
+____ mmmm mmmm _CUT _PST _MB3           ____ mmmm mmmm mmmm mmmm ____
+____ ____ mmmm mmmm mmmm _MB2           ____ mmmm mmmm mmmm ____ ____
+____ ____ ____ mmmm _SAV _MB1 ____ ____ mmmm mmmm mmmm ____ ____ ____
                ____ ____ ____ _PSR mmmm ____ ____ ____
         >; };
     };
