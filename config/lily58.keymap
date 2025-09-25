@@ -159,25 +159,25 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _MB2 _MB1 ____ ____ ____           ____ ____ ____ _F14 mmmm ____
 _MO2 _G   _A   _E   _Y   _Q             _K   _B   _S   _L   _P   _M
-____ _U   _O   _DOT _I   ____           ____ _T   _R   _N   _C   ____
-____ _Z   _X   _BSP _J   ____ ____ ____ ____ _D   _W   _F   _V   ____
-               ____ _MB3 _SP  ____ ____ _H   _OL1 ____
+____ _U   _O   _DOT _I   _MB3           _ENT _T   _R   _N   _C   ____
+____ ____ _COM _BSP _J   _MB2           ____ _D   _W   _V   ____ ____
+____ ____ ____ _X   _SP  _MB1 ____ ____ _F   _H   _Z   ____ ____ ____
+               ____ ____ ____ _F14 _OL1 ____ ____ ____
         >; };
         ol1 { bindings = <
-____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-mmmm _EQL _QMK _COM _MNS mmmm           mmmm mmmm mmmm mmmm mmmm xxxx
-____ _CL  _FSH _GRV _UND ____           ____ mmmm mmmm mmmm mmmm ____
-____ _LPR _RPR mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
-               ____ mmmm mmmm ____ ____ mmmm mmmm ____
+mmmm mmmm mmmm _QMK mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ mmmm mmmm _GRV _MNS mmmm           ____ mmmm mmmm mmmm mmmm ____
+____ ____ mmmm mmmm mmmm mmmm           ____ mmmm mmmm mmmm ____ ____
+____ ____ ____ mmmm mmmm mmmm ____ ____ mmmm mmmm mmmm ____ ____ ____
+               ____ ____ ____ mmmm xxxx ____ ____ ____
         >; };
         mo2 { bindings = <
-____ _MB2 _MB1 ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-xxxx _ALL _COP _PST _UDO _PSR           mmmm mmmm mmmm mmmm mmmm mmmm
-____ mmmm _CUT _SAV _RDO ____           ____ mmmm mmmm mmmm mmmm ____
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
-               ____ _MB3 _ENT ____ ____ mmmm mmmm ____
+xxxx mmmm _ALL _COP _UDO _RDO           mmmm mmmm mmmm mmmm mmmm mmmm
+____ mmmm mmmm _CUT _PST mmmm           ____ mmmm mmmm mmmm mmmm ____
+____ ____ mmmm mmmm mmmm mmmm           ____ mmmm mmmm mmmm ____ ____
+____ ____ ____ mmmm _SAV mmmm ____ ____ mmmm mmmm mmmm ____ ____ ____
+               ____ ____ ____ _PSR mmmm ____ ____ ____
         >; };
     };
     behaviors {
