@@ -150,6 +150,7 @@
 
 #define _OL1      &ol 1
 #define _MO2      &mo 2
+#define _MO3      &mo 3
 
 #define ____      &none
 #define mmmm      &none
@@ -163,7 +164,7 @@ _MO2 _G   _A   _E   _Y   _Q             _K   _B   _S   _L   _P   _M
 ____ _U   _DOT _O   _I   ____           ____ _T   _R   _N   _C   ____
 ____ ____ _X   _BSP _J   ____           ____ _D   _W   _V   ____ ____
 ____ ____ ____ ____ _SP  _Z   ____ ____ _F   _H   ____ ____ ____ ____
-               ____ ____ ____ _F14 _OL1 ____ ____ ____
+               ____ ____ ____ _MO3 _OL1 ____ ____ ____
         >; };
         ol1 { bindings = <
 mmmm _GRV _UND _MNS _QMK mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
@@ -173,11 +174,18 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ ____ mmmm xxxx ____ ____ ____
         >; };
         mo2 { bindings = <
-xxxx mmmm _ALL _COP _UDO _RDO           mmmm mmmm mmmm mmmm mmmm mmmm
+xxxx mmmm _ALL _COP mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ mmmm mmmm _CUT _PST ____           ____ mmmm mmmm mmmm mmmm ____
 ____ ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
 ____ ____ ____ ____ _MB1 _MB2 ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ ____ _MB3 mmmm ____ ____ ____
+        >; };
+        mo3 { bindings = <
+mmmm mmmm _PSR _F14 mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ _UDO _RDO mmmm _SAV ____           ____ mmmm mmmm mmmm mmmm ____
+____ ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
+____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
+               ____ ____ ____ xxxx mmmm ____ ____ ____
         >; };
     };
     behaviors {
