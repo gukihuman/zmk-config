@@ -181,8 +181,8 @@ ____ ____ ____ ____ _MB1 _MB2 ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ ____ _MB3 mmmm ____ ____ ____
         >; };
         mo3 { bindings = <
-mmmm mmmm _PSR _F14 mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ _UDO _RDO mmmm _SAV ____           ____ mmmm mmmm mmmm mmmm ____
+_PSR mmmm _RDO _F14 mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ _UDO mmmm mmmm _SAV ____           ____ mmmm mmmm mmmm mmmm ____
 ____ ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ ____ xxxx mmmm ____ ____ ____
