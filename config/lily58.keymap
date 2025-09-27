@@ -167,8 +167,8 @@ ____ ____ ____ ____ _SP  _Z   ____ ____ _F   _H   ____ ____ ____ ____
                ____ ____ ____ _MO3 _OL1 ____ ____ ____
         >; };
         ol1 { bindings = <
-mmmm _GRV _UND _MNS _QMK mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ mmmm mmmm _COM mmmm ____           ____ mmmm mmmm mmmm mmmm ____
+mmmm _GRV _UND _COM _QMK mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ _CL  _LPR _RPR _MNS ____           ____ mmmm mmmm mmmm mmmm ____
 ____ ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ ____ mmmm xxxx ____ ____ ____
