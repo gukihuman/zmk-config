@@ -160,8 +160,8 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_MO2 mmmm _A   _E   _Y   _X             _W   _D   _S   _L   _P   _M
-mmmm _U   _DOT _O   _I   _Q             _K   _T   _R   _N   _C   _V
+_MO2 mmmm _DOT _E   _Y   _X             _W   _D   _S   _L   _P   _M
+mmmm _U   _A   _O   _I   _Q             _K   _T   _R   _N   _C   _V
 ____ ____ _ESC _BSP _J   ____           ____ _G   mmmm mmmm ____ ____
 ____ ____ ____ ____ _SP  _ENT ____ ____ _H   _F   ____ ____ ____ ____
                ____ ____ _Z   _MO3 _OL1 _B   ____ ____
