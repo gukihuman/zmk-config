@@ -162,9 +162,9 @@
         l0 { bindings = <
 _MO2 _COM _DOT _E   _X   _J             _W   _D   _S   _L   _P   _M
 _GRV _A   _U   _O   _I   _Q             _K   _T   _R   _N   _C   _V
-____ ____ _ESC _BSP _Y   ____           ____ _G   _F14 _PSR ____ ____
-____ ____ ____ ____ _SP  _Z  ____ ____ _H   _F   ____ ____ ____ ____
-               ____ ____ _ENT   _MO3 _OL1 _B   ____ ____
+____ ____ _F14 _BSP _Y   ____           ____ _G   _ESC _PSR ____ ____
+____ ____ ____ ____ _SP  _Z   ____ ____ _H   _F   ____ ____ ____ ____
+               ____ ____ _ENT _MO3 _OL1 _B   ____ ____
         >; };
         ol1 { bindings = <
 mmmm mmmm _QMK _FSH mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
