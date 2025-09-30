@@ -160,16 +160,16 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_MO2 _DOT _COM _E   _X   _J             _W   _D   _S   _L   _P   _M
-_QMK _A   _U   _O   _I   _Q             _K   _T   _R   _N   _C   _V
+_MO2 _COM _DOT _E   _X   _J             _W   _D   _S   _L   _P   _M
+_GRV _A   _U   _O   _I   _Q             _K   _T   _R   _N   _C   _V
 ____ ____ _ESC _BSP _Y   ____           ____ _G   _F14 _PSR ____ ____
-____ ____ ____ ____ _SP  _ENT ____ ____ _H   _F   ____ ____ ____ ____
-               ____ ____ _Z   _MO3 _OL1 _B   ____ ____
+____ ____ ____ ____ _SP  _Z  ____ ____ _H   _F   ____ ____ ____ ____
+               ____ ____ _ENT   _MO3 _OL1 _B   ____ ____
         >; };
         ol1 { bindings = <
-mmmm _FSH _UND _GRV mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm _QMK _FSH mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm _CL  _LPR _RPR _MNS mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
+____ ____ mmmm mmmm _UND ____           ____ mmmm mmmm mmmm ____ ____
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ mmmm mmmm xxxx mmmm ____ ____
         >; };
@@ -178,13 +178,13 @@ xxxx mmmm _ALL _COP mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm _CUT _PST mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
 ____ ____ ____ ____ _MB1 _MB2 ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ mmmm _MB3 mmmm mmmm ____ ____
+               ____ ____ _MB3 mmmm mmmm mmmm ____ ____
         >; };
         mo3 { bindings = <
-mmmm mmmm _RDO _PSR mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm _UDO mmmm mmmm _SAV mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
-____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
+mmmm mmmm _RDO _SAV mmmm mmmm           mmmm _N7  _N8  _N9 mmmm mmmm
+mmmm _UDO mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6 mmmm mmmm
+____ ____ mmmm mmmm mmmm ____           ____ _N1  _N2  _N3  ____ ____
+____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _N0  ____ ____ ____ ____
                ____ ____ mmmm xxxx mmmm mmmm ____ ____
         >; };
     };
