@@ -162,23 +162,23 @@
         l0 { bindings = <
 _ESC _DOT _F14 _E   _X   _J             _W   _D   _S   _L   _P   _M
 _MO2 _A   _U   _O   _I   _Q             _K   _T   _R   _N   _C   _V
-____ ____ _COM _BSP _Y   ____           ____ _G   _MNS _UND ____ ____
+____ ____ _COM _BSP _Y   ____           ____ _G   _MNS _CL  ____ ____
 ____ ____ ____ ____ _SP  _Z   ____ ____ _H   _F   ____ ____ ____ ____
                ____ ____ _ENT _MO3 _OL1 _B   ____
         >; };
         ol1 { bindings = <
-_LBK _LPR _EQL _EXL _RPR _RBK           mmmm mmmm mmmm mmmm mmmm mmmm
-_LBR _CL  _SQT _QMK _FSH _RBR           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ _DQT mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
+_LBK _LBR _EXL _QMK _RBK _RBR           mmmm mmmm mmmm mmmm mmmm mmmm
+_FSH _LPR _SQT _GRV _DQT _RPR           mmmm mmmm mmmm mmmm mmmm mmmm
+____ ____ mmmm _UND _EQL ____           ____ mmmm mmmm mmmm ____ ____
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ mmmm mmmm mmmm xxxx ____ ____
+               ____ ____ mmmm mmmm xxxx mmmm ____ ____
         >; };
         mo2 { bindings = <
 mmmm mmmm _CUT mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 xxxx _ALL _COP _PST _DEL mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
-____ ____ ____ ____ _MB1 _MB2 ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ _MB3 _SAV mmmm mmmm ____ ____
+____ ____ ____ ____ _MB3 _MB2 ____ ____ mmmm mmmm ____ ____ ____ ____
+               ____ ____ _MB1 _SAV mmmm mmmm ____ ____
         >; };
         mo3 { bindings = <
 mmmm mmmm mmmm _UP  mmmm mmmm           mmmm _N7  _N8  _N9 mmmm mmmm
