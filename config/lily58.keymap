@@ -160,11 +160,11 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_F14 _COM _DOT _E   _X   _J             _W   _D   _S   _L   _P   _M
+_ESC _DOT _F14 _E   _X   _J             _W   _D   _S   _L   _P   _M
 _MO2 _A   _U   _O   _I   _Q             _K   _T   _R   _N   _C   _V
-____ ____ _GRV _BSP _Y   ____           ____ _G   _MNS _UND ____ ____
-____ ____ ____ ____ _SP  _Z   ____ ____ _H   _F   ____ ____ ____ ____
-               ____ ____ _ENT _MO3 _OL1 _B   ____ ____
+____ ____ _COM _BSP _Y   ____           ____ _G   _MNS _UND ____ ____
+____ ____ ____ _Z   _SP  _MO2 ____ ____ _OL1 _F   _B   ____ ____ ____
+               ____ ____ ____ _ENT _H   ____ ____
         >; };
         ol1 { bindings = <
 _LBK _LPR _EQL _EXL _RPR _RBK           mmmm mmmm mmmm mmmm mmmm mmmm
@@ -178,10 +178,10 @@ mmmm mmmm _CUT mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 xxxx _ALL _COP _PST _DEL mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____           ____ mmmm mmmm mmmm ____ ____
 ____ ____ ____ ____ _MB1 _MB2 ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ _MB3 _SAV mmmm mmmm ____ ____
+               ____ ____ _MB3 mmmm mmmm mmmm ____ ____
         >; };
         mo3 { bindings = <
-_ESC mmmm _PSR _UDO _RDO mmmm           mmmm _N7  _N8  _N9 mmmm mmmm
+_SAV mmmm _PSR _UDO _RDO mmmm           mmmm _N7  _N8  _N9 mmmm mmmm
 mmmm mmmm _DTS _LFT _RHT mmmm           mmmm _N4  _N5  _N6 mmmm mmmm
 ____ ____ mmmm _DWN _UP  ____           ____ _N1  _N2  _N3  ____ ____
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _N0  ____ ____ ____ ____
