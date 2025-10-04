@@ -153,7 +153,6 @@
 
 #define _OL1      &ol 1
 #define _MO2      &mo 2
-#define _MO3      &mo 3
 
 #define ____      &none
 #define mmmm      &none
@@ -170,7 +169,7 @@ ____ ____ ____ ____ _ESC _SP  ____ ____ _H   _F   ____ ____ ____ ____
                ____ ____ ____ _ENT _B   ____ ____
         >; };
         ol1 { bindings = <
-mmmm xxxx mmmm _COM mmmm mmmm           mmmm _EQL _LBR _RBR _QMK mmmm
+mmmm xxxx mmmm _COM mmmm _SAV           mmmm _EQL _LBR _RBR _QMK mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _CL  _LPR _RPR mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____           ____ mmmm _LBK _RBK ____ ____
 ____ ____ ____ ____ mmmm _UND ____ ____ _GRV _DQT ____ ____ ____ ____
@@ -182,13 +181,6 @@ mmmm mmmm mmmm _CUT _PST mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____           ____ _N1  _N2  _N3  ____ ____
 ____ ____ ____ ____ _MB2 _MB1 ____ ____ mmmm _N0  ____ ____ ____ ____
                ____ ____ ____ _MB3 mmmm ____ ____ ____
-        >; };
-        mo3 { bindings = <
-mmmm _PSR mmmm _UP  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm _UDO _LFT _DWN _RHT _RDO           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm _DTS mmmm ____           ____ mmmm mmmm mmmm ____ ____
-____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ ____ mmmm mmmm ____ ____ ____
         >; };
     };
     behaviors {
