@@ -147,7 +147,7 @@
 #define _GLS      &glyph_start
 #define _GLE      &glyph_end
 
-#define _ATB      &altb
+#define _ATB      &altb 0 0
 
 #define _MB1      &mkp MB1
 #define _MB2      &mkp MB2
@@ -165,7 +165,7 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 _OL1 ____ mmmm mmmm ____ _F14           _PSR ____ mmmm mmmm ____ mmmm
-_MO2 _COM _DOT _E   _J   mmmm           _K   _D   _S   _L   _P   _M
+_MO2 _COM _DOT _E   _J   _ATB           _K   _D   _S   _L   _P   _M
 _Q   _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _V
 ____ ____ _X   _BSP _Y   ____ _TBL _TBR ____ _G   _MNS _W   ____ ____
                ____ _ESC _SP  _ENT mmmm _H   _B   ____ 
