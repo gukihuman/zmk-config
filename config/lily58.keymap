@@ -183,7 +183,7 @@ mmmm ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
 _DOT _COM mmmm mmmm mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ _N1  _N2  _N3  ____ ____
-               ____ ____ mmmm xxxx mmmm _N0  ____ ____
+               ____ ____ mmmm xxxx _BSP _N0  ____ ____
         >; };
         mo3 { bindings = <
 _MB2 ____ _COP xxxx ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
