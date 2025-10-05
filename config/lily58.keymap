@@ -147,6 +147,8 @@
 #define _GLS      &glyph_start
 #define _GLE      &glyph_end
 
+#define _ATB      &altb
+
 #define _MB1      &mkp MB1
 #define _MB2      &mkp MB2
 #define _MB3      &mkp MB3
@@ -162,11 +164,11 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_MO2 _OL1 _DOT _E   _J   _F14           _W   _D   _S   _L   _P   _M
-_Q   _A   _U   _O   _I   _Z             _K   _T   _R   _N   _C   _V
-____ ____ _X   _BSP _Y   ____           ____ _G   _COM _MNS ____ ____
-____ ____ ____ ____ _ESC _SP  ____ ____ _H   _F   ____ ____ ____ ____
-               ____ ____ ____ _ENT _B   ____ ____
+mmmm ____ mmmm _COM ____ _F14           mmmm ____ _LBR _RBR ____ mmmm
+_MO2 _OL1 _DOT _E   _J   _ATB           _K   _D   _S   _L   _P   _M
+_Q   _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _V
+____ ____ _X   _BSP _Y   ____ ____ ____ ____ _G   _COM _W   ____ ____
+               ____ _ESC _SP  _ENT mmmm _H   _B   ____ 
         >; }; 
         ol1 { bindings = <
 mmmm xxxx mmmm _COM mmmm mmmm           mmmm _EQL _LBR _RBR _QMK mmmm
@@ -198,6 +200,32 @@ ____ ____ ____ ____ _MB2 _MB1 ____ ____ _N0  mmmm ____ ____ ____ ____
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp PIPE>, <&kp GT>;
+        };
+        altb: alt_tab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Alt-Tab Key";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&alt_tab_hold>, <&alt_tab_tap>;
+        };
+    };
+    macros {
+        alt_tab_tap: alt_tab_tap {
+            compatible = "zmk,behavior-macro";
+            label = "Alt‑Tab Tap";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_release &kp LALT>;
+        };
+        alt_tab_hold: alt_tab_hold {
+            compatible = "zmk,behavior-macro";
+            label = "Alt‑Tab Hold";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <20>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>, <&macro_pause_for_release>, <&macro_release &kp LALT>;
         };
     };
 };
