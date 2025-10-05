@@ -155,6 +155,7 @@
 
 #define _OL1      &ol 1
 #define _MO2      &mo 2
+#define _MO3      &mo 3
 
 #define ____      &none
 #define mmmm      &none
@@ -171,11 +172,11 @@ ____ ____ _X   mmmm _Y   ____ _TBL _TBR ____ _G   _V   _MNS ____ ____
                ____ ____ _SP  _MO2 _BSP _H   ____ ____ 
         >; };
         ol1 { bindings = <
-xxxx ____ xxxx _SAV ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
+mmmm ____ xxxx _SAV ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _EQL _LBR _RBR _QMK mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _CL  _LPR _RPR mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ mmmm _LBK _RBK ____ ____
-               ____ ____ mmmm mmmm ____ _GRV ____ ____
+               ____ ____ mmmm mmmm mmmm _GRV ____ ____
         >; };
         mo2 { bindings = <
 mmmm ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
