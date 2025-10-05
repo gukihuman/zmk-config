@@ -164,10 +164,10 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_OL1 ____ mmmm mmmm ____ _F14           _PSR ____ mmmm mmmm ____ mmmm
-_MO2 _COM _DOT _E   _J   _ATB           _K   _D   _S   _L   _P   _M
-_Q   _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _V
-____ ____ _X   _BSP _Y   ____ _TBL _TBR ____ _G   _MNS _W   ____ ____
+_MO2 ____ mmmm mmmm ____ _F14           _PSR ____ mmmm mmmm ____ mmmm
+_DOT _COM _K   _E   _J   _ATB           _V   _D   _S   _L   _P   _M
+_Q   _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _W
+____ ____ _X   _BSP _Y   ____ _TBL _TBR ____ _G   _MNS mmmm ____ ____
                ____ _ESC _SP  _ENT mmmm _H   _B   ____ 
         >; };
         ol1 { bindings = <
