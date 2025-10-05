@@ -165,7 +165,7 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 _OL1 ____ mmmm mmmm ____ _F14           _PSR ____ mmmm mmmm ____ mmmm
-_MO2 _COM _DOT _E   _J   _ATB           _K   _D   _S   _L   _P   _M
+_MO2 _COM _DOT _E   _J   mmmm           _K   _D   _S   _L   _P   _M
 _Q   _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _V
 ____ ____ _X   _BSP _Y   ____ _TBL _TBR ____ _G   _MNS _W   ____ ____
                ____ _ESC _SP  _ENT mmmm _H   _B   ____ 
@@ -203,7 +203,6 @@ ____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ _N1  _N2  _N3  ____ ____
         };
         altb: alt_tab {
             compatible = "zmk,behavior-hold-tap";
-            label = "Alt-Tab Key";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
@@ -213,7 +212,6 @@ ____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ _N1  _N2  _N3  ____ ____
     macros {
         alt_tab_tap: alt_tab_tap {
             compatible = "zmk,behavior-macro";
-            label = "Alt‑Tab Tap";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <20>;
@@ -221,7 +219,6 @@ ____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ _N1  _N2  _N3  ____ ____
         };
         alt_tab_hold: alt_tab_hold {
             compatible = "zmk,behavior-macro";
-            label = "Alt‑Tab Hold";
             #binding-cells = <0>;
             wait-ms = <0>;
             tap-ms = <20>;
