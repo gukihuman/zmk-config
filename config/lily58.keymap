@@ -162,9 +162,9 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_MO2 _OL1 _MNS _E   _J   _F14           _W   _D   _S   _L   _P   _M
+_MO2 _OL1 _DOT _E   _J   _F14           _W   _D   _S   _L   _P   _M
 _Q   _A   _U   _O   _I   _Z             _K   _T   _R   _N   _C   _V
-____ ____ _X   _BSP _Y   ____           ____ _G   _DOT _COM ____ ____
+____ ____ _X   _BSP _Y   ____           ____ _G   _COM _MNS ____ ____
 ____ ____ ____ ____ _ESC _SP  ____ ____ _H   _F   ____ ____ ____ ____
                ____ ____ ____ _ENT _B   ____ ____
         >; }; 
@@ -179,7 +179,7 @@ ____ ____ ____ ____ mmmm _UND ____ ____ _GRV _DQT ____ ____ ____ ____
 xxxx mmmm _ALL _COP _SAV _PSR           mmmm _N7  _N8  _N9  mmmm mmmm
 mmmm mmmm mmmm _CUT _PST mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____           ____ _N1  _N2  _N3  ____ ____
-____ ____ ____ ____ _MB2 _MB1 ____ ____ _N0  _DOT ____ ____ ____ ____
+____ ____ ____ ____ _MB2 _MB1 ____ ____ _N0  mmmm ____ ____ ____ ____
                ____ ____ ____ _MB3 mmmm ____ ____ ____
         >; };
     };
