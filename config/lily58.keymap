@@ -164,7 +164,7 @@
         l0 { bindings = <
 _MO2 _OL1 _DOT _E   _J   _F14           _W   _D   _S   _L   _P   _M
 _Q   _A   _U   _O   _I   _Z             _K   _T   _R   _N   _C   _V
-____ ____ _X   _BSP _Y   ____           ____ _G   _GLS _GLE ____ ____
+____ ____ _X   _BSP _Y   ____           ____ _G   _COM _MNS ____ ____
 ____ ____ ____ ____ _ESC _SP  ____ ____ _H   _F   ____ ____ ____ ____
                ____ ____ ____ _ENT _B   ____ ____
         >; }; 
@@ -173,7 +173,7 @@ mmmm xxxx mmmm _COM mmmm mmmm           mmmm _EQL _LBR _RBR _QMK mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _CL  _LPR _RPR mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____           ____ mmmm _LBK _RBK ____ ____
 ____ ____ ____ ____ mmmm _UND ____ ____ _GRV _DQT ____ ____ ____ ____
-               ____ ____ ____ _MNS _SQT ____ ____ ____
+               ____ ____ ____ mmmm _SQT ____ ____ ____
         >; };
         mo2 { bindings = <
 xxxx mmmm _ALL _COP _SAV _PSR           mmmm _N7  _N8  _N9  mmmm mmmm
