@@ -169,7 +169,7 @@ _MO2 _COM _DOT _E   _J   _ATB           _K   _D   _S   _L   _P   _M
 _Q   _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _V
 ____ ____ _X   _BSP _Y   ____ _TBL _TBR ____ _G   _MNS _W   ____ ____
                ____ _ESC _SP  _ENT mmmm _H   _B   ____ 
-        >; }; i
+        >; };
         ol1 { bindings = <
 xxxx ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _EQL _LBR _RBR _QMK mmmm
