@@ -164,25 +164,25 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-mmmm ____ mmmm _COM ____ _F14           mmmm ____ _LBR _RBR ____ mmmm
-_MO2 _OL1 _DOT _E   _J   _ATB           _K   _D   _S   _L   _P   _M
+_OL1 ____ mmmm mmmm ____ _F14           _PSR ____ mmmm mmmm ____ mmmm
+_MO2 _COM _DOT _E   _J   _ATB           _K   _D   _S   _L   _P   _M
 _Q   _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _V
-____ ____ _X   _BSP _Y   ____ ____ ____ ____ _G   _COM _W   ____ ____
+____ ____ _X   _BSP _Y   ____ _TBL _TBR ____ _G   _MNS _W   ____ ____
                ____ _ESC _SP  _ENT mmmm _H   _B   ____ 
         >; }; 
         ol1 { bindings = <
-mmmm xxxx mmmm _COM mmmm mmmm           mmmm _EQL _LBR _RBR _QMK mmmm
+xxxx ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _EQL _LBR _RBR _QMK mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _CL  _LPR _RPR mmmm mmmm
-____ ____ mmmm mmmm mmmm ____           ____ mmmm _LBK _RBK ____ ____
-____ ____ ____ ____ mmmm _UND ____ ____ _GRV _DQT ____ ____ ____ ____
-               ____ ____ ____ mmmm _SQT ____ ____ ____
+____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ mmmm _LBK _RBK ____ ____
+____ ____ ____ ____ mmmm _UND mmmm _SQT _GRV _DQT ____ ____ ____ ____
         >; };
         mo2 { bindings = <
+mmmm ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
 xxxx mmmm _ALL _COP _SAV _PSR           mmmm _N7  _N8  _N9  mmmm mmmm
 mmmm mmmm mmmm _CUT _PST mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
-____ ____ mmmm mmmm mmmm ____           ____ _N1  _N2  _N3  ____ ____
-____ ____ ____ ____ _MB2 _MB1 ____ ____ _N0  mmmm ____ ____ ____ ____
-               ____ ____ ____ _MB3 mmmm ____ ____ ____
+____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ _N1  _N2  _N3  ____ ____
+____ ____ ____ ____ _MB2 _MB1 _MB3 mmmm _N0  mmmm ____ ____ ____ ____
         >; };
     };
     behaviors {
