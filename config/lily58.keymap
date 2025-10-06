@@ -157,7 +157,6 @@
 #define _MO2      &mo 2
 #define _MO3      &mo 3
 #define _MO4      &mo 4
-#define _MO5      &mo 5
 
 #define ____      &none
 #define mmmm      &none
@@ -167,45 +166,38 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_ESC ____ _MO2 _OL1 ____ _F14           _PSR ____ mmmm mmmm ____ _ENT
+____ _OL1 _ESC ____ ____ ____           ____ ____ ____ _ENT _F14 ____
 _COM _DOT _K   _E   _J   _ATB           _B   _D   _S   _L   _P   _M
-_MO3 _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _W
-____ ____ _X   _BSP _Y   ____ _TBL _TBR ____ _G   _V   _Q   ____ ____
-               ____ ____ _SP  _MO4 _MO5 _H   ____ ____ 
+_MO2 _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _W
+____ ____ _X   _BSP _Y   ____ ____ ____ ____ _G   _V   _Q   ____ ____
+               ____ ____ _SP  _MO3 _MO4 _H   ____ ____ 
         >; };
         ol1 { bindings = <
-mmmm ____ mmmm xxxx ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
+____ xxxx mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ mmmm mmmm mmmm ____ ____
+____ ____ mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
                ____ ____ mmmm mmmm mmmm _MNS ____ ____
         >; };
         mo2 { bindings = <
-mmmm ____ xxxx mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ mmmm mmmm mmmm ____ ____
-               ____ ____ mmmm mmmm mmmm mmmm ____ ____
-        >; };
-        mo3 { bindings = <
-mmmm ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
+____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 mmmm mmmm mmmm _CUT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 xxxx mmmm _ALL _COP _PST mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm mmmm _MB2 ____ mmmm mmmm ____ mmmm mmmm mmmm ____ ____
+____ ____ mmmm mmmm _MB2 ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
                ____ ____ _MB1 _MB3 mmmm mmmm ____ ____
         >; };
-        mo4 { bindings = <
-mmmm ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
+        mo3 { bindings = <
+____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 _DOT _COM mmmm mmmm mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
-____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ _N1  _N2  _N3  ____ ____
+____ ____ mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  ____ ____
                ____ ____ mmmm xxxx mmmm _N0  ____ ____
         >; };
-        mo5 { bindings = <
-mmmm ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
+        mo4 { bindings = <
+mmmm ____ mmmm mmmm ____ ____           ____ ____ mmmm mmmm ____ mmmm
 mmmm mmmm mmmm _UP  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm _LFT _DWN _RHT mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ mmmm mmmm mmmm ____ ____
+____ ____ mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
                ____ ____ mmmm mmmm xxxx mmmm ____ ____
         >; };
     };
