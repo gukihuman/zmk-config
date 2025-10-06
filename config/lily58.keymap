@@ -196,15 +196,15 @@ ____ ____ mmmm mmmm _MB2 ____ mmmm mmmm ____ mmmm mmmm mmmm ____ ____
         >; };
         mo4 { bindings = <
 mmmm ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
-mmmm mmmm mmmm _UP  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm _LFT _DWN _RHT mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ mmmm mmmm mmmm ____ ____
                ____ ____ mmmm xxxx mmmm mmmm ____ ____
         >; };
         mo5 { bindings = <
 mmmm ____ mmmm mmmm ____ mmmm           mmmm ____ mmmm mmmm ____ mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm _UP  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm _LFT _DWN _RHT mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____ mmmm mmmm ____ mmmm mmmm mmmm ____ ____
                ____ ____ mmmm mmmm xxxx mmmm ____ ____
         >; };
