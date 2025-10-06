@@ -167,9 +167,9 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 ____ _OL1 _ESC ____ ____ ____           ____ ____ ____ _ENT _F14 ____
-_COM _DOT _K   _E   _J   _ATB           _B   _D   _S   _L   _P   _M
-_MO2 _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _W
-____ ____ _X   _BSP _Y   ____ ____ ____ ____ _G   _V   _Q   ____ ____
+_MO2 _Q   _K   _E   _J   _ATB           _B   _D   _S   _L   _P   _M
+_V   _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _W
+____ ____ _X   _BSP _Y   ____ ____ ____ ____ _G   _DOT _COM ____ ____
                ____ ____ _SP  _MO3 _MO4 _H   ____ ____ 
         >; };
         ol1 { bindings = <
@@ -180,15 +180,15 @@ ____ ____ mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
                ____ ____ mmmm mmmm mmmm _MNS ____ ____
         >; };
         mo2 { bindings = <
-____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-mmmm mmmm mmmm _CUT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-xxxx mmmm _ALL _COP _PST mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm mmmm _MB2 ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
+____ _ALL _COP ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+xxxx mmmm _CUT _PST mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ ____ mmmm _MB2 mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
                ____ ____ _MB1 _MB3 mmmm mmmm ____ ____
         >; };
         mo3 { bindings = <
 ____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_DOT _COM mmmm mmmm _BSP mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  ____ ____
                ____ ____ mmmm xxxx mmmm _N0  ____ ____
