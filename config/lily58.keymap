@@ -153,7 +153,7 @@
 #define _MB2      &mkp MB2
 #define _MB3      &mkp MB3
 
-#define _OL1      &ol 1
+#define _MO1      &mo 1
 #define _MO2      &mo 2
 #define _MO3      &mo 3
 #define _MO4      &mo 4
@@ -166,22 +166,22 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _OL1 _ESC ____ ____ ____           ____ ____ ____ _ENT _F14 ____
-_MO2 _V   _B   _E   _J   _ATB           _Q   _D   _S   _L   _P   _M
-_F   _A   _U   _O   _I   _Z             _X   _T   _R   _N   _C   _W
-____ ____ _K   _BSP _Y   ____ ____ ____ ____ _G   _DOT _COM ____ ____
+____ _MO1 _MO2 ____ ____ ____           ____ ____ ____ _ENT _F14 ____
+_F   _A   _U   _E   _J   _ATB           _Q   _D   _S   _L   _P   _M
+_B   _ESC _V   _O   _I   _Z             _K   _T   _R   _N   _C   _W
+____ ____ _X   _BSP _Y   ____ ____ ____ ____ _G   _DOT _COM ____ ____
                ____ ____ _SP  _MO3 _MO4 _H   ____ ____ 
         >; };
-        ol1 { bindings = <
-____ xxxx mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+        mo1 { bindings = <
+____ xxxx _SAV ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+mmmm mmmm mmmm _UDO mmmm mmmm           mmmm mmmm mmmm mmmm mmmm _QMK
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
-               ____ ____ mmmm mmmm mmmm _MNS ____ ____
+____ ____ mmmm _RDO mmmm ____ ____ ____ ____ mmmm _GLS _GLE ____ ____
+               ____ ____ mmmm mmmm mmmm mmmm ____ ____
         >; };
         mo2 { bindings = <
-____ _ALL _COP ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-xxxx mmmm _CUT _PST mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
+____ _COP xxxx ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+_ALL _CUT mmmm _PST mmmm mmmm           mmmm _N7  _N8  _N9  _PLS _MNS
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
 ____ ____ mmmm _MB2 mmmm ____ ____ ____ ____ _N1  _N2  _N3  ____ ____
                ____ ____ _MB1 _MB3 mmmm _N0 ____ ____
