@@ -153,10 +153,10 @@
 #define _MB2      &mkp MB2
 #define _MB3      &mkp MB3
 
-#define _MO1      &mo 1
-#define _MO2      &mo 2
-#define _MO3      &mo 3
-#define _MO4      &mo 4
+#define _L1      &layer 1 1
+#define _L2      &layer 2 2
+#define _L3      &layer 3 2
+#define _L4      &layer 4 4
 
 #define ____      &none
 #define mmmm      &none
@@ -166,11 +166,11 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _MO1 _MO2 ____ ____ ____           ____ ____ ____ _ENT _F14 ____
+____ _L1  _L2 ____ ____ ____           ____ ____ ____ _ENT _F14 ____
 _ESC _Q   _V   _E   _J   _ATB           _B   _D   _S   _L   _P   _M
 _K   _A   _U   _O   _I   _Z             _F   _T   _R   _N   _C   _W
 ____ ____ _X   _BSP _Y   ____ ____ ____ ____ _G   _DOT _COM ____ ____
-               ____ ____ _SP  _MO3 _MO4 _H   ____ ____ 
+               ____ ____ _SP  _L3  _L4  _H   ____ ____ 
         >; };
         mo1 { bindings = <
 ____ xxxx _SAV ____ ____ ____           ____ ____ ____ mmmm mmmm ____
@@ -205,7 +205,7 @@ ____ ____ mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
         ol: ol {
             compatible = "zmk,behavior-oneshot-layer";
             #binding-cells = <1>;
-            release-after-ms = <800>;
+            release-after-ms = <1000>;
         };
         glyph_start: glyph_start {
             compatible = "zmk,behavior-macro";
@@ -223,6 +223,13 @@ ____ ____ mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm ____ ____
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&alt_tab_hold>, <&alt_tab_tap>;
+        };
+        layer: layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&ol>;
         };
     };
     macros {
