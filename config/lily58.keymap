@@ -146,6 +146,7 @@
 
 #define _GLS      &glyph_start
 #define _GLE      &glyph_end
+#define _ARF      &arrow_func
 
 #define _ATB      &altb 0 0
 
@@ -168,37 +169,37 @@
         l0 { bindings = <
 ____ _L1  _L2  ____ ____ ____           ____ ____ ____ _ENT mmmm ____
 _ESC _F14 _K   _E   _J   _ATB           _B   _D   _S   _L   _P   _M
-_V   _A   _U   _O   _I   mmmm           _F   _T   _R   _N   _C   _W
+_V   _A   _U   _O   _I   _TAB           _F   _T   _R   _N   _C   _W
 ____ _Q   _X   _BSP _Y   ____ ____ ____ ____ _G   _DOT _COM _Z   ____
-               ____ ____ _SP  _L3  _L4  _H   ____ ____ 
+               ____ _LS  _SP  _L3  _L4  _H   _RS ____ 
         >; };
         mo1 { bindings = <
 ____ xxxx _SAV ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-mmmm mmmm mmmm _UDO mmmm mmmm           mmmm mmmm mmmm mmmm mmmm _QMK
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ mmmm mmmm _RDO mmmm ____ ____ ____ ____ mmmm _GLS _GLE mmmm ____
-               ____ ____ mmmm mmmm mmmm mmmm ____ ____
+_UDO mmmm mmmm _RDO mmmm mmmm           mmmm mmmm mmmm mmmm _EXL _QMK
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _GRV _SQT _DQT mmmm mmmm
+____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm _GLS _GLE mmmm ____
+               ____ mmmm _SP  mmmm mmmm _UND mmmm ____
         >; };
         mo2 { bindings = <
 ____ _COP xxxx ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_ALL _CUT mmmm _PST mmmm mmmm           mmmm _N7  _N8  _N9  _PLS _MNS
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
-____ mmmm mmmm _MB2 mmmm ____ ____ ____ ____ _N1  _N2  _N3  mmmm ____
-               ____ ____ _MB1 _MB3 mmmm _N0 ____ ____
+_ALL _CUT mmmm _PST mmmm mmmm           _ARF _N7  _N8  _N9  _MNS _PLS
+mmmm mmmm mmmm mmmm mmmm mmmm           _EQL _N4  _N5  _N6  _FSH _AST
+____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  _BSH ____
+               ____ _MB2 _MB1 _MB3 mmmm _N0 ____ ____
         >; };
         mo3 { bindings = <
 ____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
-               ____ ____ mmmm xxxx mmmm mmmm ____ ____
+               ____ mmmm mmmm xxxx mmmm mmmm mmmm ____
         >; };
         mo4 { bindings = <
-mmmm ____ mmmm mmmm ____ ____           ____ ____ mmmm mmmm ____ mmmm
+____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
 mmmm mmmm mmmm _UP  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm _LFT _DWN _RHT mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
-               ____ ____ mmmm mmmm xxxx mmmm ____ ____
+               ____ mmmm mmmm mmmm xxxx mmmm mmmm ____
         >; };
     };
     behaviors {
@@ -216,6 +217,11 @@ ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp PIPE>, <&kp GT>;
+        };
+        arrow_func: arrow_func {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp GT>;
         };
         altb: alt_tab {
             compatible = "zmk,behavior-hold-tap";
