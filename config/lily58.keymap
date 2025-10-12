@@ -175,7 +175,7 @@ ____ _Q   _X   _BSP _Y   ____ ____ ____ ____ _G   _DOT _COM _Z   ____
         >; };
         mo1 { bindings = <
 ____ xxxx _SAV ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_UDO mmmm mmmm _RDO mmmm mmmm           mmmm mmmm mmmm mmmm _EXL _QMK
+_UDO mmmm mmmm _RDO mmmm mmmm           _SCL _CL  mmmm mmmm _QMK _EXL
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _GRV _SQT _DQT mmmm mmmm
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm _GLS _GLE mmmm ____
                ____ mmmm _SP  mmmm mmmm _UND mmmm ____
