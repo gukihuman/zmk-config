@@ -166,25 +166,25 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _L1  _L2  ____ ____ ____           ____ ____ ____ _ENT mmmm ____
-_ESC _X   _Y   _V   _Z   _ATB           _B   _D   _S   _L   _P   _M
-_F14 _A   _U   _SP  _E   _TAB           _F   _T   _R   _N   _C   _W
+____ _F14 _L2  ____ ____ ____           ____ ____ ____ _ENT mmmm ____
+_L1  _X   _Y   _V   _Z   _ATB           _B   _D   _S   _L   _P   _M
+_ESC _A   _U   _SP  _E   _TAB           _F   _T   _R   _N   _C   _W
 ____ _Q   _K   _BSP _O   ____ ____ ____ ____ _G   _DOT _COM _J   ____
                ____ _L3  _I   _LS  _RS  _H   _L4  ____ 
         >; };
         mo1 { bindings = <
-____ xxxx _SAV ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_UDO mmmm mmmm _RDO mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
-               ____ mmmm mmmm mmmm mmmm mmmm mmmm ____
+____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
+xxxx mmmm mmmm _UDO mmmm mmmm           _ARF _N7  _N8  _N9  _MNS _PLS
+mmmm mmmm mmmm mmmm _RDO mmmm           _EQL _N4  _N5  _N6  _FSH _AST
+____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  _BSH ____
+               ____ mmmm _SAV mmmm mmmm _N0  mmmm ____
         >; };
         mo2 { bindings = <
 ____ _COP xxxx ____ ____ ____           ____ ____ ____ mmmm mmmm ____
-_ALL _CUT mmmm _PST mmmm mmmm           _ARF _N7  _N8  _N9  _MNS _PLS
-mmmm mmmm mmmm mmmm mmmm mmmm           _EQL _N4  _N5  _N6  _FSH _AST
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ _N1  _N2  _N3  _BSH ____
-               ____ _MB2 _MB1 _MB3 mmmm _N0 ____ ____
+_ALL _CUT mmmm _PST mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm mmmm mmmm mmmm ____
+               ____ _MB2 _MB1 _MB3 mmmm mmmm ____ ____
         >; };
         mo3 { bindings = <
 ____ mmmm mmmm ____ ____ ____           ____ ____ ____ mmmm mmmm ____
