@@ -164,7 +164,7 @@
 #define xxxx      &none
 / {
     keymap {
-        compatible = "zmk,keymhmap";
+        compatible = "zmk,keymap";
         l0 { bindings = <
 ____ _L1  _L2  ____ ____ ____           ____ ____ ____ _ENT mmmm ____
 _ESC _X   _Y   _J   _Z   _ATB           _B   _D   _S   _L   _P   _M
