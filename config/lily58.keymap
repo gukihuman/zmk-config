@@ -167,9 +167,9 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 ____ _F14 _L2  ____ ____ ____           ____ ____ ____ _ENT _SEN ____
-_L1  _X   _Y   _E   _V   _ATB           _B   _D   _S   _L   _P   _M
+_L1  _X   _Y   _E   _Z   _ATB           _B   _D   _S   _L   _P   _M
 _ESC _A   _U   _O   _SP  _TAB           _F   _T   _R   _N   _C   _W
-____ _Q   _K   _BSP _Z   ____ ____ ____ ____ _G   _DOT _COM _J   ____
+____ _Q   _K   _BSP _V   ____ ____ ____ ____ _G   _DOT _COM _J   ____
                ____ _L3  _I   _LS  _RS  _H   _L4  ____ 
         >; };
         mo1 { bindings = <
