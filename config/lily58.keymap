@@ -162,16 +162,15 @@
 #define ____      &none
 #define mmmm      &none
 #define xxxx      &none
-
 / {
     keymap {
-        compatible = "zmk,keymap";
+        compatible = "zmk,keymhmap";
         l0 { bindings = <
 ____ _L1  _L2  ____ ____ ____           ____ ____ ____ _ENT mmmm ____
-_F14 _K   _ESC _E   _J   _ATB           _B   _D   _S   _L   _P   _M
-_V   _U   _O   _SP  _I   _TAB           _F   _T   _R   _N   _C   _W
-____ _Q   _X   _BSP _Y   ____ ____ ____ ____ _G   _DOT _COM _Z   ____
-               ____ _LS  _A   _L3  _L4  _H   _RS ____ 
+_ESC _X   _Y   _J   _Z   _ATB           _B   _D   _S   _L   _P   _M
+_F14 _A   _U   _SP  _E   _TAB           _F   _T   _R   _N   _C   _W
+____ _Q   _K   _BSP _O   ____ ____ ____ ____ _G   _DOT _COM _V   ____
+               ____ _LS  _I   _L3  _L4  _H   _RS  ____ 
         >; };
         mo1 { bindings = <
 ____ xxxx _SAV ____ ____ ____           ____ ____ ____ mmmm mmmm ____
