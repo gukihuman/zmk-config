@@ -105,7 +105,7 @@
 #define _CRT      &kp CARET
 #define _TLD      &kp TILDE
 #define _UND      &kp UNDER
-#define _MNS      &kp MINUS
+#define _DSH      &kp MINUS
 #define _PLS      &kp PLUS
 #define _HSH      &kp HASH
 #define _AST      &kp ASTRK
@@ -138,6 +138,7 @@
 #define _DTS      &kp LC(LS(I))
 #define _FND      &kp LC(F)
 #define _SEN      &kp LS(ENTER)
+#define _CEN      &kp LC(ENTER)
 
 #define _BCK      &kp LC(LS(T))
 #define _WDW      &kp LC(W)
@@ -168,31 +169,31 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 ____ _L2  _L3  ____ ____ ____           _B   _G   _R   _L   _P   _M
-mmmm ____ _Y   _O   _ENT _F14           _K   _T   _S   _N   _C   _W
+mmmm ____ _Y   _O   _ESC _F14           _K   _T   _S   _N   _C   _W
 _L1  _A   _U   _E   _SP  _ATB           _Z   _D   _J   _V   _F   _Q
-____ ____ mmmm _BSP _ESC ____ ____ ____ _H   _X   ____ ____ ____ ____
+____ ____ mmmm _BSP _ENT ____ ____ ____ _H   _X   ____ ____ ____ ____
                ____ ____ _I   _L4  _DOT ____ ____ ____ 
         >; };
         l1 { bindings = <
-____ mmmm mmmm ____ ____ ____           _ARF _N7  _N8  _N9  _PLS _MNS
-mmmm ____ mmmm mmmm _SEN mmmm           _EQL _N4  _N5  _N6  _AST _FSH
-xxxx mmmm mmmm mmmm _UND _TAB           mmmm _N1  _N2  _N3  mmmm _BSH
-____ ____ mmmm mmmm mmmm ____ ____ ____ _N0  mmmm ____ ____ ____ ____
+____ mmmm mmmm ____ ____ ____           _ARF _EQL _QMK _AST _PLS _EXL
+mmmm ____ mmmm mmmm _SEN mmmm           mmmm _DSH _GRV _SQT _DQT mmmm
+xxxx mmmm mmmm mmmm _UND _TAB           mmmm mmmm mmmm mmmm _FSH _BSH
+____ ____ mmmm mmmm _CEN ____ ____ ____ _CL  _SCL ____ ____ ____ ____
                ____ ____ mmmm mmmm _COM ____ ____ ____
         >; };
         l2 { bindings = <
-____ xxxx _SAV ____ ____ ____           _SCL _CL  _QMK mmmm mmmm _EXL
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _GRV _SQT _DQT mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm _GLS _GLE mmmm mmmm
+____ xxxx _SAV ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____ ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ mmmm mmmm mmmm ____ ____ ____
         >; };
         l3 { bindings = <
-____ _ALL xxxx ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
-_COP ____ mmmm _PST mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-_CUT mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm _MB2 mmmm ____ ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ _MB1 _MB3 mmmm ____ ____ ____
+____ _ALL xxxx ____ ____ ____           mmmm _N7  _N8  _N9  mmmm mmmm
+_COP ____ mmmm _PST mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
+_CUT mmmm mmmm mmmm mmmm mmmm           mmmm _N1  _N2  _N3  mmmm mmmm
+____ ____ mmmm _MB2 mmmm ____ ____ ____ _N0  mmmm ____ ____ ____ ____
+               ____ ____ _MB1 _MB3 _DOT ____ ____ ____
         >; };
         l4 { bindings = <
 ____ mmmm mmmm ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
