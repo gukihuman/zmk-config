@@ -181,7 +181,7 @@ ____ ____ mmmm mmmm mmmm ____ ____ ____ _N0  mmmm ____ ____ ____ ____
                ____ ____ mmmm mmmm _COM ____ ____ ____
         >; };
         l2 { bindings = <
-____ xxxx mmmm ____ ____ ____           _SCL _CL  _QMK mmmm mmmm _EXL
+____ xxxx _SAV ____ ____ ____           _SCL _CL  _QMK mmmm mmmm _EXL
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _GRV _SQT _DQT mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm _GLS _GLE mmmm mmmm
 ____ ____ mmmm mmmm mmmm ____ ____ ____ mmmm mmmm ____ ____ ____ ____
