@@ -158,8 +158,6 @@
 #define _L1      &layer 1 1
 #define _L2      &layer 2 2
 #define _L3      &layer 3 3
-#define _L4      &layer 4 4
-#define _L5      &layer 5 5
 
 #define ____      &none
 #define mmmm      &none
@@ -169,10 +167,10 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 ____ _L2  _L3  ____ ____ ____           _B   _G   _R   _L   _P   _M
-_ATB ____ _Y   _O   _ENT _F14           _K   _T   _S   _N   _C   _W
+mmmm ____ _Y   _O   _ENT _F14           _K   _T   _S   _N   _C   _W
 _L1  _A   _U   _E   _SP  _ATB           _X   _D   _J   _Q   _V   _F
 ____ ____ mmmm _BSP _ESC ____ ____ ____ _H   _Z   ____ ____ ____ ____
-               ____ ____ _I   _L4  _DOT ____ ____ ____ 
+               ____ ____ _I   _LS  _DOT ____ ____ ____ 
         >; };
         l1 { bindings = <
 ____ mmmm mmmm ____ ____ ____           _ARF _N7  _N8  _N9  _PLS _MNS
@@ -194,13 +192,6 @@ _COP ____ mmmm _PST mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 _CUT mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ mmmm _MB2 mmmm ____ ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ _MB1 _MB3 mmmm ____ ____ ____
-        >; };
-        l4 { bindings = <
-____ mmmm mmmm ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ mmmm mmmm mmmm ____ ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ mmmm mmmm mmmm ____ ____ ____
         >; };
     };
     behaviors {
