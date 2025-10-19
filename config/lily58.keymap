@@ -170,7 +170,7 @@
         l0 { bindings = <
 ____ _L2  _L3  ____ ____ ____           _B   _G   _R   _L   _P   _M
 mmmm ____ _Y   _O   _ESC _F14           _K   _T   _S   _N   _C   _W
-_L1  _A   _U   _E   _SP  _ATB           _Z   _D   _J   _V   _X   _Q
+_L1  _A   _U   _E   _SP  _ATB           _Z   _D   _J   _V   _Q   _X
 ____ ____ mmmm _BSP _ENT ____ ____ ____ _H   _F   ____ ____ ____ ____
                ____ ____ _I   _L4  _DOT ____ ____ ____ 
         >; };
