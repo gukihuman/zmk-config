@@ -105,7 +105,7 @@
 #define _CRT      &kp CARET
 #define _TLD      &kp TILDE
 #define _UND      &kp UNDER
-#define _DSH      &kp MINUS
+#define _MNS      &kp MINUS
 #define _PLS      &kp PLUS
 #define _HSH      &kp HASH
 #define _AST      &kp ASTRK
@@ -175,9 +175,9 @@ ____ ____ mmmm _BSP _ENT ____ ____ ____ _H   _X   ____ ____ ____ ____
                ____ ____ _I   _L4  _DOT ____ ____ ____ 
         >; };
         l1 { bindings = <
-____ mmmm mmmm ____ ____ ____           _ARF _EQL _QMK _AST _PLS _EXL
-mmmm ____ mmmm mmmm _SEN mmmm           mmmm _DSH _GRV _SQT _DQT mmmm
-xxxx mmmm mmmm mmmm _UND _TAB           mmmm mmmm mmmm mmmm _FSH _BSH
+____ mmmm mmmm ____ ____ ____           _AST _PLS _EXL _DQT _LBR _RBR
+mmmm ____ mmmm mmmm _SEN mmmm           _FSH _MNS _QMK _GRV _LPR _RPR
+xxxx mmmm mmmm mmmm _UND _TAB           _BSH _EQL _ARF _SQT _LBK _RBK
 ____ ____ mmmm mmmm _CEN ____ ____ ____ _CL  _SCL ____ ____ ____ ____
                ____ ____ mmmm mmmm _COM ____ ____ ____
         >; };
