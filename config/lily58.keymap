@@ -175,10 +175,10 @@ ____ _A   _Y   _BSP _ENT ____ ____ ____ _K   _B   ____ ____ ____ ____
                ____ ____ _I   _L4  _H   ____ ____ ____ 
         >; };
         l1 { bindings = <
-____ mmmm mmmm ____ ____ ____           _AST _PLS _EXL _DQT _LBR _RBR
-mmmm ____ mmmm mmmm _SEN mmmm           _FSH _MNS _QMK _GRV _LPR _RPR
-xxxx mmmm mmmm mmmm _UND _TAB           ____ _EQL _ARF _SQT _LBK _RBK
-____ mmmm mmmm mmmm _CEN ____ ____ ____ _CL  _SCL ____ ____ ____ ____
+____ mmmm mmmm ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm ____ mmmm mmmm _SEN mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+xxxx mmmm mmmm mmmm _UND _TAB           ____ mmmm mmmm mmmm mmmm mmmm
+____ mmmm mmmm mmmm _CEN ____ ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ mmmm mmmm mmmm ____ ____ ____
         >; };
         l2 { bindings = <
@@ -196,11 +196,11 @@ ____ mmmm mmmm _MB2 mmmm ____ ____ ____ _N0  mmmm ____ ____ ____ ____
                ____ ____ _MB1 _MB3 mmmm ____ ____ ____
         >; };
         l4 { bindings = <
-____ mmmm mmmm ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm ____ mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           ____ mmmm mmmm mmmm mmmm mmmm
-____ mmmm mmmm mmmm mmmm ____ ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ mmmm mmmm mmmm ____ ____ ____
+____ mmmm mmmm ____ ____ ____           mmmm _LBR _EQL _FSH _RBR _QMK
+mmmm ____ mmmm mmmm mmmm mmmm           mmmm _LPR _CL  _MNS _RPR _EXL
+mmmm mmmm mmmm mmmm mmmm mmmm           ____ _LBK mmmm mmmm _RBK mmmm
+____ mmmm mmmm mmmm mmmm ____ ____ ____ _SQT _DQT ____ ____ ____ ____
+               ____ ____ mmmm xxxx _GRV ____ ____ ____
         >; };
     };
     behaviors {
