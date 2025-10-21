@@ -154,18 +154,18 @@ ____ _A   _Y   _BSP _ENT ____ ____ ____ ____ _D   ____ ____ ____ ____
                ____ ____ _I   _L3  ____ _H   ____ ____ 
         >; };
         l1 { bindings = <
-____ mmmm mmmm ____ ____ ____           mmmm _LBR _FSH _EQL _RBR _EXL
-mmmm ____ xxxx _SAV _UDO ____           mmmm _LPR _MNS _CL  _RPR _QMK
-mmmm mmmm mmmm mmmm _F15 ____           mmmm _LBK _BSH _SCL _RBK mmmm
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ _UND ____ ____ ____ ____
-               ____ ____ _RDO _F16 ____ _COM ____ ____
+____ mmmm mmmm ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm ____ xxxx _SAV _UDO ____           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm _F15 ____           mmmm mmmm mmmm mmmm mmmm mmmm
+____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
+               ____ ____ _RDO _F16 ____ mmmm ____ ____
         >; };
         l2 { bindings = <
-____ mmmm mmmm ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm ____ mmmm mmmm _CAP ____           mmmm mmmm mmmm mmmm mmmm mmmm
-xxxx mmmm mmmm mmmm _TAB ____           mmmm mmmm mmmm mmmm mmmm mmmm
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ _SEN _CEN ____ mmmm ____ ____
+____ mmmm mmmm ____ ____ ____           mmmm _LBR _FSH _EQL _RBR _EXL
+mmmm ____ mmmm mmmm _CAP ____           mmmm _LPR _MNS _CL  _RPR _QMK
+xxxx mmmm mmmm mmmm _TAB ____           mmmm _LBK _BSH _SCL _RBK mmmm
+____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ _UND ____ ____ ____ ____
+               ____ ____ _SEN _CEN ____ _COM ____ ____
         >; };
         l3 { bindings = <
 ____ mmmm _TBL ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
