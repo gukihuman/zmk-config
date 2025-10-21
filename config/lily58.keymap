@@ -129,7 +129,7 @@
 
 #define _MB1      &mkp MB1
 #define _MB2      &mkp MB2
-#define _MB3      &mkp MB
+#define _MB3      &mkp MB3
 
 #define _F14      &kp F14
 #define _F15      &kp F15
