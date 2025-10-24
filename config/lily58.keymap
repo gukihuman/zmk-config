@@ -103,8 +103,10 @@
 #define _RS       &kp RSHFT
 
 #define _CUT      &kp LC(X)
-#define _COP      &kp LC(LS(C))
-#define _PST      &kp LC(LS(V))
+#define _CP       &kp LC(C)
+#define _PS       &kp LC(V)
+#define _SCP      &kp LC(LS(C))
+#define _SPS      &kp LC(LS(V))
 #define _ALL      &kp LC(A)
 #define _UDO      &kp LC(Z)
 #define _RDO      &kp LC(LS(Z))
@@ -147,8 +149,8 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _F14 _L4  ____ ____ ____           _K   _G   _R   _L   _P   _V
-_ATB ____ _L1  _O   _ESC ____           _F   _T   _S   _N   _C   _M
+____ _L5  _L4  ____ ____ ____           _K   _G   _R   _L   _P   _V
+_ATB ____ _L1  _O   _ESC _F14           _F   _T   _S   _N   _C   _M
 _L2  _DOT _U   _E   _SP  _ENT           _Z   _B   _J   _Q   _W   _X
 ____ _A   _Y   _BSP ____ ____ ____ ____ ____ _D   ____ ____ ____ ____
                ____ ____ _I   _L3  ____ _H   ____ ____ 
@@ -176,10 +178,17 @@ ____ mmmm mmmm mmmm ____ ____ ____ ____ ____ mmmm ____ ____ ____ ____
         >; };
         l4 { bindings = <
 ____ _ALL xxxx ____ ____ ____           mmmm _N7  _N8  _N9  mmmm mmmm
-_COP ____ mmmm _PST mmmm ____           mmmm _N4  _N5  _N6  mmmm mmmm
+_CP  ____ mmmm _PS  mmmm ____           mmmm _N4  _N5  _N6  mmmm mmmm
 _CUT _DOT mmmm mmmm mmmm mmmm           mmmm _N1  _N2  _N3  mmmm mmmm
 ____ mmmm mmmm _MB2 ____ ____ ____ ____ ____ _N0 ____ ____ ____ ____
                ____ ____ _MB1 _MB3 ____ mmmm ____ ____
+        >; };
+        l5 { bindings = <
+____ xxxx mmmm ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
+_SCP ____ mmmm _SPS mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ mmmm mmmm mmmm ____ ____ ____ ____ ____ mmmm ____ ____ ____ ____
+               ____ ____ mmmm mmmm ____ mmmm ____ ____
         >; };
     };
     behaviors {
