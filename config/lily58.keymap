@@ -103,8 +103,8 @@
 #define _RS       &kp RSHFT
 
 #define _CUT      &kp LC(X)
-#define _COP      &kp LC(C)
-#define _PST      &kp LC(V)
+#define _COP      &kp LC(LS(C))
+#define _PST      &kp LC(LS(V))
 #define _ALL      &kp LC(A)
 #define _UDO      &kp LC(Z)
 #define _RDO      &kp LC(LS(Z))
