@@ -137,6 +137,7 @@
 #define _F14      &kp F14
 #define _F15      &kp F15
 #define _F16      &kp F16
+#define _F17      &kp F17
 
 #define _L1      &layer 1 1
 #define _L2      &layer 2 2
@@ -157,18 +158,18 @@ ____ _DOT _COM _CBS _BS  ____ ____ ____ ____ _D   ____ ____ ____ ____
                ____ ____ _I   _L4  ____ _H   ____ ____ 
         >; };
         l1 { bindings = <
-____ _F15 _F16 ____ ____ ____           mmmm _LBR _CL  _FSH _RBR _EXL
-mmmm ____ mmmm mmmm _UDO mmmm           mmmm _LPR _MNS _GRV _RPR _QMK
-xxxx mmmm mmmm mmmm mmmm mmmm           mmmm _LBK _UND mmmm _RBK mmmm
+____ mmmm mmmm ____ ____ ____           mmmm _LBR _CL  _GRV _RBR _EXL
+mmmm ____ _TBB _TBL _F15 _TAB           _FSH _LPR _MNS _DQT _RPR _QMK
+xxxx mmmm _TBC _TBR _TBN mmmm           mmmm _LBK _UND _SQT _RBK mmmm
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ _RDO mmmm ____ mmmm ____ ____
+               ____ ____ _F16 _F17 ____ mmmm ____ ____
         >; };
         l2 { bindings = <
 ____ xxxx _SAV ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
-_SCP ____ mmmm _SPS _CAP mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+_SCP ____ mmmm _SPS mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ mmmm mmmm ____ mmmm ____ ____
+____ mmmm mmmm mmmm _CEN ____ ____ ____ ____ mmmm ____ ____ ____ ____
+               ____ ____ _SEN _CAP ____ mmmm ____ ____
         >; };
         l3 { bindings = <
 ____ _ALL xxxx ____ ____ ____           mmmm _N7  _N8  _N9  mmmm mmmm
@@ -178,9 +179,9 @@ ____ mmmm mmmm mmmm _MB2 ____ ____ ____ ____ mmmm ____ ____ ____ ____
                ____ ____ _MB1 _MB3 ____ _N0  ____ ____
         >; };
         l4 { bindings = <
-____ mmmm _TBL ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
-_TBB ____ _TBR _UP  _TBN mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-_TBC mmmm _LFT _DWN _RHT mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ mmmm _SCR ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm ____ _UDO _UP  _RDO mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm _LFT _DWN _RHT mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
                ____ ____ mmmm xxxx ____ mmmm ____ ____
         >; };
