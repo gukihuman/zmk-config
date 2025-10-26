@@ -142,7 +142,6 @@
 #define _L2      &layer 2 2
 #define _L3      &layer 3 3
 #define _L4      &layer 4 4
-#define _L5      &layer 5 5
 
 #define ____      &none
 #define mmmm      &none
@@ -158,9 +157,9 @@ ____ _DOT _COM _CBS _BS  ____ ____ ____ ____ _D   ____ ____ ____ ____
                ____ ____ _I   _L4  ____ _H   ____ ____ 
         >; };
         l1 { bindings = <
-____ _F15 _F16 ____ ____ ____           mmmm _LBR _FSH mmmm _RBR _EXL
-mmmm ____ mmmm mmmm _UDO mmmm           mmmm _LPR _GRV _MNS _RPR _QMK
-xxxx mmmm mmmm mmmm mmmm mmmm           mmmm _LBK mmmm _UND _RBK mmmm
+____ _F15 _F16 ____ ____ ____           mmmm _LBR _CL  _FSH _RBR _EXL
+mmmm ____ mmmm mmmm _UDO mmmm           mmmm _LPR _MNS _GRV _RPR _QMK
+xxxx mmmm mmmm mmmm mmmm mmmm           mmmm _LBK _UND mmmm _RBK mmmm
 ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
                ____ ____ _RDO mmmm ____ mmmm ____ ____
         >; };
@@ -175,8 +174,8 @@ ____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
 ____ _ALL xxxx ____ ____ ____           mmmm _N7  _N8  _N9  mmmm mmmm
 _CP  ____ mmmm _PS  mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
 _CUT mmmm mmmm mmmm mmmm mmmm           mmmm _N1  _N2  _N3  mmmm mmmm
-____ mmmm mmmm mmmm _MB2 ____ ____ ____ ____ _N0 ____ ____ ____ ____
-               ____ ____ _MB1 _MB3 ____ mmmm ____ ____
+____ mmmm mmmm mmmm _MB2 ____ ____ ____ ____ mmmm ____ ____ ____ ____
+               ____ ____ _MB1 _MB3 ____ _N0  ____ ____
         >; };
         l4 { bindings = <
 ____ mmmm _TBL ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
