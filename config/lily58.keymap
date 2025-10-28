@@ -160,9 +160,9 @@ ____ _DOT _COM _CBS _BS  ____ ____ ____ ____ _D   ____ ____ ____ ____
         l1 { bindings = <
 ____ mmmm mmmm ____ ____ ____           mmmm _LBR _CL  _GRV _RBR _EXL
 mmmm ____ _TBB _TBL _F15 _TAB           _FSH _LPR _MNS _DQT _RPR _QMK
-xxxx mmmm _TBC _TBR _TBN mmmm           mmmm _LBK _UND _SQT _RBK mmmm
-____ mmmm mmmm mmmm mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ _F16 _F17 ____ mmmm ____ ____
+xxxx mmmm _TBC _TBR _TBN _F16           mmmm _LBK _UND _SQT _RBK mmmm
+____ mmmm mmmm mmmm _F17 ____ ____ ____ ____ mmmm ____ ____ ____ ____
+               ____ ____ _F18 _F19 ____ mmmm ____ ____
         >; };
         l2 { bindings = <
 ____ xxxx _SAV ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
