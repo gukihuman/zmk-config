@@ -138,6 +138,8 @@
 #define _F15      &kp F15
 #define _F16      &kp F16
 #define _F17      &kp F17
+#define _F18      &kp F18
+#define _F19      &kp F19
 
 #define _L1      &layer 1 1
 #define _L2      &layer 2 2
