@@ -157,7 +157,7 @@ _ESC _L2  _L3  _O   _F14 _ATB           _X   _D   _R   _L   _P   _F
 _L1  _DOT _U   _E   _SP  _ENT           _K   _T   _S   _N   _C   _V
 _COM _A   _Y   _CBS _BS  mmmm           _Z   _G   _B   _M   _W   _J
 ____ ____ ____ ____ _L4  ____ ____ ____ ____ _Q   ____ ____ ____ ____
-               ____ ____ _I   _LS  _RS  _H   ____ ____ 
+               ____ ____ _LS  _I   _RS  _H   ____ ____ 
         >; };
         l1 { bindings = <
 xxxx mmmm mmmm ____ ____ ____           mmmm _LBR _CL  _GRV _RBR _EXL
