@@ -153,10 +153,10 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _L2  _L3  ____ ____ ____           _Q   _G   _R   _L   _P   _F
-mmmm ____ _COM _O   _F14 _ATB           _K   _T   _S   _N   _C   _X
-_ESC _DOT _U   _E   _SP  _ENT           _J   _D   _B   _V   _W   _Z
-_L1  _A   _Y   _CBS _BS  ____ ____ ____ ____ _M   _RS  ____ ____ ____
+____ _L2  _L3  ____ ____ ____           _X   _K   _R   _L   _P   _F
+mmmm ____ _COM _O   _F14 _ATB           _D   _T   _S   _N   _C   _V
+_ESC _DOT _U   _E   _SP  _ENT           _Z   _G   _B   _M   _W   _J
+_L1  _A   _Y   _CBS _BS  ____ ____ ____ ____ _Q   _RS  ____ ____ ____
                ____ _LS  _I   _L4  ____ _H   ____ ____ 
         >; };
         l1 { bindings = <
