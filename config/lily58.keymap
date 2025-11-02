@@ -155,8 +155,8 @@
         l0 { bindings = <
 _L1  _L2  _L3  _O   _F14 _ATB           _K   _D   _R   _L   _P   _V
 _Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _F
-_ESC _DOT _COM _CBS _BS  ____           _Z   _G   _J   _M   _W   _X
-____ ____ ____ ____ _L4  ____ ____ ____ ____ _Q   ____ ____ ____ ____
+_ESC _DOT _COM _CBS _BS  ____           _Z   _G   _J   _M   _W   _Q
+____ ____ ____ ____ _L4  ____ ____ ____ ____ _X   ____ ____ ____ ____
                ____ ____ _A   _LS  _RS  _H   ____ ____ 
         >; };
         l1 { bindings = <
