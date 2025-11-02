@@ -153,11 +153,11 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_ESC _L2  _L3  _O   _F14 _ATB           _K   _D   _R   _L   _P   _F
-_L1  _COM _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _V
-_DOT _A   _Y   _CBS _BS  ____           _Z   _G   _J   _M   _W   _X
-____ ____ ____ ____ _LS  _L4  ____ ____ ____ _Q   _RS  ____ ____ ____
-               ____ ____ ____ _I   ____ _H   ____ ____ 
+_L1  _L2  _L3  _O   _F14 _ATB           _K   _D   _R   _L   _P   _F
+_Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _V
+_ESC _DOT _COM _CBS _BS  ____           _Z   _G   _J   _M   _W   _X
+____ ____ ____ ____ _L4  ____ ____ ____ _Q   ____ ____ ____ ____
+               ____ ____ _A   _LS  _RS  _H   ____ ____ 
         >; };
         l1 { bindings = <
 xxxx mmmm mmmm ____ ____ ____           mmmm _LBR _CL  _GRV _RBR _EXL
@@ -177,8 +177,8 @@ ____ mmmm mmmm mmmm _CEN ____ ____ ____ ____ mmmm ____ ____ ____ ____
 ____ _ALL xxxx ____ ____ ____           mmmm _N7  _N8  _N9  mmmm mmmm
 _CP  ____ mmmm _PS  mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
 _CUT mmmm mmmm mmmm mmmm mmmm           mmmm _N1  _N2  _N3  mmmm mmmm
-____ mmmm mmmm mmmm _MB2 _MB3 ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ ____ _MB1 ____ _N0  ____ ____
+____ mmmm mmmm mmmm _MB2 ____ ____ ____ ____ mmmm ____ ____ ____ ____
+               ____ ____ _MB1 _MB3 ____ _N0  ____ ____
         >; };
         l4 { bindings = <
 ____ mmmm _SCR ____ ____ ____           mmmm mmmm mmmm mmmm mmmm mmmm
