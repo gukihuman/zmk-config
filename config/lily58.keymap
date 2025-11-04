@@ -160,18 +160,18 @@ ____ ____ ____ ____ _L4  ____ ____ ____ ____ _X   ____ ____ ____ ____
                ____ ____ _A   _LS  _RS  _H   ____ ____ 
         >; };
         l1 { bindings = <
-mmmm mmmm mmmm _TBL _TBC _TAB           mmmm _LBR _CL  _GRV _RBR _EXL
-mmmm mmmm _TBB _TBR _TBN _SEN           _FSH _LPR _MNS _DQT _RPR _QMK
-xxxx mmmm mmmm mmmm mmmm _CEN           mmmm _LBK _UND _SQT _RBK mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _LBR _CL  _GRV _RBR _EXL
+mmmm mmmm _TBL _TBC _TBR mmmm           _FSH _LPR _MNS _DQT _RPR _QMK
+xxxx mmmm mmmm mmmm mmmm mmmm           mmmm _LBK _UND _SQT _RBK mmmm
 ____ ____ ____ ____ mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ mmmm mmmm mmmm mmmm ____ ____
+               ____ ____ _TBB _TBN mmmm mmmm ____ ____
         >; };
         l2 { bindings = <
-mmmm xxxx _SAV mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm xxxx _SAV _F16 mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-____ ____ ____ ____ _F16 ____ ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ _F17 _F18 mmmm mmmm ____ ____
+____ ____ ____ ____ _F17 ____ ____ ____ ____ mmmm ____ ____ ____ ____
+               ____ ____ _F18 _CAP mmmm mmmm ____ ____
         >; };
         l3 { bindings = <
 _CUT _CP  xxxx _PS  mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
