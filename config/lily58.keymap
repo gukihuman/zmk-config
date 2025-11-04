@@ -161,8 +161,8 @@ ____ ____ ____ ____ _L4  ____ ____ ____ ____ _X   ____ ____ ____ ____
         >; };
         l1 { bindings = <
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _LBR _CL  _GRV _RBR _EXL
-mmmm mmmm _TBL _TBC _TBR mmmm           _FSH _LPR _MNS _DQT _RPR _QMK
-xxxx mmmm mmmm mmmm mmmm mmmm           mmmm _LBK _UND _SQT _RBK mmmm
+mmmm mmmm _TBL _TBC _TBR mmmm           _FSH _LPR _MNS _DQT _RPR _EQL
+xxxx mmmm mmmm mmmm mmmm mmmm           mmmm _LBK _UND _SQT _RBK _QMK
 ____ ____ ____ ____ mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
                ____ ____ _TBB _TBN mmmm mmmm ____ ____
         >; };
