@@ -56,14 +56,14 @@
 #define _SCR      &kp PSCRN
 #define _CAP      &kp CAPS
 
-#define _LPR      &kp LPAR
-#define _RPR      &kp RPAR
-#define _LBR      &kp LBRC
-#define _RBR      &kp RBRC
-#define _LBK      &kp LBKT
-#define _RBK      &kp RBKT
-#define _COM      &kp COMMA
 #define _DOT      &kp DOT
+#define _COM      &kp COMMA
+#define _LPR      &kp LPAR
+#define _LBR      &kp LBRC
+#define _LBK      &kp LBKT
+#define _RPR      &kp RPAR
+#define _RBR      &kp RBRC
+#define _RBK      &kp RBKT
 #define _QMK      &kp QMARK
 #define _EXL      &kp EXCL
 #define _GRV      &kp GRAVE
@@ -71,18 +71,19 @@
 #define _DQT      &kp DQT
 #define _EQL      &kp EQUAL
 #define _CL       &kp COLON
+#define _UND      &kp UNDER
+#define _MNS      &kp MINUS
+#define _FSH      &kp FSLH
+#define _BSH      &kp BSLH
+#define _PLS      &kp PLUS
+
 #define _SCL      &kp SEMI
 #define _LT       &kp LT
 #define _GT       &kp GT
 #define _AMP      &kp AMPS
 #define _PIP      &kp PIPE
-#define _FSH      &kp FSLH
-#define _BSH      &kp BSLH
 #define _CRT      &kp CARET
 #define _TLD      &kp TILDE
-#define _UND      &kp UNDER
-#define _MNS      &kp MINUS
-#define _PLS      &kp PLUS
 #define _HSH      &kp HASH
 #define _AST      &kp ASTRK
 #define _DLR      &kp DLLR
@@ -103,18 +104,19 @@
 #define _RC       &kp RCTRL
 #define _RS       &kp RSHFT
 
+#define _ALL      &kp LC(A)
 #define _CUT      &kp LC(X)
 #define _CP       &kp LC(C)
-#define _PS       &kp LC(V)
 #define _SCP      &kp LC(LS(C))
+#define _PS       &kp LC(V)
 #define _SPS      &kp LC(LS(V))
-#define _ALL      &kp LC(A)
 #define _UDO      &kp LC(Z)
 #define _RDO      &kp LC(LS(Z))
 #define _SAV      &kp LC(S)
-#define _REF      &kp LC(R)
 #define _DTS      &kp LC(LS(I))
 #define _FND      &kp LC(F)
+
+#define _REF      &kp LC(R)
 #define _SEN      &kp LS(ENTER)
 #define _CEN      &kp LC(ENTER)
 
@@ -160,28 +162,28 @@ ____ ____ ____ ____ _L4  ____ ____ ____ ____ _X   ____ ____ ____ ____
                ____ ____ _A   _LS  _RS  _H   ____ ____ 
         >; };
         l1 { bindings = <
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _LBR _CL  _GRV _RBR _EXL
-mmmm mmmm _TBL _TBC _TBR mmmm           _FSH _LPR _MNS _DQT _RPR _EQL
-xxxx mmmm mmmm mmmm mmmm mmmm           mmmm _LBK _UND _SQT _RBK _QMK
+mmmm mmmm mmmm mmmm mmmm mmmm           _PLS _LBR _CL  _DQT _RBR _EXL
+mmmm mmmm _TBL _TBC _TBR mmmm           _FSH _LPR _MNS _GRV _RPR _EQL
+xxxx mmmm mmmm mmmm mmmm mmmm           _BSH _LBK _UND _SQT _RBK _QMK
 ____ ____ ____ ____ mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
                ____ ____ _TBB _TBN mmmm mmmm ____ ____
         >; };
         l2 { bindings = <
-mmmm xxxx _SAV _F16 mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm xxxx _SAV _F16 mmmm mmmm           _SCL _AMP _PIP _CRT _TLD mmmm
+_FND mmmm mmmm _DTS mmmm mmmm           _AT  _LT  _GT  _HSH _AST mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _DLR _PNT _ARF mmmm mmmm
 ____ ____ ____ ____ _F17 ____ ____ ____ ____ mmmm ____ ____ ____ ____
                ____ ____ _F18 _CAP mmmm mmmm ____ ____
         >; };
         l3 { bindings = <
-_CUT _CP  xxxx _PS  mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
+_CUT _CP  xxxx _PS  _SCR mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
 _ALL _SCP mmmm _SPS mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N1  _N2  _N3  mmmm mmmm
 ____ ____ ____ ____ _MB2 ____ ____ ____ ____ mmmm ____ ____ ____ ____
                ____ ____ _MB1 _MB3 mmmm _N0  ____ ____
         >; };
         l4 { bindings = <
-_TAB _SCR mmmm _UP  _RDO mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+_TAB mmmm mmmm _UP  _RDO mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 _UDO mmmm _LFT _DWN _RHT mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ xxxx ____ ____ ____ ____ mmmm ____ ____ ____ ____
