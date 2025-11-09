@@ -104,21 +104,19 @@
 #define _RC       &kp RCTRL
 #define _RS       &kp RSHFT
 
+#define _UDO      &kp LC(Z)
+#define _RDO      &kp LC(LS(Z))
 #define _ALL      &kp LC(A)
 #define _CUT      &kp LC(X)
 #define _CP       &kp LC(C)
-#define _SCP      &kp LC(LS(C))
 #define _PS       &kp LC(V)
+#define _SCP      &kp LC(LS(C))
 #define _SPS      &kp LC(LS(V))
-#define _UDO      &kp LC(Z)
-#define _RDO      &kp LC(LS(Z))
+
 #define _SAV      &kp LC(S)
 #define _DTS      &kp LC(LS(I))
 #define _FND      &kp LC(F)
-
 #define _REF      &kp LC(R)
-#define _SEN      &kp LS(ENTER)
-#define _CEN      &kp LC(ENTER)
 
 #define _TBB      &kp LC(LS(T))
 #define _TBC      &kp LC(W)
@@ -162,21 +160,21 @@ ____ ____ ____ ____ _LS  ____ ____ ____ ____ _RS  ____ ____ ____ ____
         >; };
         l1 { bindings = <
 mmmm mmmm mmmm mmmm mmmm mmmm           _PLS _LBR _CL  _DQT _RBR _EXL
-mmmm mmmm _TBL _TBC _TBR mmmm           _FSH _LPR _MNS _GRV _RPR _EQL
+mmmm mmmm mmmm _F16 _F17 _F19           _FSH _LPR _MNS _GRV _RPR _EQL
 xxxx mmmm mmmm mmmm mmmm mmmm           _BSH _LBK _UND _SQT _RBK _QMK
 ____ ____ ____ ____ mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ _TBB _TBN mmmm mmmm ____ ____
+               ____ ____ _F18 mmmm mmmm mmmm ____ ____
         >; };
         l2 { bindings = <
-mmmm xxxx _SAV _F16 mmmm mmmm           _SCL _AMP _PIP _CRT _TLD mmmm
-_FND mmmm mmmm _DTS mmmm mmmm           _AT  _LT  _GT  _HSH _AST mmmm
+mmmm xxxx _SAV _DTS mmmm mmmm           _SCL _AMP _PIP _CRT _TLD _GLS
+_FND mmmm mmmm mmmm mmmm mmmm           _AT  _LT  _GT  _HSH _AST _GLE
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _DLR _PNT _ARF mmmm mmmm
-____ ____ ____ ____ _F17 ____ ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ _F18 _CAP mmmm mmmm ____ ____
+____ ____ ____ ____ _CAP ____ ____ ____ ____ mmmm ____ ____ ____ ____
+               ____ ____ _FND _REF mmmm mmmm ____ ____
         >; };
         l3 { bindings = <
-mmmm mmmm xxxx mmmm mmmm mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
+_TBC _TBL xxxx _TBR _TBN mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
+_TBB mmmm mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N1  _N2  _N3  mmmm mmmm
 ____ ____ ____ ____ _MB2 ____ ____ ____ ____ mmmm ____ ____ ____ ____
                ____ ____ _MB1 _MB3 mmmm _N0  ____ ____
