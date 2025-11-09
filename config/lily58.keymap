@@ -160,11 +160,11 @@ ____ ____ ____ ____ _LS  ____ ____ ____ ____ _RS  ____ ____ ____ ____
                ____ ____ _A   _L4  _X   _H   ____ ____ 
         >; };
         l1 { bindings = <
-mmmm mmmm mmmm mmmm mmmm mmmm           _PLS _LBR _CL  _DQT _RBR _EXL
-mmmm mmmm mmmm _F16 _F17 _F19           _FSH _LPR _MNS _GRV _RPR _EQL
-xxxx mmmm mmmm mmmm mmmm mmmm           _BSH _LBK _UND _SQT _RBK _QMK
-____ ____ ____ ____ mmmm ____ ____ ____ ____ mmmm ____ ____ ____ ____
-               ____ ____ _F18 mmmm mmmm mmmm ____ ____
+mmmm mmmm mmmm mmmm mmmm _F16           _PLS _LBR _CL  _DQT _RBR _EXL
+mmmm mmmm mmmm _F17 _F18 _F19           _FSH _LPR _MNS _GRV _RPR _EQL
+xxxx mmmm mmmm mmmm _F20 _F21           _BSH _LBK _UND _SQT _RBK _QMK
+____ ____ ____ ____ _F22 ____ ____ ____ ____ mmmm ____ ____ ____ ____
+               ____ ____ _F23 _F24 mmmm mmmm ____ ____
         >; };
         l2 { bindings = <
 mmmm xxxx _SAV _DTS mmmm mmmm           _SCL _AMP _PIP _CRT _TLD _GLS
