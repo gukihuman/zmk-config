@@ -30,7 +30,9 @@ struct osl_data {
 };
 
 static void osl_deactivate(struct osl_data *d) {
-    if (!d->active) return;
+    if (!d->active) {
+        return;
+    }
     LOG_INF("osl deactivating layer %u", d->layer);
     zmk_keymap_layer_deactivate(d->layer, d->src_pos);
     d->active = false;
@@ -45,10 +47,8 @@ static void osl_timeout_cb(struct k_work *work) {
 }
 
 /* Behavior API */
-// **FIX 1: Updated function signature**
 static int osl_pressed(struct zmk_behavior_binding *binding,
                        struct zmk_behavior_binding_event event) {
-    // **FIX 2: Get the device from the binding**
     const struct device *dev = zmk_behavior_get_binding(binding->behavior_dev);
     const struct osl_cfg *cfg = dev->config;
     struct osl_data *d = dev->data;
@@ -58,14 +58,14 @@ static int osl_pressed(struct zmk_behavior_binding *binding,
 
     LOG_INF("OSL: pressed on pos %u, arming layer %u", d->src_pos, d->layer);
 
-    /* Guard: layer id must be sane (you have layer 0 and 1) */
+    /* Guard sanity */
     if (d->layer > 7) {
         LOG_INF("OSL: BAD layer param %u, ignoring", d->layer);
         return ZMK_BEHAVIOR_OPAQUE;
     }
 
-    /* Activate & arm */
-    zmk_keymap_layer_activate(d->layer);
+    /* Activate the layer with source information */
+    zmk_keymap_layer_activate(d->layer, d->src_pos);
     d->active = true;
 
     if (cfg->release_after_ms > 0) {
@@ -78,10 +78,10 @@ static int osl_pressed(struct zmk_behavior_binding *binding,
     return ZMK_BEHAVIOR_OPAQUE;
 }
 
-// **FIX 3: Updated function signature**
 static int osl_released(struct zmk_behavior_binding *binding,
                         struct zmk_behavior_binding_event event) {
-    ARG_UNUSED(binding); ARG_UNUSED(event);
+    ARG_UNUSED(binding);
+    ARG_UNUSED(event);
     LOG_INF("OSL: released (ignored; we drop on next key press)");
     return ZMK_BEHAVIOR_OPAQUE;
 }
@@ -91,17 +91,18 @@ static const struct behavior_driver_api osl_api = {
     .binding_released = osl_released,
 };
 
-/* Listener: drop immediately AFTER the very next keycode PRESS happens */
+/* Listener: drop immediately after the next keycode PRESS */
 static int osl_keycode_listener_cb(const zmk_event_t *eh) {
     const struct zmk_keycode_state_changed *ev = as_zmk_keycode_state_changed(eh);
-    if (!ev || !ev->state) return ZMK_EV_EVENT_BUBBLE; /* only handle PRESS */
+    if (!ev || !ev->state) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
 
 #define OSL_FOR_EACH(n)                                                            \
     {                                                                              \
         const struct device *dev = DEVICE_DT_INST_GET(n);                          \
         struct osl_data *d = dev->data;                                            \
         if (d->active) {                                                           \
-            /* **FIX 4: Changed ev->usage to ev->keycode** */                      \
             LOG_INF("OSL: observed first keycode press (keycode=0x%04X), drop layer %u", \
                     ev->keycode, d->layer);                                        \
             osl_deactivate(d);                                                     \
