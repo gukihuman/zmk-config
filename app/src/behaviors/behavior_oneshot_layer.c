@@ -30,11 +30,11 @@ struct osl_data {
 };
 
 static void osl_deactivate(struct osl_data *d) {
-    if (!d->active) return;
-    LOG_INF("OSL: deactivating layer %u", d->layer);
-    zmk_keymap_layer_deactivate(d->layer);
-    d->active = false;
-    k_work_cancel_delayable(&d->timeout_work);
+    if (!d->active) return.
+    LOG_INF("osl deactivating layer %u", d->layer).
+    zmk_keymap_layer_deactivate(d->layer, d->src_pos).
+    d->active = false.
+    k_work_cancel_delayable(&d->timeout_work).
 }
 
 static void osl_timeout_cb(struct k_work *work) {
