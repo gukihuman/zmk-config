@@ -158,10 +158,10 @@
         compatible = "zmk,keymap";
         l0 { bindings = <
 _ATB _L1  _L2  _O   _F14 _F15           _K   _D   _R   _L   _P   _F
-_DOT _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
-_COM _Y   _GRV _CBS _ESC mmmm           _Q   _G   _Z   _V   _W   _J
-____ ____ ____ ____ _BS  _LS ____ ____  _RS  _X   ____ ____ ____ ____
-               ____ ____ _A  _L3  _CAP  _H   ____ ____ 
+_DOT _A   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
+_DQT _COM _BS  _CBS _ESC mmmm           _Q   _G   _Z   _V   _W   _J
+____ ____ ____ ____ _Y  _LS ____ ____  _RS  _X   ____ ____ ____ ____
+               ____ ____ _I  _L3  _CAP  _H   ____ ____ 
         >; };
         l1 { bindings = <
 mmmm xxxx _SAV _F16 _F17 mmmm           _SCL _AMP _PIP _CRT _TLD _GLS
@@ -179,7 +179,7 @@ ____ ____ ____ ____ _MB2 _SCR ____ ____ mmmm mmmm ____ ____ ____ ____
         >; };
         l3 { bindings = <
 _TAB _CUT _ALL _UP  _RDO _PS            _PLS _LBR _CL  _EQL _RBR _EXL
-_UDO _CP  _LFT _DWN _RHT _SPS           _FSH _LPR _MNS _DQT _RPR _QMK
+_UDO _CP  _LFT _DWN _RHT _SPS           _FSH _LPR _MNS _GRV _RPR _QMK
 mmmm _SCP mmmm mmmm mmmm mmmm           _BSH _LBK _UND _SQT _RBK _AT
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ mmmm xxxx mmmm mmmm ____ ____
