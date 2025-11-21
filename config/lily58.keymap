@@ -172,7 +172,7 @@ ____ ____ ____ ____ _DTS _FND ____ ____ mmmm mmmm ____ ____ ____ ____
         >; };
         l2 { bindings = <
 _TBB _TBL xxxx _TBR _TBN mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
-_TBC mmmm mmmm mmmm mmmm mmmm           _FSH _LPR _CL  _DQT _RPR _QMK
+_TBC mmmm mmmm mmmm _SP  mmmm           _FSH _LPR _CL  _DQT _RPR _QMK
 mmmm mmmm mmmm mmmm mmmm mmmm           _BSH _LBK _UND _SQT _RBK _MNS
 ____ ____ ____ ____ _MB2 _SCR ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ _MB1 _MB3 mmmm mmmm ____ ____
