@@ -165,9 +165,9 @@ ____ ____ ____ ____ _BS  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
                ____ ____ _A   _L4  _CAP _H   ____ ____ 
         >; };
         l1 { bindings = <
-mmmm mmmm mmmm mmmm mmmm mmmm           _EQL _LBR _CL  _GRV _RBR _EXL
-mmmm mmmm mmmm mmmm mmmm mmmm           _FSH _LPR _MNS _DQT _RPR _QMK
-xxxx mmmm mmmm mmmm mmmm mmmm           _BSH _LBK _UND _SQT _RBK _PLS
+mmmm mmmm mmmm mmmm mmmm mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
+mmmm mmmm mmmm mmmm mmmm mmmm           _FSH _LPR _CL  _DQT _RPR _QMK
+xxxx mmmm mmmm mmmm mmmm mmmm           _BSH _LBK _UND _SQT _RBK _MNS
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ mmmm mmmm mmmm mmmm ____ ____
         >; };
