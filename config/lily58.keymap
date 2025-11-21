@@ -149,7 +149,6 @@
 #define _L1      &layer 1 1
 #define _L2      &layer 2 2
 #define _L3      &layer 3 3
-#define _L4      &layer 4 4
 
 #define ____      &none
 #define mmmm      &none
@@ -160,37 +159,30 @@
         l0 { bindings = <
 _ATB _L2  _L3  _O   _F14 _F15           _K   _D   _R   _L   _P   _F
 _Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
-_L1  _DOT _COM _CBS _ESC mmmm           _Q   _G   _Z   _V   _W   _J
+_F16 _DOT _COM _CBS _ESC mmmm           _Q   _G   _Z   _V   _W   _J
 ____ ____ ____ ____ _BS  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
                ____ ____ _A   _L4  _CAP _H   ____ ____ 
         >; };
         l1 { bindings = <
-mmmm mmmm mmmm mmmm mmmm mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
-mmmm mmmm mmmm mmmm mmmm mmmm           _FSH _LPR _CL  _DQT _RPR _QMK
-xxxx mmmm mmmm mmmm mmmm mmmm           _BSH _LBK _UND _SQT _RBK _MNS
-____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ mmmm mmmm mmmm mmmm ____ ____
-        >; };
-        l2 { bindings = <
-mmmm xxxx _SAV _F16 _F17 mmmm           _SCL _AMP _PIP _CRT _TLD _GLS
+mmmm xxxx _SAV _F17 mmmm mmmm           _SCL _AMP _PIP _CRT _TLD _GLS
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _LT  _GT  _HSH _AST _GLE
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _DLR _PNT _ARF _AT  mmmm
 ____ ____ ____ ____ _DTS _FND ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ _F18 _REF mmmm mmmm ____ ____
         >; };
-        l3 { bindings = <
-_TBB _TBL xxxx _TBR _TBN mmmm           mmmm _N7  _N8  _N9  mmmm mmmm
-_TBC mmmm mmmm mmmm mmmm mmmm           mmmm _N4  _N5  _N6  mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _N1  _N2  _N3  mmmm mmmm
+        l2 { bindings = <
+_TBB _TBL xxxx _TBR _TBN mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
+_TBC mmmm mmmm mmmm mmmm mmmm           _FSH _LPR _CL  _DQT _RPR _QMK
+mmmm mmmm mmmm mmmm mmmm mmmm           _BSH _LBK _UND _SQT _RBK _MNS
 ____ ____ ____ ____ _MB2 _SCR ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ _MB1 _MB3 mmmm _N0  ____ ____
+               ____ ____ _MB1 _MB3 mmmm mmmm ____ ____
         >; };
-        l4 { bindings = <
-_TAB _CUT _ALL _UP  _RDO _PS            mmmm mmmm mmmm mmmm mmmm mmmm
-_UDO _CP  _LFT _DWN _RHT _SPS           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm _SCP mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+        l3 { bindings = <
+_TAB _CUT _ALL _UP  _RDO _PS            mmmm _N7  _N8  _N9  mmmm mmmm
+_UDO _CP  _LFT _DWN _RHT _SPS           mmmm _N4  _N5  _N6  mmmm mmmm
+mmmm _SCP mmmm mmmm mmmm mmmm           mmmm _N1  _N2  _N3  mmmm mmmm
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ mmmm xxxx mmmm mmmm ____ ____
+               ____ ____ mmmm xxxx mmmm _N0  ____ ____
         >; };
     };
     behaviors {
