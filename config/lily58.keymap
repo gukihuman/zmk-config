@@ -164,11 +164,11 @@ ____ ____ ____ ____ _BS  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
                ____ ____ _A   _L3  _CAP _H   ____ ____ 
         >; };
         l1 { bindings = <
-mmmm xxxx _DOT _SAV mmmm mmmm           _SCL _AMP _PIP _CRT _TLD _GLS
+mmmm xxxx _COM _SAV mmmm mmmm           _SCL _AMP _PIP _CRT _TLD _GLS
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _LT  _GT  _HSH _AST _GLE
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _DLR _PNT _ARF _AT  mmmm
 ____ ____ ____ ____ _DTS _FND ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ _COM _REF mmmm mmmm ____ ____
+               ____ ____ _DOT _REF mmmm mmmm ____ ____
         >; };
         l2 { bindings = <
 _TBB _TBL xxxx _TBR _TBN mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
