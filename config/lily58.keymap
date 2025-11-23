@@ -159,22 +159,22 @@
         l0 { bindings = <
 _ATB _L1  _L2  _O   _F14 _F15           _K   _D   _R   _L   _P   _F
 _Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
-_F16 _F17 _F18 _CBS _ESC mmmm           _Q   _G   _Z   _V   _W   _J
+_F16 _F17 _F18 _CBS _ESC _AT            _Q   _G   _Z   _V   _W   _J
 ____ ____ ____ ____ _BS  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
                ____ ____ _A   _L3  _CAP _H   ____ ____ 
         >; };
         l1 { bindings = <
-mmmm xxxx _SAV mmmm mmmm mmmm           mmmm _AMP _PIP _CRT _TLD _GLS
-mmmm mmmm mmmm mmmm _SP  mmmm           _FSH _LT  _GT  _HSH _AST _GLE
-mmmm mmmm mmmm mmmm mmmm mmmm           _BSH _DLR _PNT _ARF _AT  mmmm
-____ ____ ____ ____ _DTS _FND ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ _DOT _REF mmmm mmmm ____ ____
+mmmm xxxx _SAV _REF mmmm mmmm           _CRT _AMP _ARF _TLD _PIP mmmm
+mmmm mmmm mmmm _SCR _SP  mmmm           mmmm _LT  _FSH _AST _GT  _HSH
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _GLS _BSH mmmm _GLE mmmm
+____ ____ ____ ____ _PNT mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
+               ____ ____ _DOT _DLR mmmm mmmm ____ ____
         >; };
         l2 { bindings = <
 _TBB _TBL xxxx _TBR _TBN mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
-_TBC mmmm mmmm mmmm _SP  mmmm           _CL  _LPR _COM _DQT _RPR _QMK
+_TBC _FND mmmm _DTS _SP  mmmm           _CL  _LPR _COM _DQT _RPR _QMK
 mmmm mmmm mmmm mmmm mmmm mmmm           _SCL _LBK _UND _SQT _RBK _MNS
-____ ____ ____ ____ _MB2 _SCR ____ ____ mmmm mmmm ____ ____ ____ ____
+____ ____ ____ ____ _MB2 mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ ____ _MB1 _MB3 mmmm mmmm ____ ____
         >; };
         l3 { bindings = <
