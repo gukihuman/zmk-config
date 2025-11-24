@@ -154,22 +154,22 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_L1  mmmm _L2  _O   _ESC _F14           _K   _D   _R   _L   _P   _F
+_L1  _ESC _L2  _O   _F14 mmmm           _K   _D   _R   _L   _P   _F
 _Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
 _F16 _F17 _F18 _CBS _BS  _F15           _Q   _G   _Z   _V   _W   _J
 ____ ____ ____ ____ _SAV _LS  ____ ____ _RS  _X   ____ ____ ____ ____
                ____ ____ _A   _ATB _CAP _H   ____ ____ 
         >; };
         l1 { bindings = <
-xxxx mmmm _LFT _UP  mmmm mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
+xxxx mmmm _LFT _UP  _RDO mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
 mmmm mmmm mmmm _DWN _RHT _RDO           _CL  _LPR _UND _DQT _RPR _GT
 _TAB _SCR mmmm mmmm mmmm mmmm           _SCL _LBK _FSH _SQT _RBK _MNS
 ____ ____ ____ ____ mmmm mmmm ____ ____ _CRT _AST ____ ____ ____ ____
                ____ ____ _UDO _ATB _HSH _BSH ____ ____
         >; };
         l2 { bindings = <
-_CUT _TBL xxxx _TBR _TBN _REF           _AMP _N7  _N8  _N9  _PIP _QMK
-_CP  _ALL mmmm _PS  _TBC _TBB           _LT  _N4  _N5  _N6  _COM mmmm
+_CUT _TBL xxxx _TBR _TBC _REF           _AMP _N7  _N8  _N9  _PIP _QMK
+_CP  _ALL mmmm _PS  _TBN _TBB           _LT  _N4  _N5  _N6  _COM mmmm
 _SCP _DTS _FND _SPS mmmm mmmm           _TLD _N1  _N2  _N3  _PNT _DLR
 ____ ____ ____ ____ _MB2 _MB3 ____ ____ _AT  _N0  ____ ____ ____ ____
                ____ ____ _MB1 _ATB _ARF _DOT ____ ____
