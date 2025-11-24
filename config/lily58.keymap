@@ -161,18 +161,18 @@ ____ ____ ____ ____ _SAV _LS  ____ ____ _RS  _X   ____ ____ ____ ____
                ____ ____ _A   _ATB _CAP _H   ____ ____ 
         >; };
         l1 { bindings = <
-xxxx mmmm _TBB _TBL _TBN _TBC           _PLS _LBR _EQL _GRV _RBR _EXL
-mmmm mmmm mmmm mmmm _TBR _REF           _CL  _LPR mmmm _DQT _RPR  _GT
-_SCR _DTS _FND mmmm mmmm mmmm           _SCL _LBK mmmm _SQT _RBK _MNS
-____ ____ ____ ____ _MB2 _MB3 ____ ____ _CRT _AST ____ ____ ____ ____
-               ____ ____ _MB1 _ATB _ARF _BSH ____ ____
+xxxx mmmm _LFT _UP  mmmm mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
+mmmm mmmm mmmm _DWN _RHT _RDO           _CL  _LPR _UND _DQT _RPR _GT
+_TAB _SCR mmmm mmmm mmmm mmmm           _SCL _LBK _FSH _SQT _RBK _MNS
+____ ____ ____ ____ mmmm mmmm ____ ____ _CRT _AST ____ ____ ____ ____
+               ____ ____ _UDO _ATB _HSH _BSH ____ ____
         >; };
         l2 { bindings = <
-_TAB _CUT xxxx _DOT _RDO _PS            _AMP _N7  _N8  _N9  _PIP _QMK
-_UDO _CP  _LFT _DWN _SP  _SPS           _LT  _N4  _N5  _N6  _FSH _QMK
-mmmm _SCP _ALL _UP  _RHT mmmm           _TLD _N1  _N2  _N3  _PNT _DLR
-____ ____ ____ ____ mmmm mmmm ____ ____ _AT  _N0  ____ ____ ____ ____
-               ____ ____ _UND _ATB _HSH _COM ____ ____
+_CUT _TBL xxxx _TBR _TBN _REF           _AMP _N7  _N8  _N9  _PIP _QMK
+_CP  _ALL mmmm _PS  _TBC _TBB           _LT  _N4  _N5  _N6  _COM mmmm
+_SCP _DTS _FND _SPS mmmm mmmm           _TLD _N1  _N2  _N3  _PNT _DLR
+____ ____ ____ ____ _MB2 _MB3 ____ ____ _AT  _N0  ____ ____ ____ ____
+               ____ ____ _MB1 _ATB _ARF _DOT ____ ____
         >; };
     };
     behaviors {
