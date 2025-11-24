@@ -124,8 +124,6 @@
 #define _TBL      &kp LC(LS(TAB))
 #define _TBR      &kp LC(TAB)
 
-#define _GLS      &glyph_start
-#define _GLE      &glyph_end
 #define _ARF      &arrow_func
 
 #define _ATB      &altb 0 0
@@ -148,7 +146,6 @@
 
 #define _L1      &layer 1 1
 #define _L2      &layer 2 2
-#define _L3      &layer 3 3
 
 #define ____      &none
 #define mmmm      &none
@@ -157,32 +154,25 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_ATB _L1  _L2  _O   _F14 _F15           _K   _D   _R   _L   _P   _F
+_ATB _SAV _L1  _O   _ESC _F14           _K   _D   _R   _L   _P   _F
 _Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
-_F16 _F17 _F18 _CBS _ESC _AT            _Q   _G   _Z   _V   _W   _J
-____ ____ ____ ____ _BS  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
-               ____ ____ _A   _L3  _CAP _H   ____ ____ 
+_F16 _F17 _F18 _CBS _BS  _F15           _Q   _G   _Z   _V   _W   _J
+____ ____ ____ ____ _L2  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
+               ____ mmmm _A   mmmm _CAP _H   mmmm ____ 
         >; };
         l1 { bindings = <
-mmmm xxxx _SAV _REF mmmm mmmm           _CRT _AMP _ARF _TLD _PIP mmmm
-mmmm mmmm mmmm _SCR _SP  mmmm           mmmm _LT  _FSH _AST _GT  _HSH
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _GLS _BSH mmmm _GLE mmmm
-____ ____ ____ ____ _PNT mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ _DOT _DLR mmmm mmmm ____ ____
-        >; };
-        l2 { bindings = <
 _TBB _TBL xxxx _TBR _TBN mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
 _TBC _FND mmmm _DTS _SP  mmmm           _CL  _LPR _COM _DQT _RPR _QMK
-mmmm mmmm mmmm mmmm mmmm mmmm           _SCL _LBK _UND _SQT _RBK _MNS
-____ ____ ____ ____ _MB2 mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ _MB1 _MB3 mmmm mmmm ____ ____
+_REF mmmm mmmm mmmm mmmm mmmm           _SCL _LBK _UND _SQT _RBK _MNS
+____ ____ ____ ____ _MB3 _SCR ____ ____ mmmm _AST ____ ____ ____ ____
+               ____ _MB2 _MB1 mmmm _ARF _DOT _AT  ____
         >; };
-        l3 { bindings = <
-_TAB _CUT _ALL _UP  _RDO _PS            mmmm _N7  _N8  _N9  mmmm mmmm
-_UDO _CP  _LFT _DWN _RHT _SPS           mmmm _N4  _N5  _N6  mmmm mmmm
-mmmm _SCP mmmm mmmm mmmm mmmm           mmmm _N1  _N2  _N3  mmmm mmmm
-____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ ____ mmmm xxxx mmmm _N0  ____ ____
+        l2 { bindings = <
+_CUT _ALL _UP  _RDO _PS  _TAB           _AMP _N7  _N8  _N9  _PIP _CRT
+_UDO _LFT _DWN _RHT _CP  _SPS           _LT  _N4  _N5  _N6  _FSH _GT
+mmmm _SCP mmmm mmmm mmmm mmmm           _TLD _N1  _N2  _N3  _PNT _DLR
+____ ____ ____ ____ xxxx mmmm ____ ____ mmmm _BSH ____ ____ ____ ____
+               ____ mmmm mmmm mmmm _HSH _N0  mmmm ____
         >; };
     };
     behaviors {
@@ -190,16 +180,6 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
             compatible = "zmk,behavior-oneshot-layer";
             #binding-cells = <1>;
             release-after-ms = <1000>;
-        };
-        glyph_start: glyph_start {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LT>, <&kp PIPE>;
-        };
-        glyph_end: glyph_end {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp PIPE>, <&kp GT>;
         };
         arrow_func: arrow_func {
             compatible = "zmk,behavior-macro";
