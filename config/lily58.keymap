@@ -165,14 +165,14 @@ xxxx _TBL _TBB _TBR _TBN mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
 _TBC _FND mmmm _DTS _SP  _SCR           _CL  _LPR _COM _DQT _RPR _QMK
 _REF mmmm mmmm mmmm mmmm mmmm           _SCL _LBK _UND _SQT _RBK _MNS
 ____ ____ ____ ____ _MB2 _MB3 ____ ____ mmmm _AST ____ ____ ____ ____
-               ____ ____ _MB1 _ATB _ARF _DOT ____ ____
+               ____ ____ _MB1 _ATB _ARF _BSH ____ ____
         >; };
         l2 { bindings = <
 _TAB _CUT xxxx _UP  _RDO _PS            _AMP _N7  _N8  _N9  _PIP _CRT
 _UDO _CP  _LFT _DWN _RHT _SPS           _LT  _N4  _N5  _N6  _FSH _GT
 mmmm _SCP _ALL mmmm mmmm mmmm           _TLD _N1  _N2  _N3  _PNT _DLR
-____ ____ ____ ____ mmmm mmmm ____ ____ _AT  _BSH ____ ____ ____ ____
-               ____ ____ _COM mmmm _HSH _N0  ____ ____
+____ ____ ____ ____ mmmm mmmm ____ ____ _AT  _N0  ____ ____ ____ ____
+               ____ ____ _COM mmmm _HSH _DOT ____ ____
         >; };
     };
     behaviors {
