@@ -147,6 +147,7 @@
 #define ____      &none
 #define mmmm      &none
 #define xxxx      &none
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -194,22 +195,15 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
         >; };
     };
     behaviors {
-        arrow_func: arrow_func {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp GT>;
-        };
         ol: ol {
             compatible = "zmk,behavior-oneshot-layer";
             #binding-cells = <1>;
             release-after-ms = <1000>;
         };
-        layer: layer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&ol>;
+        arrow_func: arrow_func {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp GT>;
         };
         altb: alt_tab {
             compatible = "zmk,behavior-hold-tap";
@@ -217,6 +211,13 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&alt_tab_hold>, <&alt_tab_tap>;
+        };
+        layer: layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&ol>;
         };
     };
     macros {
