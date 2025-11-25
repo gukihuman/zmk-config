@@ -169,7 +169,7 @@ ____ ____ ____ ____ _MB2 _MB3 ____ ____ mmmm _N0  ____ ____ ____ ____
 ____ mmmm mmmm mmmm mmmm mmmm           mmmm _MNS _HSH _PLS _CRT mmmm
 mmmm mmmm mmmm mmmm _SP  mmmm           mmmm _LT  _FSH _GT  _DLR _EXL
 xxxx mmmm mmmm mmmm mmmm ____           mmmm _AMP _BSH _PIP _AT  mmmm
-____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _AST ____ ____ ____ ___
+____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _AST ____ ____ ____ ____
                ____ mmmm _SCR _ATB mmmm _EQL ____ ____
         >; };
         l3 { bindings = <
@@ -195,22 +195,15 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
         >; };
     };
     behaviors {
-        ol: ol {
-            compatible = "zmk,behavior-oneshot-layer";
-            #binding-cells = <1>;
-            release-after-ms = <1000>;
-        };
         arrow_func: arrow_func {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp GT>;
         };
-        altb: alt_tab {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&alt_tab_hold>, <&alt_tab_tap>;
+        ol: ol {
+            compatible = "zmk,behavior-oneshot-layer";
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
         };
         layer: layer {
             compatible = "zmk,behavior-hold-tap";
@@ -218,6 +211,13 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&ol>;
+        };
+        altb: alt_tab {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&alt_tab_hold>, <&alt_tab_tap>;
         };
     };
     macros {
