@@ -146,6 +146,8 @@
 
 #define _L1      &layer 1 1
 #define _L2      &layer 2 2
+#define _L3      &layer 3 3
+#define _L4      &layer 4 4
 
 #define ____      &none
 #define mmmm      &none
@@ -154,25 +156,39 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_L1  _ESC _L2  _O   _F14 mmmm           _K   _D   _R   _L   _P   _F
+_L1  _ESC _L2  _O   _F14 _SAV           _K   _D   _R   _L   _P   _F
 _Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
 _F16 _F17 _F18 _CBS _BS  _F15           _Q   _G   _Z   _V   _W   _J
-____ ____ ____ ____ _SAV _LS  ____ ____ _RS  _X   ____ ____ ____ ____
-               ____ ____ _A   _ATB _CAP _H   ____ ____ 
+____ ____ ____ ____ _L3  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
+               ____ _L4  _A   _ATB _CAP _H   ____ ____ 
         >; };
         l1 { bindings = <
-xxxx mmmm _LFT _UP  _RDO mmmm           _PLS _LBR _EQL _GRV _RBR _EXL
-mmmm mmmm mmmm _DWN _RHT _RDO           _CL  _LPR _UND _DQT _RPR _GT
-_TAB _SCR mmmm mmmm mmmm mmmm           _SCL _LBK _FSH _SQT _RBK _MNS
-____ ____ ____ ____ mmmm mmmm ____ ____ _CRT _AST ____ ____ ____ ____
-               ____ ____ _UDO _ATB _HSH _BSH ____ ____
+xxxx mmmm mmmm mmmm _RDO _SCR           _LBR _AMP _EXL _AST _PIP _RBR
+_TLD mmmm mmmm mmmm _SP  mmmm           _LPR _LT  _FSH _DQT _GT  _RPR
+mmmm mmmm mmmm _SCL mmmm mmmm           _LBK _PLS _BSH _SQT _MNS _RBK
+____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _CL  ____ ____ ____ ____
+               ____ mmmm _UDO _ATB mmmm _EQL ____ ____
         >; };
         l2 { bindings = <
-_CUT _TBL xxxx _TBR _TBC _REF           _AMP _N7  _N8  _N9  _PIP _QMK
-_CP  _ALL mmmm _PS  _TBN _TBB           _LT  _N4  _N5  _N6  _COM mmmm
-_SCP _DTS _FND _SPS mmmm mmmm           _TLD _N1  _N2  _N3  _PNT _DLR
-____ ____ ____ ____ _MB2 _MB3 ____ ____ _AT  _N0  ____ ____ ____ ____
-               ____ ____ _MB1 _ATB _ARF _DOT ____ ____
+_TBC _TBL xxxx _TBR _TBN mmmm           _CRT _N7  _N8  _N9  _HSH _AT
+_REF _FND mmmm _DTS _TBB mmmm           _DLR _N4  _N5  _N6  _COM _QMK
+mmmm mmmm mmmm mmmm mmmm mmmm           _PNT _N1  _N2  _N3  _UND _GRV
+____ ____ ____ ____ _MB2 _MB3 ____ ____ mmmm _N0  ____ ____ ____ ____
+               ____ mmmm _MB1 _ATB mmmm _DOT ____ ____
+        >; };
+        l3 { bindings = <
+_CUT _ALL mmmm _PS  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+_CP  mmmm mmmm _SPS mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+_SCP mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ ____ ____ ____ xxxx mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
+               ____ mmmm mmmm mmmm mmmm mmmm ____ ____
+        >; };
+        l4 { bindings = <
+mmmm mmmm _UP  _TAB mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm _LFT _DWN _RHT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
+               ____ xxxx mmmm mmmm mmmm mmmm ____ ____
         >; };
     };
     behaviors {
