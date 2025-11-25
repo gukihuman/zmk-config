@@ -136,18 +136,12 @@
 #define _F15      &kp F15
 #define _F16      &kp F16
 #define _F17      &kp F17
-#define _F18      &kp F18
-#define _F19      &kp F19
-#define _F20      &kp F20
-#define _F21      &kp F21
-#define _F22      &kp F22
-#define _F23      &kp F23
-#define _F24      &kp F24
 
 #define _L1      &layer 1 1
 #define _L2      &layer 2 2
 #define _L3      &layer 3 3
 #define _L4      &layer 4 4
+#define _L5      &layer 5 5
 
 #define ____      &none
 #define mmmm      &none
@@ -156,58 +150,51 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-_L1  _ESC _L2  _O   _F14 _SAV           _K   _D   _R   _L   _P   _F
+_ESC _F14 _L1  _O   _F15 _SAV           _K   _D   _R   _L   _P   _F
 _Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
-_F16 _F17 _F18 _CBS _BS  _F15           _Q   _G   _Z   _V   _W   _J
+_L2  _F16 _F17 _CBS _BS  _F18           _Q   _G   _Z   _V   _W   _J
 ____ ____ ____ ____ _L3  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
-               ____ _L4  _A   _ATB _CAP _H   ____ ____ 
+               ____ _L4  _A   _ATB _CAP _H   _UND ____ 
         >; };
         l1 { bindings = <
-xxxx mmmm mmmm mmmm _RDO _SCR           _LBR _AMP _EXL _AST _PIP _RBR
-_TLD mmmm mmmm mmmm _SP  mmmm           _LPR _LT  _FSH _DQT _GT  _RPR
-mmmm mmmm mmmm _SCL mmmm mmmm           _LBK _PLS _BSH _SQT _MNS _RBK
-____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _CL  ____ ____ ____ ____
-               ____ mmmm _UDO _ATB mmmm _EQL ____ ____
+_TBC _TBL xxxx _TBR _TBN mmmm           _AT  _N7  _N8  _N9  _AMP _PIP
+_REF _FND mmmm _DTS _TBB mmmm           _HSH _N4  _N5  _N6  _COM _QMK
+mmmm mmmm mmmm mmmm mmmm mmmm           _TLD _N1  _N2  _N3  _GRV _PNT
+____ ____ ____ ____ _MB2 _MB3 ____ ____ mmmm _N0  ____ ____ ____ ____
+               ____ mmmm _MB1 _ATB mmmm _DOT mmmm ____
         >; };
         l2 { bindings = <
-_TBC _TBL xxxx _TBR _TBN mmmm           _CRT _N7  _N8  _N9  _HSH _AT
-_REF _FND mmmm _DTS _TBB mmmm           _DLR _N4  _N5  _N6  _COM _QMK
-mmmm mmmm mmmm mmmm mmmm mmmm           _PNT _N1  _N2  _N3  _UND _GRV
-____ ____ ____ ____ _MB2 _MB3 ____ ____ mmmm _N0  ____ ____ ____ ____
-               ____ mmmm _MB1 _ATB mmmm _DOT ____ ____
+mmmm mmmm mmmm mmmm mmmm mmmm           _CRT _LBR _CL  _DQT _RBR _AST
+mmmm mmmm mmmm mmmm _SP  mmmm           _DLR _LPR _LT  _GT  _RPR _EXL
+xxxx mmmm mmmm mmmm mmmm mmmm           _SCL _LBK _PLS _MNS _RBK _SQT
+____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _FSH ____ ____ ____ ___
+               ____ mmmm _SCR _ATB mmmm _EQL _BSH ____
         >; };
         l3 { bindings = <
 _CUT _ALL mmmm _PS  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 _CP  mmmm mmmm _SPS mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 _SCP mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ xxxx mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ mmmm mmmm mmmm mmmm mmmm ____ ____
+               ____ mmmm mmmm mmmm mmmm mmmm mmmm ____
         >; };
         l4 { bindings = <
-mmmm mmmm _UP  _TAB mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm _LFT _DWN _RHT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm _UDO _UP  _RDO mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+_TAB _LFT _DWN _RHT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ xxxx mmmm mmmm mmmm mmmm ____ ____
+               ____ xxxx mmmm mmmm mmmm mmmm mmmm ____
         >; };
     };
     behaviors {
-        ol: ol {
-            compatible = "zmk,behavior-oneshot-layer";
-            #binding-cells = <1>;
-            release-after-ms = <1000>;
-        };
         arrow_func: arrow_func {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp GT>;
         };
-        altb: alt_tab {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&alt_tab_hold>, <&alt_tab_tap>;
+        ol: ol {
+            compatible = "zmk,behavior-oneshot-layer";
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
         };
         layer: layer {
             compatible = "zmk,behavior-hold-tap";
@@ -215,6 +202,13 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&ol>;
+        };
+        altb: alt_tab {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&alt_tab_hold>, <&alt_tab_tap>;
         };
     };
     macros {
