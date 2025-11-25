@@ -164,23 +164,23 @@ ____ ____ ____ ____ _MB2 _MB3 ____ ____ mmmm _N0  ____ ____ ____ ____
                ____ mmmm _MB1 _ATB mmmm _DOT mmmm ____
         >; };
         l2 { bindings = <
-mmmm mmmm mmmm mmmm mmmm mmmm           _CRT _LBR _CL  _DQT _RBR _AST
-mmmm mmmm mmmm mmmm _SP  mmmm           _DLR _LPR _LT  _GT  _RPR _EXL
-xxxx mmmm mmmm mmmm mmmm mmmm           _SCL _LBK _PLS _MNS _RBK _SQT
+mmmm mmmm mmmm mmmm mmmm mmmm           _CRT _LBR _CL  _RBR _DQT _AST
+mmmm mmmm mmmm mmmm _SP  mmmm           _DLR _LPR _LT  _RPR _GT  _EXL
+xxxx mmmm mmmm mmmm mmmm mmmm           _SCL _LBK _PLS _RBK _MNS _SQT
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _FSH ____ ____ ____ ___
                ____ mmmm _SCR _ATB mmmm _EQL _BSH ____
         >; };
         l3 { bindings = <
-_CUT _ALL mmmm _PS  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-_CP  mmmm mmmm _SPS mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-_SCP mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+_CUT _CP  mmmm _PS  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+_ALL _SCP mmmm _SPS mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ xxxx mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ mmmm mmmm mmmm mmmm mmmm mmmm ____
         >; };
         l4 { bindings = <
 mmmm _UDO _UP  _RDO mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-_TAB _LFT _DWN _RHT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm _LFT _DWN _RHT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+_TAB mmmm mmmm mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ xxxx mmmm mmmm mmmm mmmm mmmm ____
         >; };
