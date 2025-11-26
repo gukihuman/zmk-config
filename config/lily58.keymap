@@ -169,8 +169,8 @@ ____ ____ ____ ____ _MB2 _MB3 ____ ____ mmmm _N0  ____ ____ ____ ____
 xxxx mmmm mmmm mmmm _RDO mmmm           _TLD _LBR _SQT _RBR mmmm _AT
 mmmm mmmm mmmm mmmm _SP  mmmm           _DLR _LPR _DQT _RPR _COM _CL
 mmmm mmmm mmmm mmmm mmmm ____           mmmm _LBK _GRV _RBK _SCL mmmm
-____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ mmmm _UDO _ATB mmmm _DOT ____ ____
+____ ____ ____ ____ _F16 _F17 ____ ____ mmmm mmmm ____ ____ ____ ____
+               ____ _F18 _UDO _ATB mmmm _DOT ____ ____
         >; };
         l3 { bindings = <
 mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _AMP _FSH _PIP mmmm mmmm
