@@ -152,42 +152,42 @@
     keymap {
         compatible = "zmk,keymap";
         l0 { bindings = <
-____ _ESC _L1  _O   _F14 _SAV           _K   _D   _R   _L   _P   _F
+_L2  _SCR _L1  _O   _F14 _ESC           _K   _D   _R   _L   _P   _F
 _Y   _I   _U   _E   _SP  _ENT           _B   _T   _S   _N   _C   _M
-_L2  _BS  _F15 _L3  _CBS ____           _Q   _G   _Z   _V   _W   _J
+_SAV _BS  _F15 _L3  _CBS ____           _Q   _G   _Z   _V   _W   _J
 ____ ____ ____ ____ _L4  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
                ____ _L5  _A   _ATB _CAP _H   ____ ____ 
         >; };
         l1 { bindings = <
-____ _TBL xxxx _TBR _TBB mmmm           mmmm _N7  _N8  _N9  _PNT mmmm
-_DTS _TBC mmmm _TBN mmmm mmmm           mmmm _N4  _N5  _N6  _COM _QMK
+mmmm _TBL xxxx _TBR _TBB mmmm           _CRT _N7  _N8  _N9  mmmm _PNT
+_DTS _TBC mmmm _TBN mmmm mmmm           _HSH _N4  _N5  _N6  _COM _QMK
 _FND mmmm mmmm mmmm mmmm ____           mmmm _N1  _N2  _N3  _UND mmmm
 ____ ____ ____ ____ _MB2 _MB3 ____ ____ mmmm _N0  ____ ____ ____ ____
                ____ _REF _MB1 _ATB mmmm _DOT ____ ____
         >; };
         l2 { bindings = <
-____ mmmm mmmm mmmm mmmm mmmm           mmmm _MNS _HSH _PLS _CRT mmmm
-mmmm mmmm mmmm mmmm _SP  mmmm           mmmm _LT  _FSH _GT  _DLR _EXL
-xxxx mmmm mmmm mmmm mmmm ____           mmmm _AMP _BSH _PIP _AT  mmmm
-____ ____ ____ ____ mmmm mmmm ____ ____ mmmm _AST ____ ____ ____ ____
-               ____ mmmm _UDO _ATB mmmm _EQL ____ ____
+xxxx mmmm mmmm mmmm _RDO mmmm           _TLD _LBR _SQT _RBR mmmm _AT
+mmmm mmmm mmmm mmmm _SP  mmmm           _DLR _LPR _DQT _RPR _COM _CL
+mmmm mmmm mmmm mmmm mmmm ____           mmmm _LBK _GRV _RBK _SCL mmmm
+____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
+               ____ mmmm _UDO _ATB mmmm _DOT ____ ____
         >; };
         l3 { bindings = <
-____ mmmm mmmm mmmm mmmm mmmm           mmmm _LBR _SQT _RBR mmmm mmmm
-mmmm mmmm mmmm mmmm _SP  mmmm           mmmm _LPR _DQT _RPR _CL  _SCL
-mmmm mmmm mmmm xxxx _SCR ____           mmmm _LBK _GRV _RBK _TLD mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _AMP _FSH _PIP mmmm mmmm
+mmmm mmmm mmmm mmmm _SP  mmmm           mmmm _LT  _EQL _GT  _COM _EXL
+mmmm mmmm mmmm xxxx mmmm ____           mmmm _MNS _BSH _PLS _AST mmmm
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
-               ____ mmmm mmmm _ATB mmmm mmmm ____ ____
+               ____ mmmm mmmm _ATB mmmm _DOT ____ ____
         >; };
         l4 { bindings = <
-____ _CP  _ALL _PS  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm _CP  _ALL _PS  mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 _CUT _SCP mmmm _SPS mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ xxxx mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ mmmm mmmm mmmm mmmm mmmm ____ ____
         >; };
         l5 { bindings = <
-____ _UDO _UP  _RDO mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm _UP  mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm _LFT _DWN _RHT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 _TAB mmmm mmmm mmmm mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
