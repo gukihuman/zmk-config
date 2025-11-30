@@ -158,14 +158,14 @@ ____ ____ ____ ____ _L4  _LS  ____ ____ _RS  _X   ____ ____ ____ ____
                ____ _L5  _A   _ATB _CAP _H   ____ ____ 
         >; };
         l1 { bindings = <
-mmmm _TBL xxxx _TBR _TBB mmmm           _CRT _N7  _N8  _N9  mmmm _PNT
+mmmm _TBL xxxx _TBR _TBB mmmm           _TLD _N7  _N8  _N9  mmmm _PNT
 _DTS _TBC mmmm _TBN _SP  mmmm           _HSH _N4  _N5  _N6  _COM _QMK
 _FND mmmm mmmm mmmm mmmm ____           mmmm _N1  _N2  _N3  _UND mmmm
 ____ ____ ____ ____ _MB2 mmmm ____ ____ mmmm _N0  ____ ____ ____ ____
                ____ _MB3 _MB1 _ATB mmmm _DOT ____ ____
         >; };
         l2 { bindings = <
-xxxx mmmm mmmm mmmm _RDO mmmm           _TLD _LBR _GRV _RBR mmmm _DLR
+xxxx mmmm mmmm mmmm _RDO mmmm           _CRT _LBR _GRV _RBR mmmm _DLR
 mmmm mmmm mmmm mmmm _SP  mmmm           _SCL _LPR _DQT _RPR _COM _CL
 mmmm mmmm mmmm mmmm mmmm ____           mmmm _LBK _SQT _RBK _AT  mmmm
 ____ ____ ____ ____ _F17 mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
