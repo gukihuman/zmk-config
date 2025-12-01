@@ -131,6 +131,7 @@
 #define _MB2      &mkp MB2
 #define _MB3      &mkp MB3
 
+#define _F12      &kp F12
 #define _F14      &kp F14
 #define _F15      &kp F15
 #define _F16      &kp F16
