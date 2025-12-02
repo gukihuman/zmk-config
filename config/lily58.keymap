@@ -174,9 +174,9 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ mmmm _UDO _ATB mmmm _DOT ____ ____
         >; };
         l3 { bindings = <
-mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _PIP _FSH _AMP mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm mmmm           mmmm _AMP _FSH _PIP mmmm mmmm
 mmmm mmmm mmmm mmmm _SP  mmmm           mmmm _LT  _EQL _GT  _COM _EXL
-_F16 mmmm mmmm xxxx _CBS ____           mmmm _MNS _BSH _PLS _AST mmmm
+_F16 mmmm mmmm xxxx _CBS ____           mmmm _PLS _BSH _MNS _AST mmmm
 ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ _F17 _F18 _ATB mmmm _DOT ____ ____
         >; };
@@ -188,9 +188,9 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ xxxx mmmm mmmm mmmm mmmm ____ ____
         >; };
         l5 { bindings = <
-mmmm mmmm _UP  mmmm mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm _UP  _TAB mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm _LFT _DWN _RHT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-_TAB mmmm mmmm mmmm mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm mmmm mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ xxxx mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ mmmm mmmm mmmm mmmm mmmm ____ ____
         >; };
