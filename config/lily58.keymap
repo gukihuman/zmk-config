@@ -188,8 +188,8 @@ ____ ____ ____ ____ mmmm mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ xxxx mmmm mmmm mmmm mmmm ____ ____
         >; };
         l5 { bindings = <
-mmmm mmmm _UP  _TAB mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
-mmmm _LFT _DWN _RHT mmmm mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm mmmm _UP  _TAB mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
+mmmm mmmm _LFT _DWN _RHT mmmm           mmmm mmmm mmmm mmmm mmmm mmmm
 mmmm mmmm mmmm mmmm mmmm ____           mmmm mmmm mmmm mmmm mmmm mmmm
 ____ ____ ____ ____ xxxx mmmm ____ ____ mmmm mmmm ____ ____ ____ ____
                ____ mmmm mmmm mmmm mmmm mmmm ____ ____
