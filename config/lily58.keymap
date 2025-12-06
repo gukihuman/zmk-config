@@ -164,7 +164,7 @@ mmmm _TBL xxxx _TBR mmmm mmmm           _TLD _N7  _N8  _N9  mmmm _PNT
 _TBB _TBC mmmm _TBN _SP  mmmm           _HSH _N4  _N5  _N6  _COM _QMK
 _FND mmmm mmmm mmmm mmmm ____           mmmm _N1  _N2  _N3  _UND mmmm
 ____ ____ ____ ____ _MB2 mmmm ____ ____ mmmm _N0  ____ ____ ____ ____
-               ____ _MB3 _MB1 _ATB mmmm _DOT ____ ____
+               ____ _MB1 _MB3 _ATB mmmm _DOT ____ ____
         >; };
         l2 { bindings = <
 xxxx mmmm mmmm mmmm _RDO mmmm           _CRT _LBR _GRV _RBR mmmm _DLR
